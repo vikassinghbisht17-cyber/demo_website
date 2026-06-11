@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passageway | Empowering Business with Hidden Gems of Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14355b',
+                        secondary: '#0a192f',
+                        accentBlue: '#799bd0',
+                        accentPeach: '#eac8ae',
+                        accentRed: '#ed2024'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'text-cycle': 'textCycle 8s ease-in-out infinite',
+                        'marquee': 'marquee 30s linear infinite',
+                    },
+                    keyframes: {
+                        textCycle: {
+                            '0%, 20%': { opacity: 1, transform: 'translateY(0)' },
+                            '25%, 45%': { opacity: 0, transform: 'translateY(-10px)' },
+                            '50%, 70%': { opacity: 1, transform: 'translateY(0)' },
+                            '75%, 95%': { opacity: 0, transform: 'translateY(10px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+    <!-- Module 2: Main Navigation with Mega-Menu Pattern -->
+    <header class="sticky top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-28 items-center">
+                <!-- Left: Logo -->
+                <a href="https://www.pssgway.com/" class="flex items-center cursor-pointer">
+                    <img src="./logo-horizontal.svg" alt="Passageway" class="h-14">
+                </a>
+                
+                <!-- Center: Nav -->
+                <nav class="hidden lg:flex space-x-10 h-full">
+                    <!-- 1. Core Competency -->
+                    <div class="group h-full flex items-center cursor-pointer relative">
+                        <span class="text-base font-bold text-gray-800 group-hover:text-primary transition-colors flex items-center h-full">
+                            Core Competency
+                            <svg class="w-4 h-4 ml-1 text-gray-400 group-hover:text-primary transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                        <div class="absolute top-20 -left-32 w-screen max-w-3xl bg-white border border-gray-100 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-b-xl z-50 flex overflow-hidden">
+                            <div class="w-1/2 bg-gray-50 p-8">
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Business Consulting</h3>
+                                <ul class="space-y-4 text-base font-semibold">
+                                    <li><a href="#" class="text-gray-900 hover:text-primary transition-colors">Automotive Consulting</a></li>
+                                    <li><a href="#" class="text-gray-900 hover:text-primary transition-colors">Banking & Finance Consulting</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 p-8">
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Analytical Services</h3>
+                                <ul class="space-y-4 text-base font-semibold text-gray-600">
+                                    <li><a href="#" class="hover:text-primary transition-colors">Machine Learning & Data Science</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Data Engineering</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Generative AI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Industry Solutions -->
+                    <div class="group h-full flex items-center cursor-pointer relative">
+                        <span class="text-base font-bold text-gray-800 group-hover:text-primary transition-colors flex items-center h-full">
+                            Industry Solutions
+                            <svg class="w-4 h-4 ml-1 text-gray-400 group-hover:text-primary transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                        <div class="absolute top-20 -left-64 w-screen max-w-5xl bg-white border border-gray-100 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-b-xl z-50 p-10 grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <!-- Column 1 -->
+                            <div>
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Automotive</h3>
+                                <ul class="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                                    <li><a href="#" class="hover:text-primary transition-colors">After-Sales Analytics</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Connected Vehicles</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Customer Data Management</a></li>
+                                </ul>
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Banking</h3>
+                                <ul class="space-y-3 text-base font-semibold text-gray-700">
+                                    <li><a href="#" class="hover:text-primary transition-colors">Core Banking Solutions</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Loan Management</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Regulatory Reporting</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2 -->
+                            <div>
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Finance</h3>
+                                <ul class="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                                    <li><a href="#" class="hover:text-primary transition-colors">Risk & Fraud Analytics</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Audit & Vigilance</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Investment Insights</a></li>
+                                </ul>
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">FMCG</h3>
+                                <ul class="space-y-3 text-base font-semibold text-gray-700">
+                                    <li><a href="#" class="hover:text-primary transition-colors">Supply Chain Analytics</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Consumer Behavior Modeling</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Inventory Optimization</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3 -->
+                            <div>
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Energy Metering</h3>
+                                <ul class="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                                    <li><a href="#" class="hover:text-primary transition-colors">Smart Grid Analytics</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Predictive Maintenance</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Demand Forecasting</a></li>
+                                </ul>
+                                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Sports Leagues</h3>
+                                <ul class="space-y-3 text-base font-semibold text-gray-700">
+                                    <li><a href="#" class="hover:text-primary transition-colors">Fan Engagement Data</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Player Performance Analytics</a></li>
+                                    <li><a href="#" class="hover:text-primary transition-colors">Ticketing & Revenue Strategies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Insights -->
+                    <a href="#" class="text-base font-bold text-gray-800 hover:text-primary flex items-center h-full transition-colors">Insights</a>
+
+                    <!-- 4. Company -->
+                    <a href="./company.html" class="text-base font-bold text-gray-800 hover:text-primary flex items-center h-full transition-colors">Company</a>
+
+                    <!-- 5. Careers -->
+                    <a href="./careers.html" class="text-base font-bold text-gray-800 hover:text-primary flex items-center h-full transition-colors">Careers</a>
+                </nav>
+
+                <!-- Right: Search & Language -->
+                <div class="hidden lg:flex items-center">
+                    <a href="#contact" class="bg-primary hover:bg-secondary text-white font-bold text-base px-8 py-3.5 rounded-full transition-all">Get In Touch</a>
+                </div>
+
+                <!-- Hamburger Button (Mobile Only) -->
+                <div class="flex lg:hidden items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 hover:text-primary focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Side Menu Drawer (Off-canvas, below header) -->
+    <div id="mobile-menu-drawer" class="fixed inset-x-0 top-28 bottom-0 z-40 bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100" id="mobile-menu-content">
+            <!-- Drawer Content (Links) -->
+            <div class="flex-1 overflow-y-auto px-6 py-8">
+                <nav class="space-y-6">
+                    <!-- Core Competency -->
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Core Competency</h4>
+                        <ul class="space-y-3 pl-2">
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive Consulting</a></li>
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Banking & Finance Consulting</a></li>
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">ML & Data Science</a></li>
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Data Engineering</a></li>
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Generative AI</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry Solutions -->
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Industry Solutions</h4>
+                        <ul class="space-y-3 pl-2">
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive After-Sales</a></li>
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Risk & Fraud</a></li>
+                            <li><a href="#" class="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Energy Metering</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-t border-gray-100 pt-6 space-y-4">
+                        <a href="#" class="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Insights</a>
+                        <a href="./company.html" class="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Company</a>
+                        <a href="./careers.html" class="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Careers</a>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- Drawer Footer -->
+            <div class="p-6 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com" target="_blank" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-2 text-sm font-bold text-gray-600">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9-9c1.657 0 3 2.536 3 6 0 3.464-1.343 6-3 6m0-12c-1.657 0-3 2.536-3 6 0 3.464 1.343 6 3 6"></path></svg>
+                    <span>EN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Module 3: Animated Hero Section -->
+    <section class="pt-24 pb-32 bg-white text-center px-4 overflow-hidden relative">
+        <!-- Decorative abstract shape -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-50 to-purple-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+        
+        <div class="max-w-5xl mx-auto z-10 relative">
+            <h1 class="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-gray-900 mb-8 leading-[1.1]">
+                Empowering business<br>with 
+                <span class="inline-grid align-bottom relative">
+                    <style>
+                        @keyframes slideCycle {
+                            0%, 25% { opacity: 1; transform: translateY(0); }
+                            30%, 100% { opacity: 0; transform: translateY(-20px); }
+                        }
+                        .cycle-word-1 { animation: slideCycle 9s ease-in-out infinite 0s; opacity: 0; }
+                        .cycle-word-2 { animation: slideCycle 9s ease-in-out infinite 3s; opacity: 0; }
+                        .cycle-word-3 { animation: slideCycle 9s ease-in-out infinite 6s; opacity: 0; }
+                    </style>
+                    <span class="col-start-1 row-start-1 cycle-word-1 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accentBlue to-accentPeach pr-2">hidden gems</span>
+                    <span class="col-start-1 row-start-1 cycle-word-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accentBlue to-accentPeach pr-2">predictive AI</span>
+                    <span class="col-start-1 row-start-1 cycle-word-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accentBlue to-accentPeach pr-2">smart insights</span>
+                </span>
+                of data
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 font-medium max-w-3xl mx-auto leading-relaxed">
+                We specialize in solving complex data challenges in the Automotive and Banking industries, offering predictive analytics, machine learning, and data-driven solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#contact" class="bg-primary hover:bg-secondary text-white font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl hover:shadow-primary/20 w-full sm:w-auto text-center">
+                    Get In Touch
+                </a>
+                <a href="#services" class="text-gray-900 font-bold hover:text-primary flex items-center group transition-colors">
+                    Explore Our Services
+                    <div class="ml-3 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: Client/Partner Logo Marquee -->
+    <section class="border-y border-gray-100 bg-gray-50 py-12 overflow-hidden relative">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Trusted by Global Industry Leaders</p>
+        </div>
+        <!-- Gradient masks for smooth edge fade -->
+        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+        
+        <div class="relative flex overflow-hidden">
+            <div class="animate-marquee whitespace-nowrap flex space-x-24 items-center px-12">
+                <!-- Logos (Placeholders using SVGs/Text) -->
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">TechCorp</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">GlobalBank</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">HealthPlus</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">RetailMax</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">AutoDynamics</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">CloudSystems</span>
+            </div>
+            <!-- Second marquee for seamless loop -->
+            <div class="animate-marquee whitespace-nowrap flex space-x-24 items-center px-12 absolute top-0">
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">TechCorp</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">GlobalBank</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">HealthPlus</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">RetailMax</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">AutoDynamics</span>
+                <span class="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">CloudSystems</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5: Interactive Services Tabs -->
+    <section id="services" class="py-32 bg-white max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-16 text-center md:text-left leading-tight">Our Core <br class="hidden md:block">Competencies</h2>
+        <div class="flex flex-col md:flex-row md:space-x-12">
+            <div class="md:w-1/3 mb-8 md:mb-0 space-y-3">
+                <button class="w-full text-left px-6 py-5 rounded-xl bg-gray-50 border-l-4 border-primary text-primary font-bold text-lg shadow-sm transition-all flex justify-between items-center">
+                    Business Consulting
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <button class="w-full text-left px-6 py-5 rounded-xl hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300 text-gray-500 hover:text-gray-900 font-bold text-lg transition-all flex justify-between items-center group">
+                    ML & Data Science
+                    <svg class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <button class="w-full text-left px-6 py-5 rounded-xl hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300 text-gray-500 hover:text-gray-900 font-bold text-lg transition-all flex justify-between items-center group">
+                    Data Engineering
+                    <svg class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <button class="w-full text-left px-6 py-5 rounded-xl hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300 text-gray-500 hover:text-gray-900 font-bold text-lg transition-all flex justify-between items-center group">
+                    Generative AI
+                    <svg class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+            <div class="md:w-2/3 bg-gray-50 rounded-3xl p-10 md:p-14 border border-gray-100 flex flex-col justify-center">
+                <span class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </span>
+                <h3 class="text-3xl font-extrabold text-gray-900 mb-6">Business Consulting</h3>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed font-medium">
+                    We partner with organizations in the Automotive and Banking sectors to optimize operations, improve decision-making, and unlock new revenue streams through data-driven strategies and digital transformation.
+                </p>
+                <ul class="space-y-5 mb-10">
+                    <li class="flex items-center text-gray-800 font-bold border-b border-gray-200 pb-4">
+                        <svg class="w-6 h-6 text-accentBlue mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Automotive After-Sales & Connected Vehicles
+                    </li>
+                    <li class="flex items-center text-gray-800 font-bold border-b border-gray-200 pb-4">
+                        <svg class="w-6 h-6 text-accentBlue mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Loan Management & Risk Analytics
+                    </li>
+                    <li class="flex items-center text-gray-800 font-bold">
+                        <svg class="w-6 h-6 text-accentBlue mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Fraud Detection & Audit Analytics
+                    </li>
+                </ul>
+                <div>
+                    <a href="#" class="inline-flex items-center font-black text-primary hover:text-secondary uppercase tracking-widest text-sm transition-colors border-b-2 border-primary pb-1">
+                        Explore Services <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6: Case Studies (Full Width Grid) -->
+    <section class="w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="relative h-[500px] bg-gray-900 group overflow-hidden cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-40" alt="Banking">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-20 h-20 rounded-full border border-white flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all hover:scale-110">
+                        <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-12 w-full transform group-hover:-translate-y-4 transition-transform duration-500">
+                    <span class="text-accentBlue font-bold text-xs uppercase tracking-widest mb-3 block">Automotive</span>
+                    <h3 class="text-white text-4xl font-bold leading-tight">Connected Vehicle <br>Analytics Platform</h3>
+                </div>
+            </div>
+            <div class="relative h-[500px] bg-gray-900 group overflow-hidden cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-40" alt="Retail">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-20 h-20 rounded-full border border-white flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all hover:scale-110">
+                        <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-12 w-full transform group-hover:-translate-y-4 transition-transform duration-500">
+                    <span class="text-accentPeach font-bold text-xs uppercase tracking-widest mb-3 block">Banking & Finance</span>
+                    <h3 class="text-white text-4xl font-bold leading-tight">Loan Portfolio <br>Risk Management</h3>
+                </div>
+            </div>
+            <div class="relative h-[500px] bg-gray-900 group overflow-hidden cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-40" alt="Healthcare">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-20 h-20 rounded-full border border-white flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all hover:scale-110">
+                        <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-12 w-full transform group-hover:-translate-y-4 transition-transform duration-500">
+                    <span class="text-accentRed font-bold text-xs uppercase tracking-widest mb-3 block">Predictive Analytics</span>
+                    <h3 class="text-white text-4xl font-bold leading-tight">Fault Prediction & <br>Preventive Maintenance</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 7: Insights/News Slider (Horizontal Scroll) -->
+    <section class="py-32 bg-gray-50 overflow-hidden">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Latest Insights</h2>
+                <p class="text-gray-500 mt-4 text-xl font-medium">Perspectives from our global experts.</p>
+            </div>
+            <a href="#" class="hidden sm:inline-flex items-center text-sm font-bold text-primary uppercase tracking-widest hover:text-secondary transition-colors">
+                View All <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+        
+        <!-- Horizontal scrollable container -->
+        <div class="flex overflow-x-auto space-x-8 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto no-scrollbar snap-x">
+            <!-- Article Card 1 -->
+            <div class="min-w-[340px] md:min-w-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden group snap-start transition-shadow duration-300 flex flex-col">
+                <div class="h-56 bg-gray-200 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Report</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">The Generative AI Maturity Index 2026</h3>
+                    <p class="text-gray-600 text-base mb-8 line-clamp-3 font-medium flex-grow">A comprehensive analysis of how Fortune 500 companies are securely deploying Artificial Intelligence.</p>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-primary transition-colors flex items-center">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                </div>
+            </div>
+            <!-- Article Card 2 -->
+            <div class="min-w-[340px] md:min-w-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden group snap-start transition-shadow duration-300 flex flex-col">
+                <div class="h-56 bg-gray-200 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Tech" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-accentTeal text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Blog</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">Securing Cloud-Native Architectures</h3>
+                    <p class="text-gray-600 text-base mb-8 line-clamp-3 font-medium flex-grow">Five critical strategies for protecting enterprise microservices from emerging network threats.</p>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-primary transition-colors flex items-center">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                </div>
+            </div>
+            <!-- Article Card 3 -->
+            <div class="min-w-[340px] md:min-w-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden group snap-start transition-shadow duration-300 flex flex-col">
+                <div class="h-56 bg-gray-200 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="People" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-accentBlue text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Whitepaper</div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">The Future of Remote Work Infrastructure</h3>
+                    <p class="text-gray-600 text-base mb-8 line-clamp-3 font-medium flex-grow">Designing resilient networks for a permanently distributed global enterprise workforce.</p>
+                    <a href="#" class="text-sm font-bold text-gray-900 hover:text-primary transition-colors flex items-center">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 8: About Passageway (Value Proposition) -->
+    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div class="bg-primary rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-2xl relative">
+            <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="md:w-1/2 p-12 lg:p-20 flex flex-col justify-center text-white relative z-10">
+                <h2 class="text-4xl lg:text-5xl font-extrabold mb-8 leading-tight">We're Your Partner For Innovation & Growth</h2>
+                <p class="mb-10 text-xl text-gray-200 font-medium leading-relaxed">
+                    At Passageway, we leverage advanced data analytics and AI to solve complex industry challenges. From predictive maintenance in automotives to fraud detection in banking, our solutions drive measurable business outcomes.
+                </p>
+                <div class="grid grid-cols-2 gap-8 mb-12">
+                    <div>
+                        <div class="text-4xl font-black text-accentPeach">2+</div>
+                        <div class="text-sm text-gray-300 mt-1 font-bold">Industry Verticals</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-black text-accentPeach">AI</div>
+                        <div class="text-sm text-gray-300 mt-1 font-bold">Powered Solutions</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#contact" class="inline-block bg-white text-primary font-extrabold px-10 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 h-80 md:h-auto bg-gray-800 relative">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1000&q=80" alt="Team" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-50 md:opacity-0 md:bg-gradient-to-l md:from-transparent md:to-primary md:opacity-80"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 9: Industry Focus -->
+    <section class="border-t border-gray-100">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="bg-gray-50 p-16 md:p-24 lg:p-32 flex flex-col justify-center order-2 lg:order-1">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest mb-4">Industry Focus</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8">
+                    Deep expertise across diverse sectors.
+                </h2>
+                <p class="text-xl text-gray-600 mb-12 font-medium leading-relaxed">
+                    We deliver purpose-built solutions for the industries that matter most to our clients â€” transforming data into actionable insights and strategic advantage.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 mb-12 border-t border-gray-200 pt-12">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-8 bg-accentBlue rounded-full"></div>
+                        <div class="font-black text-gray-900 text-lg uppercase tracking-wide">Automotive</div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-8 bg-accentPeach rounded-full"></div>
+                        <div class="font-black text-gray-900 text-lg uppercase tracking-wide">FMCG</div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-8 bg-primary rounded-full"></div>
+                        <div class="font-black text-gray-900 text-lg uppercase tracking-wide">Finance</div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-8 bg-secondary rounded-full"></div>
+                        <div class="font-black text-gray-900 text-lg uppercase tracking-wide">Banking</div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-8 bg-accentTeal rounded-full"></div>
+                        <div class="font-black text-gray-900 text-lg uppercase tracking-wide">Energy Metering</div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-8 bg-accentRed rounded-full"></div>
+                        <div class="font-black text-gray-900 text-lg uppercase tracking-wide">Sports Leagues</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="inline-flex items-center text-sm font-extrabold text-gray-900 hover:text-primary uppercase tracking-widest transition-colors border-b-2 border-gray-900 pb-1 hover:border-primary">
+                        Explore Solutions <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="relative min-h-[500px] lg:min-h-full order-1 lg:order-2">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Business Analytics" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 10: Careers Section (Wipro-inspired) -->
+    <section id="careers" class="py-32 bg-white">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-accentRed font-bold text-xs uppercase tracking-widest mb-4 block">Careers</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">Join the Passageway Team</h2>
+                <p class="text-xl text-gray-500 font-medium">Build your career at the intersection of data, AI, and real-world business impact.</p>
+            </div>
+
+            <!-- Careers Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Card 1: Culture -->
+                <div class="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team Culture" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold mb-2">Our Culture</h3>
+                        <p class="text-gray-300 text-sm font-medium">A collaborative environment where innovation meets purpose.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Growth -->
+                <div class="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Career Growth" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold mb-2">Growth & Learning</h3>
+                        <p class="text-gray-300 text-sm font-medium">Continuous upskilling in ML, AI, and cutting-edge data platforms.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Impact -->
+                <div class="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Real Impact" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"></path></svg>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold mb-2">Real-World Impact</h3>
+                        <p class="text-gray-300 text-sm font-medium">Work on projects that directly transform how industries operate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="bg-secondary rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-48 h-48 bg-primary rounded-full mix-blend-screen filter blur-3xl opacity-70"></div>
+                <div class="absolute -left-10 -bottom-10 w-48 h-48 bg-accentBlue rounded-full mix-blend-screen filter blur-3xl opacity-50"></div>
+                <div class="relative z-10 mb-8 md:mb-0">
+                    <h3 class="text-white text-3xl md:text-4xl font-extrabold mb-3">Ready to make an impact?</h3>
+                    <p class="text-gray-400 text-lg font-medium">Explore open positions and join our growing team in Jaipur.</p>
+                </div>
+                <a href="mailto:contact@pssgway.com" class="relative z-10 bg-white text-primary font-extrabold px-10 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 11: Bento Promo Grid -->
+    <section class="max-w-[1600px] mx-auto px-4 py-32">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Discover More</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[350px]">
+            <!-- Block 1 -->
+            <div class="bg-primary text-white p-10 flex flex-col justify-between rounded-2xl hover:-translate-y-2 transition-transform duration-500 shadow-xl shadow-primary/20">
+                <div>
+                    <span class="uppercase tracking-widest text-xs font-bold text-primary bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Innovation Labs</span>
+                    <h3 class="text-3xl font-bold mt-8 leading-tight">Co-create the future of your industry</h3>
+                </div>
+                <a href="#" class="inline-flex items-center text-sm font-bold hover:underline uppercase tracking-widest">
+                    Explore Labs <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <!-- Block 2 -->
+            <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-sm relative group">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Tech" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+            </div>
+            <!-- Block 3 -->
+            <div class="bg-accentTeal text-white p-10 flex flex-col justify-between rounded-2xl hover:-translate-y-2 transition-transform duration-500 shadow-xl shadow-teal-500/20">
+                <div>
+                    <span class="uppercase tracking-widest text-xs font-bold text-accentTeal bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Podcasts</span>
+                    <h3 class="text-3xl font-bold mt-8 leading-tight">Listen to Enterprise Tech Talks</h3>
+                </div>
+                <a href="#" class="inline-flex items-center text-sm font-bold hover:underline uppercase tracking-widest">
+                    Listen Now <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <!-- Block 4 -->
+            <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-sm relative group">
+                 <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=800&q=80" alt="Podcast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                 <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center text-white shadow-lg">
+                        <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 12: Contact Form & Brand Statement -->
+    <section class="py-32 px-4 bg-gray-900 text-center text-white relative overflow-hidden">
+        <!-- Abstract background glow -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary rounded-full filter blur-[120px] opacity-40 mix-blend-screen pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900 rounded-full filter blur-[120px] opacity-40 mix-blend-screen pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto mb-20 relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8 tracking-tight">
+                Ready to unlock the hidden gems in your data?
+            </h2>
+            <p class="text-2xl text-gray-400 font-medium">Let's build smarter solutions together.</p>
+        </div>
+        
+        <div class="max-w-2xl mx-auto bg-white rounded-3xl p-10 md:p-14 text-left shadow-2xl shadow-black/50 text-gray-900 relative z-10">
+            <h3 class="text-3xl font-extrabold mb-8">Get In Touch</h3>
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
+                        <input type="text" placeholder="John Doe" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Work Email <span class="text-red-500">*</span></label>
+                        <input type="email" placeholder="john@company.com" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Company Name <span class="text-red-500">*</span></label>
+                    <input type="text" placeholder="Your organization" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">How can we help? <span class="text-red-500">*</span></label>
+                    <textarea rows="4" placeholder="Tell us about your project..." class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"></textarea>
+                </div>
+                <button type="button" class="w-full bg-primary hover:bg-secondary text-white font-extrabold text-lg py-5 rounded-xl transition-colors shadow-lg shadow-primary/30 mt-4">
+                    Send Message
+                </button>
+                <p class="text-xs text-gray-400 text-center mt-6 font-medium">By submitting, you agree to our <a href="#" class="underline hover:text-gray-700">Privacy Policy</a>.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Module 13: Comprehensive Footer -->
+    <footer class="bg-gray-950 text-white pt-24 pb-12 border-t border-gray-800">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-16 mb-20">
+                <!-- Brand Column -->
+                <div class="col-span-2 lg:col-span-2 pr-8">
+                    <div class="flex items-center mb-8">
+                        <img src="./logo-horizontal.svg" alt="Passageway" class="h-8 brightness-0 invert">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm font-medium">
+                        Empowering business with hidden gems of data. Specializing in advanced analytics and AI solutions for the Automotive and Banking industries.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/passageway-tech-pvt-ltd/" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all border border-gray-800"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div>
+                    <h4 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-500">Services</h4>
+                    <ul class="space-y-4 text-sm text-gray-300 font-semibold">
+                        <li><a href="#" class="hover:text-white transition-colors">Business Consulting</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ML & Data Science</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Data Engineering</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Generative AI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-500">Industries</h4>
+                    <ul class="space-y-4 text-sm text-gray-300 font-semibold">
+                        <li><a href="#" class="hover:text-white transition-colors">Automotive</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FMCG</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Finance</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Banking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Energy Metering</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sports Leagues</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-500">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-300 font-semibold">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Insights</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-500">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-300 font-semibold">
+                        <li><a href="mailto:contact@pssgway.com" class="hover:text-white transition-colors">contact@pssgway.com</a></li>
+                        <li><a href="tel:+917742543582" class="hover:text-white transition-colors">+91-7742543582</a></li>
+                        <li><span class="text-gray-400">Jaipur, Rajasthan, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-bold tracking-wide">
+                <p>&copy; 2026 Passageway Tech Private Limited. All rights reserved.</p>
+                <div class="mt-6 md:mt-0 flex space-x-6">
+                    <a href="mailto:contact@pssgway.com" class="hover:text-gray-300 cursor-pointer transition-colors">contact@pssgway.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Drawer -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-menu-drawer');
+        const drawerContent = document.getElementById('mobile-menu-content');
+        let isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                drawer.classList.remove('opacity-0', 'pointer-events-none');
+                drawerContent.classList.remove('translate-x-full');
+                menuBtn.innerHTML = `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+            } else {
+                drawer.classList.add('opacity-0', 'pointer-events-none');
+                drawerContent.classList.add('translate-x-full');
+                menuBtn.innerHTML = `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>`;
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        drawer.addEventListener('click', (e) => {
+            if (e.target === drawer) toggleMenu();
+        });
+    </script>
+</body>
+</html>
