@@ -27,8 +27,9 @@ export const Header: React.FC = () => {
     }`;
 
   return (
-    <header className="sticky top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <header className="sticky top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-28 items-center">
           {/* Left: Logo */}
           <Link to="/" className="flex items-center cursor-pointer">
@@ -157,6 +158,7 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </div>
+    </header>
 
       {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
@@ -219,6 +221,6 @@ export const Header: React.FC = () => {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 };
