@@ -87,20 +87,23 @@ export const Home: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         
         <div className="max-w-5xl mx-auto z-20 relative">
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white mb-8 leading-[1.1]">
-            Empowering business<br />with{' '}
-            <span className="inline-grid align-bottom relative">
-              <span className="col-start-1 row-start-1 animate-[slideCycle_9s_ease-in-out_infinite_0s] opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent-blue to-accent-peach pr-2">
-                hidden gems
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight text-white mb-8 leading-[1.1]">
+            Empowering business<br />
+            <span className="flex flex-wrap justify-center items-center gap-x-4 mt-2">
+              <span>with</span>
+              <span className="inline-grid align-bottom relative">
+                <span className="col-start-1 row-start-1 animate-[textCycle1_9s_ease-in-out_infinite] text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent-blue to-accent-peach">
+                  hidden gems
+                </span>
+                <span className="col-start-1 row-start-1 animate-[textCycle2_9s_ease-in-out_infinite] text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent-blue to-accent-peach">
+                  predictive AI
+                </span>
+                <span className="col-start-1 row-start-1 animate-[textCycle3_9s_ease-in-out_infinite] text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent-blue to-accent-peach">
+                  smart insights
+                </span>
               </span>
-              <span className="col-start-1 row-start-1 animate-[slideCycle_9s_ease-in-out_infinite_3s] opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent-blue to-accent-peach pr-2">
-                predictive AI
-              </span>
-              <span className="col-start-1 row-start-1 animate-[slideCycle_9s_ease-in-out_infinite_6s] opacity-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent-blue to-accent-peach pr-2">
-                smart insights
-              </span>
+              <span className="whitespace-nowrap">of data</span>
             </span>
-            of data
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 font-medium max-w-3xl mx-auto leading-relaxed">
             We specialize in solving complex data challenges in the Automotive and Banking industries, offering predictive analytics, machine learning, and data-driven solutions.
@@ -134,11 +137,22 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Custom inline animations for slideCycle */}
+        {/* Custom inline animations for text cycling */}
         <style dangerouslySetInnerHTML={{__html: `
-          @keyframes slideCycle {
-            0%, 25% { opacity: 1; transform: translateY(0); }
-            30%, 100% { opacity: 0; transform: translateY(-20px); }
+          @keyframes textCycle1 {
+            0%, 28% { opacity: 1; transform: translateY(0); }
+            33%, 95% { opacity: 0; transform: translateY(-20px); }
+            96%, 100% { opacity: 0; transform: translateY(20px); }
+          }
+          @keyframes textCycle2 {
+            0%, 28% { opacity: 0; transform: translateY(20px); }
+            33%, 61% { opacity: 1; transform: translateY(0); }
+            66%, 100% { opacity: 0; transform: translateY(-20px); }
+          }
+          @keyframes textCycle3 {
+            0%, 61% { opacity: 0; transform: translateY(20px); }
+            66%, 95% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
           }
         `}} />
       </section>
