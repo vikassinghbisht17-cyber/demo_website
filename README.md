@@ -1,38 +1,32 @@
-# Passageway Website Rebuild - Local Setup Guide
+# React + TypeScript + Vite
 
-This project contains the modernized, Tailwind CSS-based rebuild of the Passageway company website.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## How to Share the Project
+Currently, two official plugins are available:
 
-To share this project with your colleague, simply compress (zip) the entire folder containing these files and send it to them. 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-The essential files to include are:
-1. `landing_page_prototype.html` (The homepage)
-2. `company.html` (The "About Us" / Company page)
-3. `logo-horizontal.svg` (The Passageway logo)
-4. *(Optional)* The `modules/` folder - this is no longer strictly required since the main `.html` files are self-contained, but it can be kept for reference.
+## React Compiler
 
-## How Your Colleague Can Run It
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Because we have consolidated the website into self-contained HTML files, it is incredibly easy to run. No servers, node modules, or build tools are required!
+## Expanding the Oxlint configuration
 
-### Step 1: Extract the Files
-Extract the shared folder anywhere on the laptop (e.g., Desktop).
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-### Step 2: Open in a Browser
-Simply **double-click** either `landing_page_prototype.html` or `company.html`. 
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-The file will open directly in your default web browser (Chrome, Edge, Safari, etc.) via a local `file:///` path.
-
-### Step 3: Navigation
-The links between the pages are already connected. For example, clicking the **"Company"** link in the navigation bar of the landing page will instantly open the `company.html` page.
-
-## Technical Details (For Developers)
-
-- **Styling**: The project uses Tailwind CSS via CDN. As long as the laptop has an active internet connection, the styles will load perfectly.
-- **Images**: All placeholder images are loaded externally from Unsplash.
-- **Icons**: Icons are inline SVGs.
-- **Modularity**: All HTML code is contained within the two main files. You do not need to run a local python server to bypass CORS issues anymore, because we are no longer using JavaScript `fetch()` to load the components dynamically.
-
----
-*Built with Tailwind CSS.*
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
