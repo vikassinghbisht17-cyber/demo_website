@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company | Passageway</title>
+    <title>Insights | Passageway</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,9 +26,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
+
     <!-- Module 2: Main Navigation with Mega-Menu Pattern -->
     <header class="sticky top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +124,7 @@
                     </div>
 
                     <!-- 3. Insights -->
-                    <a href="./insight.html" class="text-base font-bold text-gray-800 hover:text-primary flex items-center h-full transition-colors">Insights</a>
+                    <a href="./insight.html" class="text-base font-bold text-primary flex items-center h-full transition-colors">Insights</a>
 
                     <!-- 4. Company -->
                     <a href="./company.html" class="text-base font-bold text-gray-800 hover:text-primary flex items-center h-full transition-colors">Company</a>
@@ -174,7 +177,7 @@
                     </div>
                     
                     <div class="border-t border-gray-100 pt-6 space-y-4">
-                        <a href="./insight.html" class="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Insights</a>
+                        <a href="./insight.html" class="block text-lg font-bold text-primary transition-colors">Insights</a>
                         <a href="./company.html" class="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Company</a>
                         <a href="./careers.html" class="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Careers</a>
                     </div>
@@ -196,186 +199,190 @@
         </div>
     </div>
 
-    <!-- Company Hero Section -->
-    <section class="pt-32 pb-24 bg-white text-center px-4 overflow-hidden relative">
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-primary/5 to-transparent rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-accentBlue/10 to-transparent rounded-full blur-3xl -z-10"></div>
+    <!-- Insights Hero Section -->
+    <section class="relative pt-32 pb-32 overflow-hidden bg-gray-900 text-white min-h-[55vh] flex flex-col justify-center">
+        <!-- Abstract Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80" alt="Data networks" class="w-full h-full object-cover opacity-35 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-secondary/90"></div>
+        </div>
+        <!-- Light Beam Glow Effect -->
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-accentBlue rounded-full filter blur-[140px] opacity-25 pointer-events-none"></div>
         
-        <div class="max-w-4xl mx-auto z-10 relative">
-            <span class="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">About Us</span>
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-8 leading-[1.1]">
-                Empowering the future with <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accentBlue to-accentPeach">predictive intelligence</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed mb-12">
-                Established in 2023, Passageway is a premier Data Analytics company based in Jaipur, Rajasthan. We specialize in solving complex data challenges in the Automotive and BFSI industries.
-            </p>
-        </div>
-    </section>
-
-    <!-- Company Industry Focus (Automotive & BFSI) -->
-    <section class="py-24 bg-gray-50 border-y border-gray-100">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
-                <!-- Automotive Focus -->
-                <div class="bg-white p-12 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-500 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accentBlue/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-                    <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                        <svg class="w-8 h-8 text-accentBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-extrabold text-gray-900 mb-6 relative z-10">Automotive Intelligence</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed font-medium relative z-10">
-                        We empower automotive businesses with deep insights in <strong class="text-gray-900">After-Sales Analytics</strong>, after-sales target setting and control, precise <strong class="text-gray-900">pricing strategy</strong>, claim surveillance, and franchise compliance.
-                    </p>
-                </div>
-
-                <!-- BFSI Focus -->
-                <div class="bg-white p-12 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-500 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accentPeach/20 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-                    <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                        <svg class="w-8 h-8 text-accentPeach" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-extrabold text-gray-900 mb-6 relative z-10">BFSI Market Operations</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed font-medium relative z-10">
-                        We strengthen financial market operations by offering advanced <strong class="text-gray-900">fraud detection</strong>, risk management, and comprehensive audit and vigilance solutions tailored for branch and business banking.
-                    </p>
-                </div>
-
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <span class="text-accentPeach font-bold text-sm uppercase tracking-widest mb-6 block border-l-4 border-accentPeach pl-4">Passageway Insights</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+                    Browse Our <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-accentBlue to-accentPeach">Latest Updates</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl">
+                    Stay updated with the latest insights, innovations, and expertise brewing as we redefine Automotive and Banking solutions.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Company Vision Banner -->
-    <section class="w-full relative overflow-hidden" style="background: linear-gradient(90deg, #0b2545 0%, #064789 100%);">
-        
-        <!-- Faded Background Text -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 text-white/5 font-extrabold select-none pointer-events-none" style="font-size: 20rem; line-height: 1; margin-left: -2rem;">
-            Vision
-        </div>
-
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-            <div class="flex flex-col md:flex-row items-center">
-                <!-- Left: Title -->
-                <div class="w-full md:w-1/3 mb-8 md:mb-0">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-white pl-8 md:pl-20 border-l-4 border-transparent relative">
-                        <!-- Stylized light beam effect -->
-                        <div class="absolute left-full top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/10 blur-[80px] rounded-full pointer-events-none"></div>
-                        Our Vision
-                    </h2>
-                </div>
-                
-                <!-- Right: Text -->
-                <div class="w-full md:w-2/3 md:pl-12">
-                    <p class="text-xl md:text-2xl text-white font-medium leading-relaxed max-w-4xl">
-                        To be the leader in providing data-driven solutions for the Automotive and BFSI sectors, empowering our partners to unlock their full data potential, optimize operations, and enhance decision-making.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Company Values Section (ENTIRE) -->
-    <section class="py-32 bg-[#f0f4f8] overflow-hidden">
-        <!-- Faded background text 'VALUES' -->
-        <div class="absolute top-0 left-0 w-full text-center overflow-hidden pointer-events-none opacity-[0.03]">
-            <h2 class="text-[20rem] font-black leading-none whitespace-nowrap">VALUES</h2>
-        </div>
-
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight text-center mb-32">Our Values</h2>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
-                
-                <!-- 1. Empathy -->
-                <div class="flex flex-col items-center group">
-                    <div class="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
-                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-20">
-                            <span class="text-8xl md:text-[10rem] font-black text-[#a6c1ee] drop-shadow-lg group-hover:text-primary transition-colors duration-500">E</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=600&fit=crop" alt="Empathy" class="w-full h-full object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-700 relative z-10">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 text-center">Empathy</h3>
-                </div>
-
-                <!-- 2. Nimble -->
-                <div class="flex flex-col items-center group">
-                    <div class="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
-                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-20">
-                            <span class="text-8xl md:text-[10rem] font-black text-[#a6c1ee] drop-shadow-lg group-hover:text-primary transition-colors duration-500">N</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=400&h=600&fit=crop" alt="Nimble" class="w-full h-full object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-700 relative z-10">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 text-center">Nimble</h3>
-                </div>
-
-                <!-- 3. Trust -->
-                <div class="flex flex-col items-center group">
-                    <div class="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
-                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-20">
-                            <span class="text-8xl md:text-[10rem] font-black text-[#f1c39e] drop-shadow-lg group-hover:text-primary transition-colors duration-500">T</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=600&fit=crop" alt="Trust" class="w-full h-full object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-700 relative z-10">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 text-center">Trust</h3>
-                </div>
-
-                <!-- 4. Intelligence -->
-                <div class="flex flex-col items-center group">
-                    <div class="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
-                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-20">
-                            <span class="text-8xl md:text-[10rem] font-black text-[#a6c1ee] drop-shadow-lg group-hover:text-primary transition-colors duration-500">I</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=600&fit=crop" alt="Intelligence" class="w-full h-full object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-700 relative z-10">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 text-center">Intelligence</h3>
-                </div>
-
-                <!-- 5. Responsible -->
-                <div class="flex flex-col items-center group">
-                    <div class="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
-                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-20">
-                            <span class="text-8xl md:text-[10rem] font-black text-[#a6c1ee] drop-shadow-lg group-hover:text-primary transition-colors duration-500">R</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=600&fit=crop" alt="Responsible" class="w-full h-full object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-700 relative z-10">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 text-center">Responsible</h3>
-                </div>
-
-                <!-- 6. Entrepreneur -->
-                <div class="flex flex-col items-center group">
-                    <div class="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
-                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-20">
-                            <span class="text-8xl md:text-[10rem] font-black text-[#a6c1ee] drop-shadow-lg group-hover:text-primary transition-colors duration-500">E</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=600&fit=crop" alt="Entrepreneur" class="w-full h-full object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-700 relative z-10">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 text-center">Entrepreneur</h3>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Company Culture -->
+    <!-- Interactive Filter & Insights Grid -->
     <section class="py-24 bg-white">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-primary rounded-[2.5rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl max-w-5xl mx-auto text-center">
-                <!-- Abstract overlay -->
-                <div class="absolute -right-20 -top-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-accentBlue opacity-20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <!-- Category Filter Bar -->
+            <div class="flex overflow-x-auto space-x-3 pb-8 mb-12 border-b border-gray-100 no-scrollbar snap-x">
+                <button onclick="filterCategory('all')" id="filter-btn-all" class="filter-btn px-6 py-3 rounded-full text-base font-bold bg-primary text-white transition-all shadow-md shadow-primary/10 snap-start shrink-0">
+                    All
+                </button>
+                <button onclick="filterCategory('big-data')" id="filter-btn-big-data" class="filter-btn px-6 py-3 rounded-full text-base font-bold text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 transition-all snap-start shrink-0">
+                    Big Data
+                </button>
+                <button onclick="filterCategory('data-analytics')" id="filter-btn-data-analytics" class="filter-btn px-6 py-3 rounded-full text-base font-bold text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 transition-all snap-start shrink-0">
+                    Data Analytics
+                </button>
+                <button onclick="filterCategory('automotive')" id="filter-btn-automotive" class="filter-btn px-6 py-3 rounded-full text-base font-bold text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 transition-all snap-start shrink-0">
+                    Automotive
+                </button>
+                <button onclick="filterCategory('banking')" id="filter-btn-banking" class="filter-btn px-6 py-3 rounded-full text-base font-bold text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 transition-all snap-start shrink-0">
+                    Banking
+                </button>
+                <button onclick="filterCategory('generative-ai')" id="filter-btn-generative-ai" class="filter-btn px-6 py-3 rounded-full text-base font-bold text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 transition-all snap-start shrink-0">
+                    Generative AI
+                </button>
+            </div>
+
+            <!-- Insights Grid -->
+            <div id="insights-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
                 
-                <div class="relative z-10">
-                    <span class="text-accentBlue font-bold text-xs uppercase tracking-widest mb-4 block">Our Culture</span>
-                    <h3 class="text-3xl md:text-5xl font-extrabold mb-8">At the heart of everything</h3>
-                    <p class="text-gray-200 font-medium leading-relaxed mb-10 text-lg md:text-xl max-w-3xl mx-auto">
-                        At the heart of everything we do are the people we serve and the talented team who make it possible. Together, we build a world of possibilities with an entrepreneurial spirit. We nurture an environment where everyone feels valued, respected, and empowered to thrive.
-                    </p>
-                    <div class="flex items-center justify-center space-x-4">
-                        <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center">
-                            <svg class="w-8 h-8 text-accentPeach" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <!-- Card 1: To Mitigate Healthcare Crisis (Original) -->
+                <div class="insight-card flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="big-data">
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Healthcare big data" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                            Big Data
                         </div>
                     </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2 block">Economic Times • Sep 2020</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                            To Mitigate Healthcare Crisis
+                        </h3>
+                        <p class="text-gray-600 text-base mb-8 font-medium leading-relaxed flex-grow">
+                            How big data platforms and analytics are being leveraged to predict, prevent, and mitigate healthcare crises globally.
+                        </p>
+                        <a href="https://government.economictimes.indiatimes.com/news/healthcare/opinion-big-data-to-mitigate-healthcare-crisis/77889658" target="_blank" class="inline-flex items-center text-sm font-extrabold text-gray-900 group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border-b-2 border-transparent group-hover:border-primary pb-0.5 w-fit">
+                            Read Article <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Card 2: Quick and Accessible: Top Big Data Trends (Original) -->
+                <div class="insight-card flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="data-analytics">
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Data Analytics Graphs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                            Data Analytics
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2 block">Dataquest India • Jan 2021</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                            Quick & Accessible: Top Big Data Trends
+                        </h3>
+                        <p class="text-gray-600 text-base mb-8 font-medium leading-relaxed flex-grow">
+                            An analysis of the leading patterns in big data architectures and how they fuel real-time decision-making in large organizations.
+                        </p>
+                        <a href="https://www.dqindia.com/looking-top-trends-big-data-analytics-2021-vision/" target="_blank" class="inline-flex items-center text-sm font-extrabold text-gray-900 group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border-b-2 border-transparent group-hover:border-primary pb-0.5 w-fit">
+                            Read Article <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Predictive Analytics in Automotive After-Sales (New/Expertise) -->
+                <div class="insight-card flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="automotive">
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80" alt="EV diagnostics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                            Automotive
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2 block">Passageway Case Study • May 2026</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                            Predictive Analytics in After-Sales
+                        </h3>
+                        <p class="text-gray-600 text-base mb-8 font-medium leading-relaxed flex-grow">
+                            How connected vehicle diagnostics and predictive machine learning models optimize dealer after-sales targets and parts inventory controls.
+                        </p>
+                        <a href="./index.html#contact" class="inline-flex items-center text-sm font-extrabold text-gray-900 group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border-b-2 border-transparent group-hover:border-primary pb-0.5 w-fit">
+                            Explore Case Study <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: AI-Powered Fraud Detection in Banking (New/Expertise) -->
+                <div class="insight-card flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="banking">
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" alt="Banking security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                            Banking
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2 block">Passageway Case Study • Mar 2026</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                            Fraud Detection in Branch Banking
+                        </h3>
+                        <p class="text-gray-600 text-base mb-8 font-medium leading-relaxed flex-grow">
+                            Implementing high-performance anomaly detection to monitor transactions, secure operations, and conduct branch-wide risk profiling.
+                        </p>
+                        <a href="./index.html#contact" class="inline-flex items-center text-sm font-extrabold text-gray-900 group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border-b-2 border-transparent group-hover:border-primary pb-0.5 w-fit">
+                            Explore Case Study <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Generative AI Maturity in Enterprise Operations (New/Expertise) -->
+                <div class="insight-card flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="generative-ai">
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&q=80" alt="Artificial Intelligence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                            Generative AI
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2 block">Passageway Whitepaper • Apr 2026</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                            Enterprise Generative AI Maturity
+                        </h3>
+                        <p class="text-gray-600 text-base mb-8 font-medium leading-relaxed flex-grow">
+                            A strategic guide outlining security guidelines, deployment parameters, and architectural patterns for LLMs in highly regulated industries.
+                        </p>
+                        <a href="./index.html#contact" class="inline-flex items-center text-sm font-extrabold text-gray-900 group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border-b-2 border-transparent group-hover:border-primary pb-0.5 w-fit">
+                            Read Whitepaper <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Connected Vehicle Fleet Intelligence (New/Expertise) -->
+                <div class="insight-card flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="automotive">
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80" alt="Fleet trucks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                            Automotive
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2 block">Passageway Case Study • Jun 2026</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                            Connected Fleet Telematics
+                        </h3>
+                        <p class="text-gray-600 text-base mb-8 font-medium leading-relaxed flex-grow">
+                            Leveraging real-time telemetry datasets to optimize franchise compliance, analyze claims, and predict component fatigue cycles.
+                        </p>
+                        <a href="./index.html#contact" class="inline-flex items-center text-sm font-extrabold text-gray-900 group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border-b-2 border-transparent group-hover:border-primary pb-0.5 w-fit">
+                            Explore Case Study <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -488,8 +495,9 @@
         </div>
     </footer>
 
-    <!-- Script for Mobile Drawer -->
+    <!-- Filter & Mobile Drawer Logic -->
     <script>
+        // Mobile Drawer Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const drawer = document.getElementById('mobile-menu-drawer');
         const drawerContent = document.getElementById('mobile-menu-content');
@@ -512,6 +520,46 @@
         drawer.addEventListener('click', (e) => {
             if (e.target === drawer) toggleMenu();
         });
+
+        // Category Filter Logic
+        function filterCategory(category) {
+            // Update Active Button State
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.id === `filter-btn-${category}`) {
+                    btn.classList.add('bg-primary', 'text-white', 'shadow-md', 'shadow-primary/10');
+                    btn.classList.remove('text-gray-500', 'hover:text-gray-900', 'bg-gray-50', 'hover:bg-gray-100');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white', 'shadow-md', 'shadow-primary/10');
+                    btn.classList.add('text-gray-500', 'hover:text-gray-900', 'bg-gray-50', 'hover:bg-gray-100');
+                }
+            });
+
+            // Filter Grid Items with Smooth Fade Animations
+            const cards = document.querySelectorAll('.insight-card');
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (category === 'all' || cardCategory === category) {
+                    // Show matching cards
+                    card.style.display = 'flex';
+                    // Trigger reflow to apply opacity transitions
+                    void card.offsetHeight;
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                } else {
+                    // Hide non-matching cards
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    // Delay setting display none until opacity transition completes
+                    setTimeout(() => {
+                        if (card.style.opacity === '0') {
+                            card.style.display = 'none';
+                        }
+                    }, 300);
+                }
+            });
+        }
     </script>
 </body>
 </html>
