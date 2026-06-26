@@ -81,11 +81,12 @@ export const Home: React.FC = () => {
       <section className="min-h-[90vh] flex items-center justify-center pt-24 pb-32 text-center px-4 overflow-hidden relative bg-secondary">
         {/* Full-screen Background Video */}
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-          <source src="/want_to_add_a_video_here_at_my.mp4" type="video/mp4" />
+          {/* <source src="/want_to_add_a_video_here_at_my.mp4" type="video/mp4" /> */}
+          <source src="/pssgway_website__RECREATE.mp4" type="video/mp4" />
         </video>
         {/* Dark Overlay for Readability */}
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        
+
         <div className="max-w-5xl mx-auto z-20 relative">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight text-white mb-8 leading-[1.1]">
             Empowering business<br />
@@ -138,7 +139,8 @@ export const Home: React.FC = () => {
         </div>
 
         {/* Custom inline animations for text cycling */}
-        <style dangerouslySetInnerHTML={{__html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           @keyframes textCycle1 {
             0%, 28% { opacity: 1; transform: translateY(0); }
             33%, 95% { opacity: 0; transform: translateY(-20px); }
@@ -165,7 +167,7 @@ export const Home: React.FC = () => {
         {/* Gradient masks for smooth edge fade */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
-        
+
         <div className="relative flex overflow-hidden">
           <div className="animate-marquee whitespace-nowrap flex space-x-24 items-center px-12">
             <span className="text-2xl font-black text-gray-400 grayscale opacity-50 hover:opacity-100 transition-opacity cursor-pointer">TechCorp</span>
@@ -206,11 +208,10 @@ export const Home: React.FC = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`w-full text-left px-6 py-5 rounded-xl border-l-4 font-bold text-lg transition-all flex justify-between items-center group cursor-pointer ${
-                    isActive
+                  className={`w-full text-left px-6 py-5 rounded-xl border-l-4 font-bold text-lg transition-all flex justify-between items-center group cursor-pointer ${isActive
                       ? 'bg-gray-50 border-primary text-primary shadow-sm'
                       : 'border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   {labels[tab]}
                   <svg className={`w-5 h-5 transition-transform ${isActive ? 'translate-x-1' : 'opacity-0 group-hover:opacity-100'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -305,7 +306,7 @@ export const Home: React.FC = () => {
             View All <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
           </Link>
         </div>
-        
+
         {/* Horizontal scrollable container */}
         <div className="flex overflow-x-auto space-x-8 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto no-scrollbar snap-x">
           {/* Card 1 */}
