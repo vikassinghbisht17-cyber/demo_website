@@ -26,3 +26,5 @@ dist-ssr
 # Temporary backups
 temp_backup/
 
+# Implementation plans
+backend_implementation_plan.md
