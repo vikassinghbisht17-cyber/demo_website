@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Company } from './pages/Company';
 import { Careers } from './pages/Careers';
 import { Insights } from './pages/Insights';
+import { IndustrySolution } from './pages/IndustrySolution';
 
 // Scroll to top on route change helper
 const ScrollToTop: React.FC = () => {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/company" element={<Company />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/solutions" element={<IndustrySolution />} />
           </Routes>
         </main>
 

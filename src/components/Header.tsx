@@ -78,45 +78,45 @@ export const Header: React.FC = () => {
                 <div>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Automotive</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">After-Sales Analytics</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Connected Vehicles</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Customer Data Management</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">After-Sales Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Connected Vehicles</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Customer Data Management</Link></li>
                   </ul>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Banking</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Core Banking Solutions</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Loan Management</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Regulatory Reporting</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Core Banking Solutions</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Loan Management</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Regulatory Reporting</Link></li>
                   </ul>
                 </div>
                 {/* Column 2 */}
                 <div>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Finance</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Risk & Fraud Analytics</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Audit & Vigilance</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Investment Insights</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Risk & Fraud Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Audit & Vigilance</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Investment Insights</Link></li>
                   </ul>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">FMCG</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Supply Chain Analytics</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Consumer Behavior Modeling</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Inventory Optimization</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Supply Chain Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Consumer Behavior Modeling</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Inventory Optimization</Link></li>
                   </ul>
                 </div>
                 {/* Column 3 */}
                 <div>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Energy Metering</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Smart Grid Analytics</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Predictive Maintenance</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Demand Forecasting</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Smart Grid Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Predictive Maintenance</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Demand Forecasting</Link></li>
                   </ul>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Sports Leagues</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Fan Engagement Data</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Player Performance Analytics</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Ticketing & Revenue Strategies</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Fan Engagement Data</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Player Performance Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Ticketing & Revenue Strategies</Link></li>
                   </ul>
                 </div>
               </div>
@@ -188,9 +188,9 @@ export const Header: React.FC = () => {
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Industry Solutions</h4>
                   <ul className="space-y-3 pl-2">
-                    <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive After-Sales</Link></li>
-                    <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Risk & Fraud</Link></li>
-                    <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Energy Metering</Link></li>
+                    <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive After-Sales</Link></li>
+                    <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Risk & Fraud</Link></li>
+                    <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Energy Metering</Link></li>
                   </ul>
                 </div>
 
