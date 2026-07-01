@@ -19,7 +19,8 @@ const competencies = [
       </svg>
     ),
     color: 'bg-primary',
-    textColor: 'text-primary'
+    textColor: 'text-primary',
+    relatedCaseStudyId: 4
   },
   {
     id: 'analytics',
@@ -38,7 +39,8 @@ const competencies = [
       </svg>
     ),
     color: 'bg-accent-blue',
-    textColor: 'text-accent-blue'
+    textColor: 'text-accent-blue',
+    relatedCaseStudyId: 1
   },
   {
     id: 'ml',
@@ -57,7 +59,8 @@ const competencies = [
       </svg>
     ),
     color: 'bg-accent-peach',
-    textColor: 'text-accent-peach'
+    textColor: 'text-accent-peach',
+    relatedCaseStudyId: 6
   },
   {
     id: 'genai',
@@ -76,7 +79,8 @@ const competencies = [
       </svg>
     ),
     color: 'bg-accent-red',
-    textColor: 'text-accent-red'
+    textColor: 'text-accent-red',
+    relatedCaseStudyId: 2
   }
 ];
 
@@ -148,7 +152,7 @@ export const CoreCompetencies: React.FC = () => {
                   </div>
 
                   <div className="mt-12">
-                    <Link to="/solutions" className="inline-flex items-center text-sm font-extrabold text-primary hover:text-accent-blue uppercase tracking-widest transition-colors border-b-2 border-primary pb-1 hover:border-accent-blue">
+                    <Link to={`/solutions#case-study-${comp.relatedCaseStudyId}`} className="inline-flex items-center text-sm font-extrabold text-primary hover:text-accent-blue uppercase tracking-widest transition-colors border-b-2 border-primary pb-1 hover:border-accent-blue">
                       View Related Case Studies <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </Link>
                   </div>

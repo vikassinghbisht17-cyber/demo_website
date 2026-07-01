@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ContactForm } from '../components/ContactForm';
 
 interface ValueItem {
@@ -9,6 +9,46 @@ interface ValueItem {
 }
 
 export const Company: React.FC = () => {
+  const [activeBio, setActiveBio] = useState<any>(null);
+
+  useEffect(() => {
+    if (activeBio) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeBio]);
+
+  const founders = [
+    {
+      id: 'abhishek',
+      name: 'Abhishek Dadhichi',
+      role: 'Co-Founder and Director',
+      shortBio: 'Driving the vision and technical strategy at Passageway. Specializing in advanced analytics and enterprise AI architecture.',
+      fullBio: 'Abhishek is a visionary leader with extensive experience driving the technical strategy and vision at Passageway. With a deep specialization in advanced analytics, data engineering, and enterprise AI architecture, he is passionate about transforming raw enterprise data into actionable intelligence. His leadership ensures that our GenAI frameworks and data platforms deliver scalable, real-world impacts for our clients.',
+      image: '/co_founder_one_image.png'
+    },
+    {
+      id: 'roop',
+      name: 'Roop Singh',
+      role: 'Founder',
+      shortBio: '15+ years experience in business and IT consulting for BFSI and Healthcare industries.',
+      fullBio: 'Roop brings over 15 years of experience in providing business and IT consulting services to the BFSI and Healthcare industries. He focuses on aligning business strategies to define concepts and developing data-driven IT solutions that simplify decision-making. At Passageway, Roop aims to help clients solve complex business problems using Data Science, Machine Learning, and Gen AI in an intuitive way. His focus is to deeply empathize with the client\'s business problems and use data analytics as a core enabler to solve them.',
+      image: '' 
+    },
+    {
+      id: 'varun',
+      name: 'Varun Pandey',
+      role: 'Co-Founder',
+      shortBio: 'Leading strategic growth and operational excellence. Focused on delivering impactful AI and data solutions.',
+      fullBio: 'Varun leads strategic growth and operational excellence at Passageway. With a sharp focus on delivering impactful AI and data solutions, he ensures that our technological innovations drive measurable business outcomes for enterprise clients. His expertise in scaling operations and fostering key partnerships has been instrumental in building our reputation for a 100% delivery track record.',
+      image: '/co_founder_three_image.png'
+    }
+  ];
+
   const valuesList: ValueItem[] = [
     {
       letter: 'E',
@@ -137,53 +177,36 @@ export const Company: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Meet Our Founders</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Founder 1: Abhishek */}
-            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden group">
-              <div className="h-[400px] w-full overflow-hidden bg-gray-100 relative">
-                <img src="/co_founder_one_image.png" alt="Abhishek" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <div className="p-8 relative">
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Abhishek Dadhichi</h3>
-                <span className="text-sm font-bold uppercase tracking-widest text-primary block mb-4">Co-Founder and Director</span>
-                <p className="text-gray-600 font-medium leading-relaxed">
-                  Driving the vision and technical strategy at Passageway. Specializing in advanced analytics, data engineering, and enterprise AI architecture to transform raw data into actionable intelligence.
-                </p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            {founders.map((founder) => (
+              <div key={founder.id} className="bg-white rounded-[1.5rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col sm:flex-row group cursor-pointer" onClick={() => setActiveBio(founder)}>
+                {/* Image Section */}
+                <div className="w-full sm:w-5/12 h-64 sm:h-auto min-h-[300px] relative overflow-hidden bg-gray-50 flex-shrink-0 border-r border-gray-50">
+                  {founder.image ? (
+                    <img src={founder.image} alt={founder.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 absolute inset-0" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center absolute inset-0">
+                      <svg className="w-16 h-16 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
 
-            {/* Founder 2 Placeholder */}
-            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden group">
-              <div className="h-[400px] w-full overflow-hidden bg-gray-50 relative flex items-center justify-center border-b border-gray-100">
-                <svg className="w-20 h-20 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+                {/* Text Section */}
+                <div className="w-full sm:w-7/12 p-8 flex flex-col justify-center bg-white relative">
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">{founder.name}</h3>
+                  <span className="text-sm font-bold text-gray-600 block mb-6">{founder.role}</span>
+                  <p className="text-gray-500 font-medium leading-relaxed mb-6 line-clamp-3 sm:line-clamp-4">
+                    {founder.shortBio}
+                  </p>
+                  <button className="inline-flex items-center text-sm font-bold text-primary hover:text-accent-blue transition-colors mt-auto w-fit">
+                    Read Bio <svg className="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 12h14m0 0l-6-6m6 6l-6 6" /></svg>
+                  </button>
+                </div>
               </div>
-              <div className="p-8 relative">
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Roop Singh</h3>
-                <span className="text-sm font-bold uppercase tracking-widest text-gray-400 block mb-4">Founder</span>
-                <p className="text-gray-400 font-medium leading-relaxed italic">
-                  15+ experience in providing business and IT consulting services to BFSI, Automotive, and Health care industries with a focus on aligning business to define concepts and developing Data driven IT solutions to simplify decision making.
-                  Passageway aims to help clients to solve business problems using Data Science, Machine Learning, Gen AI in an intuitive way. Our focus is to empathize with client's business problems and use Data analytics as enabler to solve them.
-                </p>
-              </div>
-            </div>
-
-            {/* Founder 3: Varun Pandey */}
-            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden group">
-              <div className="h-[400px] w-full overflow-hidden bg-gray-100 relative">
-                <img src="/co_founder_three_image.png" alt="Varun Pandey" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <div className="p-8 relative">
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Varun Pandey</h3>
-                <span className="text-sm font-bold uppercase tracking-widest text-primary block mb-4">Co-Founder</span>
-                <p className="text-gray-600 font-medium leading-relaxed">
-                  Leading strategic growth and operational excellence. Focused on delivering impactful AI and data solutions that drive measurable business outcomes for enterprise clients.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -196,23 +219,6 @@ export const Company: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Industry Focus</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Automotive Focus */}
-            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-blue/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M21 16v-4a1 1 0 00-1-1h-3l-2-3h-5" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Automotive Intelligence</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  We empower automotive OEMs with deep insights in <strong className="text-gray-900">After-Sales Analytics</strong>, warranty defect trend monitoring, regional parts demand forecasting models, and dealer network scorecards.
-                </p>
-              </div>
-            </div>
-
             {/* Manufacturing Focus */}
             <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-red/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
@@ -366,6 +372,51 @@ export const Company: React.FC = () => {
 
       {/* Module 12: Contact Form */}
       <ContactForm />
+
+      {/* Founder Bio Modal */}
+      {activeBio && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" onClick={() => setActiveBio(null)}>
+          <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" onClick={() => setActiveBio(null)}></div>
+          <div 
+            className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden relative z-10 max-h-[90vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setActiveBio(null)}
+              className="absolute top-6 right-6 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors z-20"
+            >
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="flex flex-col md:flex-row overflow-y-auto">
+              {/* Modal Image */}
+              <div className="w-full md:w-5/12 h-72 md:h-auto min-h-[300px] bg-gray-50 flex-shrink-0 relative">
+                {activeBio.image ? (
+                  <img src={activeBio.image} alt={activeBio.name} className="w-full h-full object-cover object-top absolute inset-0" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center absolute inset-0 border-b md:border-r border-gray-100">
+                    <svg className="w-20 h-20 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                )}
+              </div>
+              {/* Modal Text */}
+              <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col bg-white">
+                <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">{activeBio.name}</h3>
+                <span className="text-md font-bold text-primary uppercase tracking-widest block mb-8">{activeBio.role}</span>
+                <div className="w-12 h-1 bg-gray-200 mb-8 rounded-full"></div>
+                <div className="prose prose-gray">
+                  <p className="text-gray-600 font-medium leading-relaxed whitespace-pre-wrap">
+                    {activeBio.fullBio}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

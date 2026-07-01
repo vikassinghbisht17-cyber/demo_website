@@ -25,17 +25,6 @@ const caseStudies = [
     reverse: true,
   },
   {
-    id: 3,
-    title: 'Automotive After-Sales & Dealer Analytics Platform',
-    industry: 'Automotive',
-    challenge: 'An automotive OEM\'s regional managers and dealer network had limited visibility into after-sales revenue patterns, warranty claims data, and parts inventory needs, relying on delayed monthly spreadsheets.',
-    solution: 'We built a unified dealer intelligence platform integrating multiple Dealer Management Systems (DMS) with OEM warranty databases. Incorporated custom parts forecasting and defective parts clustering models.',
-    outcome: 'Provided real-time visibility to dealer principals and OEM management, enabling proactive workshop capacity management, optimized spare parts stocking, and a 70% reduction in manual reporting overhead.',
-    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop',
-    bgColor: 'bg-gray-50',
-    reverse: false,
-  },
-  {
     id: 4,
     title: 'Distributed Tender Data Engineering & AI Platform',
     industry: 'Government & Public Procurement',
@@ -44,7 +33,7 @@ const caseStudies = [
     outcome: 'Scaled ingestion from 30K to 750K tenders per day automatically. Allowed end-users to find highly relevant tenders instantly using natural language queries, completely transforming the tender discovery process.',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop',
     bgColor: 'bg-[#f4f5f8]',
-    reverse: true,
+    reverse: false,
   },
   {
     id: 5,
@@ -54,8 +43,8 @@ const caseStudies = [
     solution: 'We co-engineered a native data engineering layer featuring pre-defined ETL pipelines, metadata collectors, and a robust Data Fabric. This unified data model fed directly into drag-and-drop dashboards and a conversational AI analytics engine.',
     outcome: 'Delivered packaged domain analytics apps that allowed business users to ask plain-language questions and trigger automated workflows directly within the platform, eliminating the need for third-party BI tools.',
     image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop',
-    bgColor: 'bg-gray-50',
-    reverse: false,
+    bgColor: 'bg-[#f4f5f8]',
+    reverse: true,
   },
   {
     id: 6,
@@ -65,15 +54,25 @@ const caseStudies = [
     solution: 'We deployed our proprietary Decision Anomaly Detection framework, which combined real-time transaction monitoring with context-aware anomaly scoring and ML clustering techniques augmented by LLMs.',
     outcome: 'The system proactively flagged hidden fraud signals and provided natural-language alert narratives explaining exactly why an anomaly was flagged. Reduced false positives by over 40% and drastically accelerated underwriting review times.',
     image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1200&auto=format&fit=crop',
-    bgColor: 'bg-[#f4f5f8]',
-    reverse: true,
+    bgColor: 'bg-gray-50',
+    reverse: false,
   }
 ];
 
 export const IndustrySolution: React.FC = () => {
-  // Always scroll to top on mount
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Handle hash scrolling if present in the URL
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (
@@ -102,7 +101,7 @@ export const IndustrySolution: React.FC = () => {
       {/* Case Studies Zig-Zag Layout */}
       <div className="w-full">
         {caseStudies.map((study) => (
-          <div key={study.id} className="flex flex-col lg:flex-row w-full group">
+          <div key={study.id} id={`case-study-${study.id}`} className="flex flex-col lg:flex-row w-full group">
             {/* Text Block */}
             <div className={`w-full lg:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center ${study.bgColor} ${study.reverse ? 'lg:order-2' : 'lg:order-1'}`}>
               <span className="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">{study.industry}</span>

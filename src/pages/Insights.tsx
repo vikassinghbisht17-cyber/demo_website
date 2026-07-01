@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ContactForm } from '../components/ContactForm';
 
-type InsightCategory = 'all' | 'big-data' | 'data-analytics' | 'automotive' | 'banking' | 'generative-ai';
+type InsightCategory = 'all' | 'big-data' | 'data-analytics' | 'healthcare' | 'banking' | 'generative-ai';
 
 interface InsightArticle {
   title: string;
@@ -23,7 +23,7 @@ export const Insights: React.FC = () => {
     { value: 'all', label: 'All' },
     { value: 'big-data', label: 'Big Data' },
     { value: 'data-analytics', label: 'Data Analytics' },
-    { value: 'automotive', label: 'Automotive' },
+    { value: 'healthcare', label: 'Healthcare' },
     { value: 'banking', label: 'Banking' },
     { value: 'generative-ai', label: 'Generative AI' },
   ];
@@ -52,13 +52,13 @@ export const Insights: React.FC = () => {
       isExternal: true,
     },
     {
-      title: 'Predictive Analytics in After-Sales',
-      category: 'automotive',
-      categoryLabel: 'Automotive',
+      title: 'Predictive Analytics in Patient Care',
+      category: 'healthcare',
+      categoryLabel: 'Healthcare',
       source: 'Passageway Case Study',
       date: 'May 2026',
-      description: 'How connected vehicle diagnostics and predictive machine learning models optimize dealer after-sales targets and parts inventory controls.',
-      image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80',
+      description: 'How connected health diagnostics and predictive machine learning models optimize patient care targets and hospital resource controls.',
+      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',
       link: '/#contact',
       isExternal: false,
     },
@@ -85,13 +85,13 @@ export const Insights: React.FC = () => {
       isExternal: false,
     },
     {
-      title: 'Connected Fleet Telematics',
-      category: 'automotive',
-      categoryLabel: 'Automotive',
+      title: 'Connected Telemedicine Solutions',
+      category: 'healthcare',
+      categoryLabel: 'Healthcare',
       source: 'Passageway Case Study',
       date: 'Jun 2026',
-      description: 'Leveraging real-time telemetry datasets to optimize franchise compliance, analyze claims, and predict component fatigue cycles.',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80',
+      description: 'Leveraging real-time patient datasets to optimize treatment compliance, analyze claims, and predict healthcare resource needs.',
+      image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&q=80',
       link: '/#contact',
       isExternal: false,
     },
@@ -129,7 +129,7 @@ export const Insights: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl">
-              Stay updated with the latest insights, innovations, and expertise brewing as we redefine Automotive and Banking solutions.
+              Stay updated with the latest insights, innovations, and expertise brewing as we redefine Healthcare and Banking solutions.
             </p>
           </div>
         </div>

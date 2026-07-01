@@ -135,7 +135,7 @@ export const Home: React.FC = () => {
       <section className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-3">
           <Link to="/solutions" className="relative h-[500px] bg-gray-900 group overflow-hidden cursor-pointer block">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" className="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-40" alt="Automotive" />
+            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80" className="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-40" alt="Digital Platforms" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="w-20 h-20 rounded-full border border-white flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all hover:scale-110">
@@ -143,8 +143,8 @@ export const Home: React.FC = () => {
               </div>
             </div>
             <div className="absolute bottom-0 left-0 p-12 w-full transform group-hover:-translate-y-4 transition-transform duration-500">
-              <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-3 block">Automotive</span>
-              <h3 className="text-white text-4xl font-bold leading-tight">Automotive After-Sales <br />Analytics Platform</h3>
+              <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-3 block">Digital Platforms</span>
+              <h3 className="text-white text-4xl font-bold leading-tight">Enterprise Data & <br />Analytics Platform</h3>
             </div>
           </Link>
           <Link to="/solutions" className="relative h-[500px] bg-gray-900 group overflow-hidden cursor-pointer block">
@@ -236,7 +236,7 @@ export const Home: React.FC = () => {
           <div className="md:w-1/2 p-12 lg:p-20 flex flex-col justify-center text-white relative z-10">
             <h2 className="text-4xl lg:text-5xl font-extrabold mb-8 leading-tight">We're Your Partner For Innovation & Growth</h2>
             <p className="mb-10 text-xl text-gray-200 font-medium leading-relaxed">
-              At Passageway, we leverage advanced data analytics and AI to solve complex industry challenges. From predictive maintenance in automotives to fraud detection in banking, our solutions drive measurable business outcomes.
+              At Passageway, we leverage advanced data analytics and AI to solve complex industry challenges. From predictive maintenance in manufacturing to fraud detection in banking, our solutions drive measurable business outcomes.
             </p>
             <div className="grid grid-cols-2 gap-8 mb-12">
               <div>
@@ -282,7 +282,7 @@ export const Home: React.FC = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-10 mb-12 border-t border-gray-200 pt-12">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-8 bg-accent-blue rounded-full shrink-0"></div>
-                <div className="font-black text-gray-900 uppercase tracking-wider text-sm lg:text-base leading-tight">Automotive</div>
+                <div className="font-black text-gray-900 uppercase tracking-wider text-sm lg:text-base leading-tight">Healthcare</div>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-8 bg-accent-red rounded-full shrink-0"></div>

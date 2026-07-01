@@ -18,7 +18,7 @@ interface OpenRole {
 export const Careers: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      quote: "The level of autonomy and trust here is incredible. I was given the opportunity to lead the development of our predictive maintenance platform for a major automotive client within my first year.",
+      quote: "The level of autonomy and trust here is incredible. I was given the opportunity to lead the development of our predictive maintenance platform for a major manufacturing client within my first year.",
       author: "Sandeep K.",
       role: "Lead Data Scientist",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop",
@@ -54,7 +54,7 @@ export const Careers: React.FC = () => {
       email: "careers@pssgway.com"
     },
     {
-      title: "Automotive Analytics Consultant",
+      title: "Healthcare Analytics Consultant",
       location: "Remote (India)",
       type: "Full Time",
       email: "careers@pssgway.com"
@@ -88,7 +88,7 @@ export const Careers: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed mb-10 max-w-2xl">
-              Join a culture of continuous learning, impactful work, and innovation. Build the future of enterprise AI and data intelligence across Automotive, Manufacturing, BFSI, Energy, and Digital Platforms.
+              Join a culture of continuous learning, impactful work, and innovation. Build the future of enterprise AI and data intelligence across Manufacturing, BFSI, Energy, and Digital Platforms.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
               <a
@@ -148,7 +148,7 @@ export const Careers: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Impactful Work</h3>
               <p className="text-gray-600 leading-relaxed font-medium">
-                Work directly with global leaders in the Automotive and Banking sectors, building solutions that transform their core operations.
+                Work directly with global leaders in the Manufacturing and Banking sectors, building solutions that transform their core operations.
               </p>
             </div>
             {/* Pillar 3 */}

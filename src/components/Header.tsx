@@ -54,12 +54,7 @@ export const Header: React.FC = () => {
               <div className="absolute top-20 -left-64 w-screen max-w-5xl bg-white border border-gray-100 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-b-xl z-50 p-10 grid grid-cols-1 md:grid-cols-3 gap-12">
                 {/* Column 1 */}
                 <div>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Automotive</h3>
-                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Automotive Intelligence</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">After-Sales Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Warranty Defect Monitoring</Link></li>
-                  </ul>
+
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Manufacturing</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
                     <li><Link to="/solutions" className="hover:text-primary transition-colors">Manufacturing Analytics</Link></li>
@@ -150,7 +145,7 @@ export const Header: React.FC = () => {
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Core Competency</h4>
                   <ul className="space-y-3 pl-2">
-                    <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive Consulting</Link></li>
+
                     <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Banking & Finance Consulting</Link></li>
                     <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">ML & Data Science</Link></li>
                     <li><Link to="/company" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Data Engineering</Link></li>
@@ -161,7 +156,7 @@ export const Header: React.FC = () => {
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Industry Solutions</h4>
                   <ul className="space-y-3 pl-2">
-                    <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive After-Sales</Link></li>
+
                     <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Risk & Fraud</Link></li>
                     <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Energy Metering</Link></li>
                   </ul>
