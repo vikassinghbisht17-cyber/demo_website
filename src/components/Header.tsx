@@ -38,32 +38,10 @@ export const Header: React.FC = () => {
 
           {/* Center: Desktop Nav */}
           <nav className="hidden lg:flex space-x-10 h-full">
-            {/* 1. Core Competency Dropdown */}
-            <div className="group h-full flex items-center cursor-pointer relative">
-              <span className="text-base font-bold text-gray-800 group-hover:text-primary transition-colors flex items-center h-full">
-                Core Competency
-                <svg className="w-4 h-4 ml-1 text-gray-400 group-hover:text-primary transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-              <div className="absolute top-20 -left-32 w-screen max-w-3xl bg-white border border-gray-100 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-b-xl z-50 flex overflow-hidden">
-                <div className="w-1/2 bg-gray-50 p-8">
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Business Consulting</h3>
-                  <ul className="space-y-4 text-base font-semibold">
-                    <li><Link to="/company" className="text-gray-900 hover:text-primary transition-colors">Automotive Consulting</Link></li>
-                    <li><Link to="/company" className="text-gray-900 hover:text-primary transition-colors">Banking & Finance Consulting</Link></li>
-                  </ul>
-                </div>
-                <div className="w-1/2 p-8">
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Analytical Services</h3>
-                  <ul className="space-y-4 text-base font-semibold text-gray-600">
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Machine Learning & Data Science</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Data Engineering</Link></li>
-                    <li><Link to="/company" className="hover:text-primary transition-colors">Generative AI</Link></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            {/* 1. Capabilities Link */}
+            <NavLink to="/capabilities" className={navLinkClass}>
+              Capabilities
+            </NavLink>
 
             {/* 2. Industry Solutions Mega-Menu */}
             <div className="group h-full flex items-center cursor-pointer relative">
@@ -78,45 +56,40 @@ export const Header: React.FC = () => {
                 <div>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Automotive</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Automotive Intelligence</Link></li>
                     <li><Link to="/solutions" className="hover:text-primary transition-colors">After-Sales Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Connected Vehicles</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Customer Data Management</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Warranty Defect Monitoring</Link></li>
                   </ul>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Banking</h3>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Manufacturing</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Core Banking Solutions</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Loan Management</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Regulatory Reporting</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Manufacturing Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">4M Traceability Framework</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Operational KPIs</Link></li>
                   </ul>
                 </div>
                 {/* Column 2 */}
                 <div>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Finance</h3>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Banking & Financial Services</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Risk & Fraud Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Audit & Vigilance</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Investment Insights</Link></li>
-                  </ul>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">FMCG</h3>
-                  <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Supply Chain Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Consumer Behavior Modeling</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Inventory Optimization</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">BFSI Platform Engineering</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Fraud Vigilance Monitors</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Resolution OS Orchestration</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Credit Default Prediction</Link></li>
                   </ul>
                 </div>
                 {/* Column 3 */}
                 <div>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Energy Metering</h3>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Energy & Utilities</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Smart Grid Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Predictive Maintenance</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Demand Forecasting</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Asset Performance Monitoring</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Power Outage Intelligence</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Energy Consumption Forecasting</Link></li>
                   </ul>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Sports Leagues</h3>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Digital Platforms & Media</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Fan Engagement Data</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Player Performance Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Ticketing & Revenue Strategies</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Product Recommendation Engines</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">User Behavior Analytics</Link></li>
+                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Marketing Funnel Performance</Link></li>
                   </ul>
                 </div>
               </div>
@@ -196,6 +169,7 @@ export const Header: React.FC = () => {
 
                 <div className="border-t border-gray-100 pt-6 space-y-4">
                   <Link to="/insights" className="block text-lg font-bold text-primary transition-colors">Insights</Link>
+                  <Link to="/capabilities" className="block text-2xl font-bold text-gray-900 hover:text-primary transition-colors">Capabilities</Link>
                   <Link to="/company" className="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Company</Link>
                   <Link to="/careers" className="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Careers</Link>
                 </div>

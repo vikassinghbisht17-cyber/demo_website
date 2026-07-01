@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Company } from './pages/Company';
 import { Careers } from './pages/Careers';
 import { Insights } from './pages/Insights';
+import { CoreCompetencies } from './pages/CoreCompetencies';
 import { IndustrySolution } from './pages/IndustrySolution';
 
 // Scroll to top on route change helper
@@ -39,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/company" element={<Company />} />
+            <Route path="/capabilities" element={<CoreCompetencies />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/solutions" element={<IndustrySolution />} />

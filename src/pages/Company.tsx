@@ -54,7 +54,7 @@ export const Company: React.FC = () => {
       <section className="pt-32 pb-24 bg-white text-center px-4 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-primary/5 to-transparent rounded-full blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-accent-blue/10 to-transparent rounded-full blur-3xl -z-10"></div>
-        
+
         <div className="max-w-4xl mx-auto z-10 relative">
           <span className="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">About Us</span>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-8 leading-[1.1]">
@@ -64,41 +64,218 @@ export const Company: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed mb-12">
-            Established in 2023, Passageway is a premier Data Analytics company based in Jaipur, Rajasthan. We specialize in solving complex data challenges in the Automotive and BFSI industries.
+            Founded in 2023 in Jaipur, Rajasthan, Passageway Tech Private Limited is a pioneering Data Engineering and AI consultancy. We empower enterprises to synthesize raw, fragmented datasets into coherent, actionable intelligence—engineered through robust data platforms, advanced analytics, and production-grade Generative AI frameworks built for real-world impact.
           </p>
+        </div>
+      </section>
+
+      {/* Stats Divider Section (Wipro Inspired) */}
+      <section className="py-16 bg-[#0b295c] text-white border-y border-white/5 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] h-[300px] bg-white/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[300px] h-[300px] bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Card 1 */}
+            <div
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-peach px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-peach/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              style={{ animationDelay: '100ms' }}
+            >
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-peach transition-colors duration-300">50+</span>
+              <span className="text-sm font-medium text-blue-200 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Data & AI Professionals</span>
+            </div>
+            {/* Card 2 */}
+            <div
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-blue px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-blue/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              style={{ animationDelay: '200ms' }}
+            >
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">2023</span>
+              <span className="text-sm font-medium text-blue-200 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Founded in Jaipur, India</span>
+            </div>
+            {/* Card 3 */}
+            <div
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-peach px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-peach/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              style={{ animationDelay: '300ms' }}
+            >
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-peach transition-colors duration-300">5</span>
+              <span className="text-sm font-medium text-blue-200 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Gen AI Frameworks</span>
+            </div>
+            {/* Card 4 */}
+            <div
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-blue px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-blue/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              style={{ animationDelay: '400ms' }}
+            >
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">100%</span>
+              <span className="text-sm font-medium text-blue-200 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Delivery Track Record</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Load animations keyframes */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          @keyframes fadeUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          `
+        }} />
+      </section>
+
+      {/* Leadership Team Section */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-3 block">Leadership</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Meet Our Founders</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Founder 1: Abhishek */}
+            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden group">
+              <div className="h-[400px] w-full overflow-hidden bg-gray-100 relative">
+                <img src="/co_founder_one_image.png" alt="Abhishek" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-8 relative">
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Abhishek</h3>
+                <span className="text-sm font-bold uppercase tracking-widest text-primary block mb-4">Co-Founder</span>
+                <p className="text-gray-600 font-medium leading-relaxed">
+                  Driving the vision and technical strategy at Passageway. Specializing in advanced analytics, data engineering, and enterprise AI architecture to transform raw data into actionable intelligence.
+                </p>
+              </div>
+            </div>
+
+            {/* Founder 2 Placeholder */}
+            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden group">
+              <div className="h-[400px] w-full overflow-hidden bg-gray-50 relative flex items-center justify-center border-b border-gray-100">
+                <svg className="w-20 h-20 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div className="p-8 relative">
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Roop</h3>
+                <span className="text-sm font-bold uppercase tracking-widest text-gray-400 block mb-4">Leadership Team</span>
+                <p className="text-gray-400 font-medium leading-relaxed italic">
+                  15+ experience in providing business and IT consulting services to BFSI, Automotive, and Health care industries with a focus on aligning business to define concepts and developing Data driven IT solutions to simplify decision making.
+                  Passageway aims to help clients to solve business problems using Data Science, Machine Learning, Gen AI in an intuitive way. Our focus is to empathize with client's business problems and use Data analytics as enabler to solve them.
+                </p>
+              </div>
+            </div>
+
+            {/* Founder 3: Varun Pandey */}
+            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden group">
+              <div className="h-[400px] w-full overflow-hidden bg-gray-100 relative">
+                <img src="/co_founder_three_image.png" alt="Varun Pandey" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-8 relative">
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Varun Pandey</h3>
+                <span className="text-sm font-bold uppercase tracking-widest text-primary block mb-4">Co-Founder</span>
+                <p className="text-gray-600 font-medium leading-relaxed">
+                  Leading strategic growth and operational excellence. Focused on delivering impactful AI and data solutions that drive measurable business outcomes for enterprise clients.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Company Industry Focus */}
       <section className="py-24 bg-gray-50 border-y border-gray-100">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-3 block">Specialized Solutions</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Industry Focus</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Automotive Focus */}
-            <div className="bg-white p-12 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-500 group relative overflow-hidden">
+            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-blue/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                <svg className="w-8 h-8 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M21 16v-4a1 1 0 00-1-1h-3l-2-3h-5" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Automotive Intelligence</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  We empower automotive OEMs with deep insights in <strong className="text-gray-900">After-Sales Analytics</strong>, warranty defect trend monitoring, regional parts demand forecasting models, and dealer network scorecards.
+                </p>
               </div>
-              <h3 className="text-3xl font-extrabold text-gray-900 mb-6 relative z-10">Automotive Intelligence</h3>
-              <p className="text-gray-600 text-lg leading-relaxed font-medium relative z-10">
-                We empower automotive businesses with deep insights in <strong className="text-gray-900">After-Sales Analytics</strong>, after-sales target setting and control, precise <strong className="text-gray-900">pricing strategy</strong>, claim surveillance, and franchise compliance.
-              </p>
+            </div>
+
+            {/* Manufacturing Focus */}
+            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-red/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Manufacturing Analytics</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  Leveraging our proprietary <strong className="text-gray-900">4M Traceability framework</strong> (Man, Machine, Material, Method) to unify ERP & SCADA data for OEE tracking, scrap analysis, and machine failure prediction.
+                </p>
+              </div>
             </div>
 
             {/* BFSI Focus */}
-            <div className="bg-white p-12 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-500 group relative overflow-hidden">
+            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-peach/20 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                <svg className="w-8 h-8 text-accent-peach" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-accent-peach" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Banking & Financial Services</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  We engineer creditdefault prediction models, loan application processing bots, fraud vigilance monitors, and our flagship <strong className="text-gray-900">Resolution OS</strong> orchestration layer for NBFCs.
+                </p>
               </div>
-              <h3 className="text-3xl font-extrabold text-gray-900 mb-6 relative z-10">BFSI Market Operations</h3>
-              <p className="text-gray-600 text-lg leading-relaxed font-medium relative z-10">
-                We strengthen financial market operations by offering advanced <strong className="text-gray-900">fraud detection</strong>, risk management, and comprehensive audit and vigilance solutions tailored for branch and business banking.
-              </p>
+            </div>
+
+            {/* Energy Focus */}
+            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Energy & Utilities</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  We integrate SCADA and meter telemetry into cloud data lakes to enable asset health performance monitoring, power outage intelligence, and energy consumption forecasting.
+                </p>
+              </div>
+            </div>
+
+            {/* Digital Platforms Focus */}
+            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between lg:col-span-1 md:col-span-2 lg:max-w-none md:max-w-md md:mx-auto lg:mx-0">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Digital Platforms & Media</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  We build real-time product engagement recommenders, user behavior cohort tracking tables, digital asset analytics, and marketing funnel performance engines.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -117,14 +294,17 @@ export const Company: React.FC = () => {
             <div className="w-full md:w-1/3 mb-8 md:mb-0">
               <h2 className="text-4xl md:text-5xl font-extrabold text-white pl-8 md:pl-20 border-l-4 border-transparent relative">
                 <div className="absolute left-full top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/10 blur-[80px] rounded-full pointer-events-none"></div>
-                Our Vision
+                Our Vision & Mission
               </h2>
             </div>
-            
+
             {/* Right: Text */}
             <div className="w-full md:w-2/3 md:pl-12">
-              <p className="text-xl md:text-2xl text-white font-medium leading-relaxed max-w-4xl">
-                To be the leader in providing data-driven solutions for the Automotive and BFSI sectors, empowering our partners to unlock their full data potential, optimize operations, and enhance decision-making.
+              <h3 className="text-2xl md:text-3xl text-white font-extrabold mb-4 leading-snug">
+                "Become the Trusted Partner for Enterprise Data Transformation."
+              </h3>
+              <p className="text-lg md:text-xl text-blue-100 font-light leading-relaxed max-w-4xl">
+                Enabling organizations to harness the full power of their data through modern data platforms, advanced analytics, and AI-driven solutions — delivering measurable business value at every stage.
               </p>
             </div>
           </div>
@@ -165,7 +345,7 @@ export const Company: React.FC = () => {
           <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl max-w-5xl mx-auto text-center">
             <div className="absolute -right-20 -top-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-accent-blue opacity-20 rounded-full blur-3xl pointer-events-none"></div>
-            
+
             <div className="relative z-10">
               <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-4 block">Our Culture</span>
               <h3 className="text-3xl md:text-5xl font-extrabold mb-8">At the heart of everything</h3>

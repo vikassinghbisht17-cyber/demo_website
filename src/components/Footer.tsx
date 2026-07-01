@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
               <img src="/logo-horizontal.svg" alt="Passageway" className="h-8 brightness-0 invert" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm font-medium">
-              Empowering business with hidden gems of data. Specializing in advanced analytics and AI solutions for the Automotive and Banking industries.
+              Empowering business with hidden gems of data.
             </p>
             {/* Social Icons */}
             <div className="flex space-x-4">

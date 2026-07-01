@@ -88,7 +88,7 @@ export const Careers: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed mb-10 max-w-2xl">
-              Join a culture of continuous learning, impactful work, and innovation. Build the future of Automotive and BFSI analytics with us.
+              Join a culture of continuous learning, impactful work, and innovation. Build the future of enterprise AI and data intelligence across Automotive, Manufacturing, BFSI, Energy, and Digital Platforms.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
               <a

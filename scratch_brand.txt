@@ -1,0 +1,548 @@
+=== BRAND GUIDE ===
+P assagewa y
+
+P assagewa yL ogo L ockups
+H oriz on tal L ockupV ertic al L ockupBr and mark
+P assagewa y
+
+
+The P athfinderThe "P athfinder" is a k e y visual elemen t drawn fr om the P assage w a y brand mark, 
+s ymbolizing leadership, guidanc e, and pr ogr ess. R epr esen ting the c ompan y' s r ole in 
+leading the w a y to suc c ess, it c on v e y s a sense of f orw ar d mo tion and purpose. The 
+"P athfinder" will appear thr oughout brand visuals, pr o viding a dynamic and 
+mo tiv ating r epr esen tation of the c ompan y' s mission.
+
+Titillium W ebPrimary T ypefac eOur typefac e is “Titillium W eb ”   
+Go to h ttps:/ /f on ts.google.c om/ specimen/Titillium+W eb to do wnload the f on t files
+
+V erdanaS y stem T ypefac eIn the absenc e of our primary typefac e, use “V er dana”
+
+C olor P ale ttehe x: 89796A he x: B6A18DN e xus N eutral
+he x: E9D4C0he x: F2E4D7he x: F AF4EFhe x: 4D5D7Che x: 667CA5 H oriz on Bluehe x: 809BCE
+r gb: 128, 155, 206  
+cm yk: 51, 33, 1, 0he x: 99AFD8 he x: BF CDE7 he x: E6EBF5 he x: 002035he x: 002A47Midnigh t Bluehe x: 003559
+r gb: 0, 53, 89  
+cm yk: 100, 80, 39, 32he x: 335D7Ahe x: 809AA C he x: C CD7DE he x: E4C9B0
+r gb: 228, 201, 176  
+cm yk: 10, 20, 29, 0
+
+P assagewa yThank y ou!
+
+
+=== CASE STUDIES ===
+
+DATA ENGINEERING · AI · ANALYTICS
+
+Empowering business with hidden gems of data
+Engineering Intelligence from Data
+From distributed data pipelines and resilient data lakes to enterprise analytics and generative AI.
+
+
+
+
+4M Traceability Analytics Framework
+CHAPTER ONE · MANUFACTURING INTELLIGENCE
+
+Empowering business with hidden gems of data
+01
+01
+The first major client engagements revealed a universal manufacturing truth: defects and failures are always traceable — if you know where to look. Passageway built the 4M framework to look everywhere, simultaneously.
+
+4M
+
+
+MAN
+Operator & shift
+traceability
+
+
+MACHINE
+Line & equipment
+traceability
+
+
+MATERIAL
+Batch & supplier
+traceability
+
+
+METHOD
+Process parameter
+traceability
+"Every defect is traceable. Every unit has a story. 4M ensures you can always read it."
+
+
+
+CHAPTER ONE · THE PLATFORM
+
+Empowering business with hidden gems of data
+02
+02
+Energy Data Platform
+As client complexity grew, Passageway recognised that isolated analytics weren't enough. Enterprises needed a data foundation — one they could build everything on. So we built it.
+
+
+01
+Data Ingestion Framework
+
+
+
+02
+Canonical Data Model
+
+
+
+03
+Incremental Architecture
+
+
+
+04
+Analytics & KPI Engine
+
+
+
+CHAPTER ONE · ARCHITECTURE & ANALYTICS
+
+Empowering business with hidden gems of data
+03
+03
+Energy Platform — Layers 3 & 4
+
+
+Layer 3 — Incremental Architecture
+CDC (Change Data Capture) pipelines, incremental ingestion, and reconciliation frameworks ensure data is always fresh, accurate, and auditable — without full table scans or data lake lock-in. Built for enterprise scale from day one.
+
+CDC Pipelines
+
+Delta Processing
+
+Reconciliation
+
+Audit Trails
+
+
+
+Layer 4 — Analytics & KPI Engine
+Production performance, manufacturing traceability, operational KPIs, and infrastructure monitoring — all unified and delivered via Power BI, Tableau, or custom dashboards. Intelligence, not just data.
+
+Defect Rate Trends
+
+OEE by Line
+
+Energy per Unit
+
+Customer KPIs
+
+
+
+CHAPTER TWO · DISTRIBUTED TENDER DATA ENGINEERING
+
+Empowering business with hidden gems of data
+04
+04
+Tender Data Lake Pipeline
+Government procurement portals publish tenders across hundreds of fragmented websites. Passageway’s distributed scraping fleet captures, cleans, and structures this data into a tiered data lake — delivering targeted tender intelligence to subscribers at scale.
+
+
+What is it?
+A worker-based, queue-driven architecture that scrapes tender data from 200+ government procurement portals, ingests documents with content-addressed deduplication, and lands structured data in a Bronze–Silver–Gold data lake.
+
+Powered by RabbitMQ, MinIO, Postgres, and Redis. Designed to scale from 30K to 750K tenders per day without redesign.
+PIPELINE STAGES
+
+Scraping → listing & detail parsing
+
+Document fetching → text extraction
+
+Validation & reconciliation
+
+
+Distributed Scraper Fleet
+7 specialised workers connected by durable queues. Session management via Redis with epoch-based invalidation. Per-site rate limiting and CAPTCHA handling.
+
+
+Bronze–Silver–Gold Lake
+Raw captures preserved immutably. Cleaned, deduplicated data in Parquet/Iceberg. Star schema models for analytics and subscriber APIs.
+
+
+Adapter Registry
+YAML-driven site configs so adding a portal needs no code deploy. Fixture-based regression testing and canary promotions.
+Scaling from 200 to 5,000+ procurement portals
+
+
+
+
+From Data Lake to AI Insights
+CHAPTER TWO · DATA ENGINEERING & AI INTELLIGENCE
+
+Empowering business with hidden gems of data
+05
+05
+
+
+DATA FOUNDATION
+A resilient, self-healing pipeline that turns fragmented portal data into a trusted, queryable lake — the foundation every AI feature is built on.
+ENGINEERING HIGHLIGHTS
+
+Bronze → Silver → Gold tiered data lake
+
+Content-addressed dedup via SHA-256
+
+Bronze-before-ack durability contract
+
+Self-healing DLQs & reconciliation
+
+INSIGHT: Every Gold record carries lineage back to its raw source — fully auditable, fully traceable.
+
+
+AI INTELLIGENCE
+A RAG-based assistant that puts every tender and its documents at the customer's fingertips — answering in natural language with grounded, cited insights.
+RAG CHATBOT
+
+Powered by the Qwen large language model
+
+Knowledge base: all tenders + documents
+
+Semantic retrieval over the data lake
+
+Grounded, source-linked answers
+
+INSIGHT: Customers ask ‘which tenders fit my capabilities?’ and get instant, document-grounded answers — not keyword search.
+
+
+
+
+Resilience & Scale
+CHAPTER TWO · DISTRIBUTED TENDER DATA ENGINEERING
+
+Empowering business with hidden gems of data
+06
+06
+
+
+SELF-HEALING PIPELINE
+Failures are expected at 5,000-site scale. Every stage persists to Bronze before acknowledging its input, so no work is lost — and recovery is automatic.
+RECOVERY MECHANISMS
+
+Bronze-before-ack durability contract
+
+Per-stage dead-letter queues + auto-replay
+
+Reconciliation catches silent misses
+
+Session-epoch model survives expiry
+
+INSIGHT: A 30-minute portal outage that dead-letters thousands of jobs recovers with no human intervention.
+
+
+BUILT TO SCALE
+Capacity grows by adding workers, not rewriting the system — the same architecture spans every phase from pilot to full national coverage.
+SCALE TARGETS
+
+200 → 5,000+ procurement portals
+
+30K → 750K tenders per day
+
+Queue-depth worker autoscaling
+
+Content-addressed dedup (30–60% saved)
+
+INSIGHT: Full OpenTelemetry tracing follows one tender from scrape to Gold across every worker.
+
+
+
+CHAPTER THREE · ENTERPRISE DATA & ANALYTICS ENGINEERING
+
+Empowering business with hidden gems of data
+07
+07
+Enterprise Data & Analytics Platform
+Co-engineering a new product line with a leading enterprise platform — unifying enterprise data from any source into governed, AI-ready analytics that drive action, natively on the platform.
+
+
+What is it?
+A native data engineering layer for the platform's new Data & Analytics Apps — ingesting platform data alongside external enterprise sources, then unifying, modelling and governing it for analytics and AI.
+
+Each domain app pairs platform data with a source: HR with Workday, SecOps with SIEM, CRM with Salesforce.
+DATA SOURCES
+
+Platform core — CMDB, ITSM, workflows
+
+Workday · Salesforce · Splunk · Datadog
+
+Structured & unstructured feeds
+
+
+Ingest & Connect
+Metadata collectors and connectors built on the platform's data fabric — pulling any enterprise source into the platform.
+
+
+Unify, Model & Cleanse
+Predefined ETL pipelines with cleansing, resolution, unification and consolidation rules — one trusted, conformed data model.
+
+
+Insights to Action
+KPIs, conversational AI and ML models turn unified data into insight — closing the loop with native workflow automation.
+Insights to Action — analytics that never leave the platform
+
+
+
+
+From Unified Data to Domain Intelligence
+CHAPTER THREE · ENTERPRISE DATA INTELLIGENCE
+
+Empowering business with hidden gems of data
+08
+08
+
+
+DOMAIN ANALYTICS APPS
+Purpose-built apps that fuse platform data with a domain source, then deliver the analytics each business function needs — without ever leaving the platform.
+APPS IN BUILD
+
+HR Analytics — platform + Workday
+
+SecOps Analytics — platform + SIEM
+
+CRM Analytics — platform + Salesforce
+
+Industry-specific analytics packs
+
+INSIGHT: Each app ships connectors, pipelines, rules and models as one packaged, governed product.
+
+
+INTELLIGENCE & ACTION
+A unified data model feeds KPIs, conversational analytics and ML — and every insight can trigger an automated workflow, closing the loop from question to action.
+INTELLIGENCE LAYER
+
+KPIs & no-code BI dashboards
+
+Conversational AI for analytics
+
+ML models & AI agents
+
+Insight-to-Action workflow triggers
+
+INSIGHT: Business users ask questions in plain language and act on the answer in the same platform.
+
+
+
+
+Data Fabric & Analytics Foundation
+CHAPTER THREE · ENTERPRISE DATA & ANALYTICS
+
+Empowering business with hidden gems of data
+09
+09
+
+
+DATA FABRIC
+The integration layer that brings any non-platform data — structured or unstructured — into the platform, then contextualises and governs it alongside native data.
+WHAT WE BUILD
+
+Metadata collectors across systems
+
+Structured & unstructured ingestion
+
+Contextualisation & governance
+
+One controlled, unified data estate
+
+INSIGHT: Data stays governed and in place — usable alongside platform data without copying it into yet another silo.
+
+
+NO-CODE ANALYTICS
+A self-service BI layer that lets business users explore platform data and build reports without code — now extended with conversational AI.
+CAPABILITIES
+
+Drag-and-drop dashboards & KPIs
+
+Conversational AI for BI
+
+Reusable across every domain app
+
+Insight-to-Action workflow triggers
+
+INSIGHT: One analytics engine powers every domain app, so each new app inherits BI and conversational querying for free.
+
+
+
+
+Generative AI Frameworks
+CHAPTER FOUR · AI-POWERED ENTERPRISE
+
+Empowering business with hidden gems of data
+10
+10
+While other firms were still debating AI readiness, Passageway was already deploying it. Instead of one-off builds, we created five reusable enterprise AI frameworks — so our clients could adopt AI faster, safer, and with proven architecture.
+
+
+
+01
+Intelligent Knowledge System
+Semantic Q&A over enterprise documents, manuals & policies
+
+
+
+02
+Decision Anomaly Detection
+Suspicious patterns, fraud signals, operational risk alerts
+
+
+
+03
+Smart Portfolio Analysis
+Risk clustering, performance insights, predictive returns
+
+
+
+04
+Intelligent Computer Vision
+Quality inspection, safety detection, production monitoring
+
+
+
+05
+Agentic AI Framework
+Document agents, workflow automation, reporting bots
+
+
+
+CHAPTER FOUR · KNOWLEDGE & ANOMALY DETECTION
+
+Empowering business with hidden gems of data
+11
+11
+Gen AI — Frameworks 01 & 02
+
+
+
+01
+Intelligent Knowledge System
+A RAG (Retrieval-Augmented Generation) system that turns enterprise documents, manuals, policies, and databases into a living AI knowledge engine. Ask in plain language. Get precise, sourced answers.
+CAPABILITIES
+
+Natural language Q&A over enterprise docs
+
+Semantic search across unstructured data
+
+Source attribution and full traceability
+
+Multi-modal: text, PDF, spreadsheets
+
+Role-based knowledge access control
+
+IN PRACTICE: An after-sales manager asks: "What are the top 5 failure patterns for Model X gearbox?" — and gets an answer sourced directly from warranty claims and field reports. Instantly.
+
+
+
+02
+Decision Anomaly Detection
+ML + LLM-powered monitoring that detects abnormal patterns in transactions, operations, and decisions — with natural-language narratives explaining exactly why each anomaly was flagged.
+CAPABILITIES
+
+Real-time transaction monitoring
+
+Context-aware anomaly scoring
+
+Natural language alert narratives
+
+Supervised + unsupervised models
+
+Seamless workflow integration
+
+IN PRACTICE: "Branch X processed 3× its usual claim volume between 2–4 AM on a non-business day." Full drill-down context. Not just an alert — an explanation.
+
+
+
+
+Gen AI — Frameworks 03, 04 & 05
+CHAPTER FOUR · PORTFOLIO, VISION & AGENTIC AI
+
+Empowering business with hidden gems of data
+12
+12
+
+
+
+03
+Smart Portfolio Analysis
+AI-driven analysis of financial or asset portfolios. Clusters by risk, predicts performance, surfaces rebalancing recommendations with LLM-generated narratives.
+KEY CAPABILITIES
+
+Risk cluster segmentation
+
+Predictive performance modelling
+
+LLM-generated portfolio summaries
+
+Opportunity & risk narration
+
+
+
+04
+Intelligent Computer Vision
+Deep learning for automated visual quality inspection on production lines. Detects defects, deviations, and safety hazards in real time — replacing manual inspection.
+KEY CAPABILITIES
+
+Defect detection on assembly lines
+
+Safety PPE compliance monitoring
+
+Label & packaging verification
+
+Automated inspection reporting
+
+
+
+05
+Agentic AI Framework
+AI agents that autonomously handle document processing, reporting workflows, and multi-step business tasks — with human oversight at critical decision points.
+KEY CAPABILITIES
+
+Automated report generation
+
+Multi-step document processing
+
+Policy & compliance agents
+
+Workflow orchestration bots
+
+
+
+CHAPTER FOUR · AI-POWERED CUSTOMER INTELLIGENCE
+
+Empowering business with hidden gems of data
+13
+13
+Customer Propensity Intelligence
+The most advanced enterprises don't react to customer behaviour. They predict it. Passageway's Customer Propensity Intelligence platform gives sales and CX teams the power to act before the customer decides.
+
+
+What is it?
+An ensemble ML scoring platform that processes historical customer behaviour, transaction data, product usage patterns, and external signals — assigning each customer a propensity score (0–100) quantifying their likelihood to take a specific commercial action within a defined time window.
+
+Powered by XGBoost, Random Forest, and Logistic Regression. Validated against real conversion outcomes. Deployed at enterprise scale.
+INPUT SIGNALS
+
+Transaction history & recency
+
+Product usage & service logs
+
+Demographic & lifecycle segmentation
+
+
+Purchase Propensity
+Score customers likely to buy within 30/60/90 days. Right offer, right customer, right time.
+
+
+Churn Propensity
+Identify at-risk customers before they lapse. Trigger retention before churn — not after.
+
+
+Upsell / Cross-sell Propensity
+Predict readiness to upgrade based on lifecycle stage and usage trajectory.
+Typical lift: 2–4× higher conversion vs. non-scored outreach
+
+

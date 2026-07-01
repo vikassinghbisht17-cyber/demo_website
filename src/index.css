@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #14355b;
-  --color-secondary: #0a192f;
-  --color-accent-blue: #799bd0;
-  --color-accent-peach: #eac8ae;
+  --color-primary: #003559;
+  --color-secondary: #002035;
+  --color-accent-blue: #809BCE;
+  --color-accent-peach: #E4C9B0;
   --color-accent-red: #ed2024;
   --color-accent-teal: #0d9488;
   --font-sans: "Inter", sans-serif;
@@ -17,10 +17,10 @@
       color: #ffffff;
     }
     25% {
-      color: #799bd0;
+      color: #809BCE;
     }
     50% {
-      color: #eac8ae;
+      color: #E4C9B0;
     }
     75% {
       color: #ed2024;
