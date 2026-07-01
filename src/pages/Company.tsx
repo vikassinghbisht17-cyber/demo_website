@@ -145,8 +145,8 @@ export const Company: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-8 relative">
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Abhishek</h3>
-                <span className="text-sm font-bold uppercase tracking-widest text-primary block mb-4">Co-Founder</span>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Abhishek Dadhichi</h3>
+                <span className="text-sm font-bold uppercase tracking-widest text-primary block mb-4">Co-Founder and Director</span>
                 <p className="text-gray-600 font-medium leading-relaxed">
                   Driving the vision and technical strategy at Passageway. Specializing in advanced analytics, data engineering, and enterprise AI architecture to transform raw data into actionable intelligence.
                 </p>
@@ -161,8 +161,8 @@ export const Company: React.FC = () => {
                 </svg>
               </div>
               <div className="p-8 relative">
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Roop</h3>
-                <span className="text-sm font-bold uppercase tracking-widest text-gray-400 block mb-4">Leadership Team</span>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-1">Roop Singh</h3>
+                <span className="text-sm font-bold uppercase tracking-widest text-gray-400 block mb-4">Founder</span>
                 <p className="text-gray-400 font-medium leading-relaxed italic">
                   15+ experience in providing business and IT consulting services to BFSI, Automotive, and Health care industries with a focus on aligning business to define concepts and developing Data driven IT solutions to simplify decision making.
                   Passageway aims to help clients to solve business problems using Data Science, Machine Learning, Gen AI in an intuitive way. Our focus is to empathize with client's business problems and use Data analytics as enabler to solve them.
