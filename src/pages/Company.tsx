@@ -36,8 +36,10 @@ export const Company: React.FC = () => {
       name: 'Roop Singh',
       role: 'Founder',
       shortBio: '15+ years experience in business and IT consulting for BFSI and Healthcare industries.',
-      fullBio: 'Roop brings over 15 years of experience in providing business and IT consulting services to the BFSI and Healthcare industries. He focuses on aligning business strategies to define concepts and developing data-driven IT solutions that simplify decision-making. At Passageway, Roop aims to help clients solve complex business problems using Data Science, Machine Learning, and Gen AI in an intuitive way. His focus is to deeply empathize with the client\'s business problems and use data analytics as a core enabler to solve them.',
-      image: '' 
+      fullBio: `With over 15 years of experience in Business and IT Consulting, he has partnered with organizations across the BFSI, Automotive, and Healthcare sectors to bridge the gap between business strategy and technology. His expertise lies in transforming complex business challenges into data-driven solutions that enable informed decision-making and sustainable growth.
+
+As the Founder of Passageway, his vision is to empower businesses by leveraging the potential of Data Science, Machine Learning, and Generative AI.He believes that every successful solution begins with a deep understanding of the client's business challenges. By combining empathy with advanced analytics and intelligent technologies, Passageway delivers innovative, practical, and impactful solutions that drive measurable business outcomes.`,
+      image: '/founder_image.jpeg'
     },
     {
       id: 'varun',
@@ -377,11 +379,11 @@ export const Company: React.FC = () => {
       {activeBio && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" onClick={() => setActiveBio(null)}>
           <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" onClick={() => setActiveBio(null)}></div>
-          <div 
-            className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden relative z-10 max-h-[90vh] flex flex-col"
+          <div
+            className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden relative z-10 h-[600px] max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <button 
+            <button
               onClick={() => setActiveBio(null)}
               className="absolute top-6 right-6 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors z-20"
             >
@@ -389,7 +391,7 @@ export const Company: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="flex flex-col md:flex-row overflow-y-auto">
+            <div className="flex flex-col md:flex-row overflow-hidden min-h-0 flex-1">
               {/* Modal Image */}
               <div className="w-full md:w-5/12 h-72 md:h-auto min-h-[300px] bg-gray-50 flex-shrink-0 relative">
                 {activeBio.image ? (
@@ -403,7 +405,7 @@ export const Company: React.FC = () => {
                 )}
               </div>
               {/* Modal Text */}
-              <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col bg-white">
+              <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col bg-white overflow-y-auto">
                 <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">{activeBio.name}</h3>
                 <span className="text-md font-bold text-primary uppercase tracking-widest block mb-8">{activeBio.role}</span>
                 <div className="w-12 h-1 bg-gray-200 mb-8 rounded-full"></div>
