@@ -188,7 +188,15 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
                 {/* Image Section */}
                 <div className="w-full h-72 sm:h-80 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
                   {founder.image ? (
-                    <img src={founder.image} alt={founder.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 absolute inset-0" />
+                    <img 
+                      src={founder.image} 
+                      alt={founder.name} 
+                      className={`w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105 ${
+                        founder.id === 'abhishek' 
+                          ? 'object-[center_15%]' 
+                          : 'object-top'
+                      }`} 
+                    />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center absolute inset-0">
                       <svg className="w-16 h-16 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
