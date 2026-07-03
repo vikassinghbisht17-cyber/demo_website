@@ -9,6 +9,8 @@ import { Insights } from './pages/Insights';
 import { CoreCompetencies } from './pages/CoreCompetencies';
 import { IndustrySolution } from './pages/IndustrySolution';
 
+import { BreadcrumbStripe } from './components/BreadcrumbStripe';
+
 // Scroll to top on route change helper
 const ScrollToTop: React.FC = () => {
   const { pathname, hash } = useLocation();
@@ -35,6 +37,7 @@ function App() {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
+        <BreadcrumbStripe />
         
         <main className="flex-grow">
           <Routes>

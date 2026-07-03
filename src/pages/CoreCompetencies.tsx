@@ -90,19 +90,24 @@ export const CoreCompetencies: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-secondary text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Subtle background graphics */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-blue/5 rounded-full blur-[100px] -mt-32 -mr-32 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-peach/5 rounded-full blur-[100px] -mb-32 -ml-32 pointer-events-none"></div>
         
-        <div className="max-w-[1600px] mx-auto relative z-10 text-center">
-          <span className="text-accent-blue font-bold text-sm uppercase tracking-widest mb-6 block">Capabilities</span>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-            Engineering Intelligence <br /> from Data
+        <div className="max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
+          <span className="text-accent-blue font-bold text-sm uppercase tracking-widest mb-6 block border-l-4 border-accent-blue pl-4">
+            Capabilities
+          </span>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+            Engineering Intelligence <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-accent-blue to-accent-peach">
+              from Data
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed mb-12">
+          <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-12">
             From distributed data pipelines and resilient data lakes to enterprise analytics and generative AI.
           </p>
         </div>
@@ -117,8 +122,8 @@ export const CoreCompetencies: React.FC = () => {
                 
                 {/* Visual/Icon Side */}
                 <div className="w-full lg:w-5/12 flex justify-center">
-                  <div className="relative w-full max-w-md aspect-square rounded-[3rem] bg-white shadow-2xl border border-gray-100 flex flex-col items-center justify-center p-12 group hover:-translate-y-4 transition-transform duration-500">
-                    <div className={`absolute inset-0 ${comp.color} opacity-[0.03] rounded-[3rem] group-hover:opacity-10 transition-opacity duration-500`}></div>
+                  <div className="common-card relative w-full max-w-md aspect-square flex flex-col items-center justify-center p-12 group hover:-translate-y-4">
+                    <div className={`absolute inset-0 ${comp.color} opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500`}></div>
                     <div className={`w-28 h-28 rounded-3xl ${comp.color}/10 flex items-center justify-center mb-8`}>
                       <div className={comp.textColor}>
                         {comp.icon}
@@ -181,7 +186,7 @@ export const CoreCompetencies: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Framework 1 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-blue p-8 rounded-2xl shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-accent-blue/15 transition-all duration-500 transform flex flex-col justify-between">
+            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-blue p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-blue/20 transition-all duration-500 transform flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-accent-blue/10 rounded-xl flex items-center justify-center mb-6 border border-accent-blue/20 group-hover:bg-accent-blue/20 transition-colors duration-300">
                   <svg className="w-6 h-6 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,7 +205,7 @@ export const CoreCompetencies: React.FC = () => {
             </div>
 
             {/* Framework 2 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-peach p-8 rounded-2xl shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-accent-peach/15 transition-all duration-500 transform flex flex-col justify-between">
+            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-peach p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-peach/20 transition-all duration-500 transform flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-accent-peach/10 rounded-xl flex items-center justify-center mb-6 border border-accent-peach/20 group-hover:bg-accent-peach/20 transition-colors duration-300">
                   <svg className="w-6 h-6 text-accent-peach" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -219,7 +224,7 @@ export const CoreCompetencies: React.FC = () => {
             </div>
 
             {/* Framework 3 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-red p-8 rounded-2xl shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-accent-red/15 transition-all duration-500 transform flex flex-col justify-between">
+            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-red p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-red/20 transition-all duration-500 transform flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-accent-red/10 rounded-xl flex items-center justify-center mb-6 border border-accent-red/20 group-hover:bg-accent-red/20 transition-colors duration-300">
                   <svg className="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,7 +243,7 @@ export const CoreCompetencies: React.FC = () => {
             </div>
 
             {/* Framework 4 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-teal p-8 rounded-2xl shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-accent-teal/15 transition-all duration-500 transform flex flex-col justify-between">
+            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-teal p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-teal/20 transition-all duration-500 transform flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-accent-teal/10 rounded-xl flex items-center justify-center mb-6 border border-accent-teal/20 group-hover:bg-accent-teal/20 transition-colors duration-300">
                   <svg className="w-6 h-6 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,7 +263,7 @@ export const CoreCompetencies: React.FC = () => {
             </div>
 
             {/* Framework 5 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-primary p-8 rounded-2xl shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-primary/20 transition-all duration-500 transform flex flex-col justify-between">
+            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-primary p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 transform flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20 group-hover:bg-primary/20 transition-colors duration-300">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
