@@ -5,7 +5,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Company } from './pages/Company';
 import { Careers } from './pages/Careers';
-import { Insights } from './pages/Insights';
+// import { Insights } from './pages/Insights';
 import { CoreCompetencies } from './pages/CoreCompetencies';
 import { IndustrySolution } from './pages/IndustrySolution';
 
