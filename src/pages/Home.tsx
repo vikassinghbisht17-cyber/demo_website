@@ -176,7 +176,8 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Module 7: Insights/News Slider (Horizontal Scroll) */}
+      {/* Module 7: Insights/News Slider (Horizontal Scroll) - HIDDEN FOR NOW */}
+      {false && (
       <section className="py-32 bg-gray-50 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex justify-between items-end">
           <div>
@@ -228,6 +229,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Module 8: About Passageway (Value Proposition) */}
       <section className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -236,11 +238,11 @@ export const Home: React.FC = () => {
           <div className="md:w-1/2 p-12 lg:p-20 flex flex-col justify-center text-white relative z-10">
             <h2 className="text-4xl lg:text-5xl font-extrabold mb-8 leading-tight">We're Your Partner For Innovation & Growth</h2>
             <p className="mb-10 text-xl text-gray-200 font-medium leading-relaxed">
-              At Passageway, we leverage advanced data analytics and AI to solve complex industry challenges. From predictive maintenance in manufacturing to fraud detection in banking, our solutions drive measurable business outcomes.
+              We bridge the gap between complex business challenges and modern data technologies —enabling organizations to convert raw enterprise data into actionable insights, measurable outcomes, and competitive advantage.
             </p>
             <div className="grid grid-cols-2 gap-8 mb-12">
               <div>
-                <div className="text-4xl font-black text-accent-peach">3+</div>
+                <div className="text-4xl font-black text-accent-peach">5+</div>
                 <div className="text-sm text-gray-300 mt-1 font-bold">Industry Verticals</div>
               </div>
               <div>

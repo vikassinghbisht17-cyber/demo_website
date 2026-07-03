@@ -51,7 +51,7 @@ export const ContactForm: React.FC = () => {
 
       <div className="max-w-2xl mx-auto bg-white rounded-3xl p-10 md:p-14 text-left shadow-2xl shadow-black/50 text-gray-900 relative z-10">
         <h3 className="text-3xl font-extrabold mb-8">Get In Touch</h3>
-        
+
         {submitStatus === 'success' ? (
           <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl mb-6">
             <h4 className="font-bold text-lg mb-2">Message Sent Successfully!</h4>
@@ -75,7 +75,7 @@ export const ContactForm: React.FC = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
@@ -89,7 +89,7 @@ export const ContactForm: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="john@company.com"
+                  placeholder="Your Email"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />

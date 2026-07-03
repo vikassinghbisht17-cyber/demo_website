@@ -29,7 +29,7 @@ export const Company: React.FC = () => {
       role: 'Founder',
       linkedin: 'https://www.linkedin.com/in/roop-s-47aaa4160/',
       shortBio: '15+ years experience in business and IT consulting for BFSI and Healthcare industries.',
-      fullBio: `With over 15 years of experience in Business and IT Consulting, he has partnered with organizations across the BFSI, Automotive, and Healthcare sectors to bridge the gap between business strategy and technology. His expertise lies in transforming complex business challenges into data-driven solutions that enable informed decision-making and sustainable growth.
+      fullBio: `With over 25+ years of experience in Business and IT Consulting, he has partnered with organizations across the BFSI, Automotive, and Healthcare sectors to bridge the gap between business strategy and technology. His expertise lies in transforming complex business challenges into data-driven solutions that enable informed decision-making and sustainable growth.
 
 As the Founder of Passageway, his vision is to empower businesses by leveraging the potential of Data Science, Machine Learning, and Generative AI.He believes that every successful solution begins with a deep understanding of the client's business challenges. By combining empathy with advanced analytics and intelligent technologies, Passageway delivers innovative, practical, and impactful solutions that drive measurable business outcomes.`,
       image: '/founder_image.jpeg'
@@ -39,8 +39,8 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
       name: 'Abhishek Dadhichi',
       role: 'Co-Founder and Director',
       linkedin: 'https://www.linkedin.com/in/abhishek-dadhichi-aa183b17/',
-      shortBio: 'Driving the vision and technical strategy at Passageway. Specializing in advanced analytics and enterprise AI architecture.',
-      fullBio: 'Abhishek is a visionary leader with extensive experience driving the technical strategy and vision at Passageway. With a deep specialization in advanced analytics, data engineering, and enterprise AI architecture, he is passionate about transforming raw enterprise data into actionable intelligence. His leadership ensures that our GenAI frameworks and data platforms deliver scalable, real-world impacts for our clients.',
+      shortBio: '20+ years of experience driving technical strategy. Specializing in advanced analytics and enterprise AI architecture.',
+      fullBio: 'Abhishek is a visionary leader with 20+ years of extensive experience driving the technical strategy and vision at Passageway. With a deep specialization in advanced analytics, data engineering, and enterprise AI architecture, he is passionate about transforming raw enterprise data into actionable intelligence. His leadership ensures that our GenAI frameworks and data platforms deliver scalable, real-world impacts for our clients.',
       image: '/co_founder_one_image.png'
     },
     {
@@ -48,8 +48,12 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
       name: 'Varun Pandey',
       role: 'Co-Founder',
       linkedin: 'https://www.linkedin.com/in/varun-pandey-27a33784/',
-      shortBio: 'Leading strategic growth and operational excellence. Focused on delivering impactful AI and data solutions.',
-      fullBio: 'Varun leads strategic growth and operational excellence at Passageway. With a sharp focus on delivering impactful AI and data solutions, he ensures that our technological innovations drive measurable business outcomes for enterprise clients. His expertise in scaling operations and fostering key partnerships has been instrumental in building our reputation for a 100% delivery track record.',
+      shortBio: 'Leading strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.',
+      fullBio: `Varun leads strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.
+
+With 12 years of industry experience, Varun brings deep expertise in building and scaling high-performing technology applications. He has a proven track record of delivering reliable, scalable solutions with a 100% execution-focused approach. His leadership combines technical depth, business clarity, and a strong commitment to innovation.
+
+At Passageway, Varun focuses on helping organizations adopt practical AI solutions that improve efficiency, unlock growth opportunities, and create long-term business value.`,
       image: '/co_founder_three_image.png'
     }
   ];
@@ -188,14 +192,13 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
                 {/* Image Section */}
                 <div className="w-full h-72 sm:h-80 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
                   {founder.image ? (
-                    <img 
-                      src={founder.image} 
-                      alt={founder.name} 
-                      className={`w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105 ${
-                        founder.id === 'abhishek' 
-                          ? 'object-[center_15%]' 
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      className={`w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105 ${founder.id === 'abhishek'
+                          ? 'object-[center_15%]'
                           : 'object-top'
-                      }`} 
+                        }`}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center absolute inset-0">
@@ -212,16 +215,16 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
                   <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-2">{founder.name}</h3>
                   <span className="text-sm font-bold text-gray-600 block mb-4">{founder.role}</span>
                   {founder.linkedin && (
-                    <a 
-                      href={founder.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={founder.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-[#0077b5] hover:text-[#005582] transition-colors mb-6 w-fit"
                       onClick={(e) => e.stopPropagation()}
                       aria-label={`${founder.name}'s LinkedIn profile`}
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                       </svg>
                     </a>
                   )}
@@ -271,7 +274,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
                 </div>
                 <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Banking & Financial Services</h3>
                 <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  We engineer creditdefault prediction models, loan application processing bots, fraud vigilance monitors, and our flagship <strong className="text-gray-900">Resolution OS</strong> orchestration layer for NBFCs.
+                  We engineer credit default prediction models, loan application processing bots, fraud vigilance monitors, and our flagship <strong className="text-gray-900">Resolution OS</strong> orchestration layer for NBFCs.
                 </p>
               </div>
             </div>
@@ -351,7 +354,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight text-center mb-32">Our Values</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-24 md:gap-x-8 lg:gap-y-8 mt-12 lg:mt-0">
             {valuesList.map((val, idx) => (
               <div key={idx} className="flex flex-col items-center group">
                 <div className="relative w-full aspect-[2/3] rounded-lg overflow-visible mb-6">
@@ -380,7 +383,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
               <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-4 block">Our Culture</span>
               <h3 className="text-3xl md:text-5xl font-extrabold mb-8">At the heart of everything</h3>
               <p className="text-gray-200 font-medium leading-relaxed mb-10 text-lg md:text-xl max-w-3xl mx-auto">
-                At the heart of everything we do are the people we serve and the talented team who make it possible. Together, we build a world of possibilities with an entrepreneurial spirit. We nurture an environment where everyone feels valued, respected, and empowered to thrive.
+                The foundation of our success is the people we serve and the talented team who makes it all possible. Together, we build a world of possibilities with an entrepreneurial spirit. We nurture an environment where everyone feels valued, respected, and empowered to thrive.
               </p>
               <div className="flex items-center justify-center space-x-4">
                 <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center">
@@ -431,19 +434,18 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
                 <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">{activeBio.name}</h3>
                 <span className="text-md font-bold text-primary uppercase tracking-widest block mb-4">{activeBio.role}</span>
                 {activeBio.linkedin && (
-                  <a 
-                    href={activeBio.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={activeBio.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#0077b5] hover:text-[#005582] transition-colors mb-8 inline-block"
                     aria-label={`${activeBio.name}'s LinkedIn profile`}
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
                 )}
-                <div className="w-12 h-1 bg-gray-200 mb-8 rounded-full"></div>
                 <div className="prose prose-gray">
                   <p className="text-gray-600 font-medium leading-relaxed whitespace-pre-wrap">
                     {activeBio.fullBio}

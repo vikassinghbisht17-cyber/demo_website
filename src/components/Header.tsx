@@ -90,8 +90,8 @@ export const Header: React.FC = () => {
               </div>
             </div>
 
-            {/* 3. Insights */}
-            <NavLink to="/insights" className={navLinkClass}>Insights</NavLink>
+            {/* 3. Insights (Hidden for now) */}
+            {/* <NavLink to="/insights" className={navLinkClass}>Insights</NavLink> */}
 
             {/* 4. Company */}
             <NavLink to="/company" className={navLinkClass}>Company</NavLink>
@@ -163,7 +163,7 @@ export const Header: React.FC = () => {
                 </div>
 
                 <div className="border-t border-gray-100 pt-6 space-y-4">
-                  <Link to="/insights" className="block text-lg font-bold text-primary transition-colors">Insights</Link>
+                  {/* <Link to="/insights" className="block text-lg font-bold text-primary transition-colors">Insights</Link> */}
                   <Link to="/capabilities" className="block text-2xl font-bold text-gray-900 hover:text-primary transition-colors">Capabilities</Link>
                   <Link to="/company" className="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Company</Link>
                   <Link to="/careers" className="block text-lg font-bold text-gray-800 hover:text-primary transition-colors">Careers</Link>
