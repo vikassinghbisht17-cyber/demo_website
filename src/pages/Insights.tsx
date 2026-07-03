@@ -163,7 +163,7 @@ export const Insights: React.FC = () => {
             {filteredArticles.map((art, idx) => (
               <div
                 key={idx}
-                className="flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+                className="common-card flex flex-col overflow-hidden group"
               >
                 <div className="h-60 bg-gray-100 overflow-hidden relative">
                   <img

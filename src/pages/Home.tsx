@@ -105,22 +105,22 @@ export const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Cards for each competency */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+            <div className="common-card p-8 group">
               <h3 className="text-xl font-bold text-primary mb-4">Data Engineering & Platforms</h3>
               <p className="text-gray-600 font-medium mb-6">Designing resilient data lakes and scalable ingestion pipelines to unify siloed enterprise data.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore Engineering &rarr;</Link>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+            <div className="common-card p-8 group">
               <h3 className="text-xl font-bold text-primary mb-4">Advanced Analytics & BI</h3>
               <p className="text-gray-600 font-medium mb-6">Synthesizing complex data into operational intelligence through custom KPIs and automated workflows.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore Analytics &rarr;</Link>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+            <div className="common-card p-8 group">
               <h3 className="text-xl font-bold text-primary mb-4">Predictive Intelligence</h3>
               <p className="text-gray-600 font-medium mb-6">Deploying enterprise ML models to anticipate customer actions and flag operational risks proactively.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore ML &rarr;</Link>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+            <div className="common-card p-8 group">
               <h3 className="text-xl font-bold text-primary mb-4">Generative AI Frameworks</h3>
               <p className="text-gray-600 font-medium mb-6">Implementing reusable GenAI architectures for intelligent document processing and knowledge extraction.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore GenAI &rarr;</Link>
@@ -191,7 +191,7 @@ export const Home: React.FC = () => {
         {/* Horizontal scrollable container */}
         <div className="flex overflow-x-auto space-x-8 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto no-scrollbar snap-x">
           {/* Card 1 */}
-          <div className="min-w-[340px] md:min-w-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden group snap-start transition-shadow duration-300 flex flex-col">
+          <div className="common-card min-w-[340px] md:min-w-[420px] overflow-hidden group snap-start flex flex-col">
             <div className="h-56 bg-gray-200 overflow-hidden relative">
               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="AI" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Report</div>
@@ -203,7 +203,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="min-w-[340px] md:min-w-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden group snap-start transition-shadow duration-300 flex flex-col">
+          <div className="common-card min-w-[340px] md:min-w-[420px] overflow-hidden group snap-start flex flex-col">
             <div className="h-56 bg-gray-200 overflow-hidden relative">
               <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Tech" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-accent-teal text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Blog</div>
@@ -215,7 +215,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="min-w-[340px] md:min-w-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden group snap-start transition-shadow duration-300 flex flex-col">
+          <div className="common-card min-w-[340px] md:min-w-[420px] overflow-hidden group snap-start flex flex-col">
             <div className="h-56 bg-gray-200 overflow-hidden relative">
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="People" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-accent-blue text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Whitepaper</div>
@@ -306,7 +306,7 @@ export const Home: React.FC = () => {
               </div>
             </div>
             <div>
-              <Link to="/company" className="inline-flex items-center text-sm font-extrabold text-gray-900 hover:text-primary uppercase tracking-widest transition-colors border-b-2 border-gray-900 pb-1 hover:border-primary">
+              <Link to="/solutions" className="inline-flex items-center text-sm font-extrabold text-gray-900 hover:text-primary uppercase tracking-widest transition-colors border-b-2 border-gray-900 pb-1 hover:border-primary">
                 Explore Solutions <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
               </Link>
             </div>

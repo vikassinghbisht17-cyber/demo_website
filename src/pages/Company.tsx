@@ -24,17 +24,10 @@ export const Company: React.FC = () => {
 
   const founders = [
     {
-      id: 'abhishek',
-      name: 'Abhishek Dadhichi',
-      role: 'Co-Founder and Director',
-      shortBio: 'Driving the vision and technical strategy at Passageway. Specializing in advanced analytics and enterprise AI architecture.',
-      fullBio: 'Abhishek is a visionary leader with extensive experience driving the technical strategy and vision at Passageway. With a deep specialization in advanced analytics, data engineering, and enterprise AI architecture, he is passionate about transforming raw enterprise data into actionable intelligence. His leadership ensures that our GenAI frameworks and data platforms deliver scalable, real-world impacts for our clients.',
-      image: '/co_founder_one_image.png'
-    },
-    {
       id: 'roop',
       name: 'Roop Singh',
       role: 'Founder',
+      linkedin: 'https://www.linkedin.com/in/roop-s-47aaa4160/',
       shortBio: '15+ years experience in business and IT consulting for BFSI and Healthcare industries.',
       fullBio: `With over 15 years of experience in Business and IT Consulting, he has partnered with organizations across the BFSI, Automotive, and Healthcare sectors to bridge the gap between business strategy and technology. His expertise lies in transforming complex business challenges into data-driven solutions that enable informed decision-making and sustainable growth.
 
@@ -42,9 +35,19 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
       image: '/founder_image.jpeg'
     },
     {
+      id: 'abhishek',
+      name: 'Abhishek Dadhichi',
+      role: 'Co-Founder and Director',
+      linkedin: 'https://www.linkedin.com/in/abhishek-dadhichi-aa183b17/',
+      shortBio: 'Driving the vision and technical strategy at Passageway. Specializing in advanced analytics and enterprise AI architecture.',
+      fullBio: 'Abhishek is a visionary leader with extensive experience driving the technical strategy and vision at Passageway. With a deep specialization in advanced analytics, data engineering, and enterprise AI architecture, he is passionate about transforming raw enterprise data into actionable intelligence. His leadership ensures that our GenAI frameworks and data platforms deliver scalable, real-world impacts for our clients.',
+      image: '/co_founder_one_image.png'
+    },
+    {
       id: 'varun',
       name: 'Varun Pandey',
       role: 'Co-Founder',
+      linkedin: 'https://www.linkedin.com/in/varun-pandey-27a33784/',
       shortBio: 'Leading strategic growth and operational excellence. Focused on delivering impactful AI and data solutions.',
       fullBio: 'Varun leads strategic growth and operational excellence at Passageway. With a sharp focus on delivering impactful AI and data solutions, he ensures that our technological innovations drive measurable business outcomes for enterprise clients. His expertise in scaling operations and fostering key partnerships has been instrumental in building our reputation for a 100% delivery track record.',
       image: '/co_founder_three_image.png'
@@ -121,7 +124,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Card 1 */}
             <div
-              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-peach px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-peach/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-peach px-6 py-10 rounded-none text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-peach/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
               style={{ animationDelay: '100ms' }}
             >
               <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-peach transition-colors duration-300">50+</span>
@@ -129,7 +132,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             </div>
             {/* Card 2 */}
             <div
-              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-blue px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-blue/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-blue px-6 py-10 rounded-none text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-blue/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
               style={{ animationDelay: '200ms' }}
             >
               <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">2023</span>
@@ -137,7 +140,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             </div>
             {/* Card 3 */}
             <div
-              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-peach px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-peach/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-peach px-6 py-10 rounded-none text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-peach/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
               style={{ animationDelay: '300ms' }}
             >
               <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-peach transition-colors duration-300">5</span>
@@ -145,7 +148,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             </div>
             {/* Card 4 */}
             <div
-              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-blue px-6 py-10 rounded-b-xl text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-blue/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
+              className="group bg-[#0f3460]/40 backdrop-blur-md border-t-4 border-accent-blue px-6 py-10 rounded-none text-center shadow-lg border border-white/5 hover:scale-105 hover:bg-[#0f3460]/60 hover:shadow-2xl hover:shadow-accent-blue/20 hover:border-white/20 transition-all duration-500 transform cursor-pointer animate-[fadeUp_0.6s_ease-out_both]"
               style={{ animationDelay: '400ms' }}
             >
               <span className="block text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">100%</span>
@@ -179,11 +182,11 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Meet Our Founders</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8 max-w-[1600px] mx-auto">
             {founders.map((founder) => (
-              <div key={founder.id} className="bg-white rounded-[1.5rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col sm:flex-row group cursor-pointer" onClick={() => setActiveBio(founder)}>
+              <div key={founder.id} className="common-card overflow-hidden flex flex-col group cursor-pointer" onClick={() => setActiveBio(founder)}>
                 {/* Image Section */}
-                <div className="w-full sm:w-5/12 h-64 sm:h-auto min-h-[300px] relative overflow-hidden bg-gray-50 flex-shrink-0 border-r border-gray-50">
+                <div className="w-full h-72 sm:h-80 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
                   {founder.image ? (
                     <img src={founder.image} alt={founder.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 absolute inset-0" />
                   ) : (
@@ -197,12 +200,23 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
                 </div>
 
                 {/* Text Section */}
-                <div className="w-full sm:w-7/12 p-8 flex flex-col justify-center bg-white relative">
-                  <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">{founder.name}</h3>
-                  <span className="text-sm font-bold text-gray-600 block mb-6">{founder.role}</span>
-                  <p className="text-gray-500 font-medium leading-relaxed mb-6 line-clamp-3 sm:line-clamp-4">
-                    {founder.shortBio}
-                  </p>
+                <div className="w-full p-6 sm:p-8 flex flex-col flex-grow bg-white relative">
+                  <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-2">{founder.name}</h3>
+                  <span className="text-sm font-bold text-gray-600 block mb-4">{founder.role}</span>
+                  {founder.linkedin && (
+                    <a 
+                      href={founder.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-[#0077b5] hover:text-[#005582] transition-colors mb-6 w-fit"
+                      onClick={(e) => e.stopPropagation()}
+                      aria-label={`${founder.name}'s LinkedIn profile`}
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                    </a>
+                  )}
                   <button className="inline-flex items-center text-sm font-bold text-primary hover:text-accent-blue transition-colors mt-auto w-fit">
                     Read Bio <svg className="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 12h14m0 0l-6-6m6 6l-6 6" /></svg>
                   </button>
@@ -222,7 +236,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Manufacturing Focus */}
-            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-red/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
               <div>
                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
@@ -239,7 +253,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             </div>
 
             {/* BFSI Focus */}
-            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-peach/20 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
               <div>
                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
@@ -255,7 +269,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             </div>
 
             {/* Energy Focus */}
-            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
               <div>
                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
@@ -271,7 +285,7 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
             </div>
 
             {/* Digital Platforms Focus */}
-            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between lg:col-span-1 md:col-span-2 lg:max-w-none md:max-w-md md:mx-auto lg:mx-0">
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between lg:col-span-1 md:col-span-2 lg:max-w-none md:max-w-md md:mx-auto lg:mx-0">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
               <div>
                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
@@ -407,7 +421,20 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
               {/* Modal Text */}
               <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col bg-white overflow-y-auto">
                 <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">{activeBio.name}</h3>
-                <span className="text-md font-bold text-primary uppercase tracking-widest block mb-8">{activeBio.role}</span>
+                <span className="text-md font-bold text-primary uppercase tracking-widest block mb-4">{activeBio.role}</span>
+                {activeBio.linkedin && (
+                  <a 
+                    href={activeBio.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[#0077b5] hover:text-[#005582] transition-colors mb-8 inline-block"
+                    aria-label={`${activeBio.name}'s LinkedIn profile`}
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                )}
                 <div className="w-12 h-1 bg-gray-200 mb-8 rounded-full"></div>
                 <div className="prose prose-gray">
                   <p className="text-gray-600 font-medium leading-relaxed whitespace-pre-wrap">

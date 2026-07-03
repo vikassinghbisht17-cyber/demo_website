@@ -49,3 +49,9 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@layer components {
+  .common-card {
+    @apply bg-white rounded-none shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300;
+  }
+}

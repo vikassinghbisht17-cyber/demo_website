@@ -128,7 +128,7 @@ export const Careers: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Pillar 1 */}
-            <div className="p-10 rounded-[2rem] bg-gray-50 border border-gray-100 hover:shadow-xl transition-shadow duration-500 group">
+            <div className="common-card !bg-gray-50 p-10 group">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
                 <svg className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -140,7 +140,7 @@ export const Careers: React.FC = () => {
               </p>
             </div>
             {/* Pillar 2 */}
-            <div className="p-10 rounded-[2rem] bg-gray-50 border border-gray-100 hover:shadow-xl transition-shadow duration-500 group">
+            <div className="common-card !bg-gray-50 p-10 group">
               <div className="w-16 h-16 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-8 group-hover:bg-accent-blue transition-colors duration-500">
                 <svg className="w-8 h-8 text-accent-blue group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -152,7 +152,7 @@ export const Careers: React.FC = () => {
               </p>
             </div>
             {/* Pillar 3 */}
-            <div className="p-10 rounded-[2rem] bg-gray-50 border border-gray-100 hover:shadow-xl transition-shadow duration-500 group">
+            <div className="common-card !bg-gray-50 p-10 group">
               <div className="w-16 h-16 rounded-2xl bg-accent-peach/20 flex items-center justify-center mb-8 group-hover:bg-accent-peach transition-colors duration-500">
                 <svg className="w-8 h-8 text-orange-600 group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -179,7 +179,7 @@ export const Careers: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((test, idx) => (
-              <div key={idx} className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 relative group overflow-hidden">
+              <div key={idx} className="common-card p-10 relative group overflow-hidden">
                 {/* Accent bar */}
                 <div className={`absolute top-0 left-0 w-full h-2 ${test.accentColor}`}></div>
                 <div className={`absolute top-0 right-0 w-32 h-32 opacity-5 rounded-full blur-2xl -mt-10 -mr-10 ${test.accentColor}`}></div>
@@ -213,7 +213,7 @@ export const Careers: React.FC = () => {
 
           <div className="space-y-4">
             {openRoles.map((role, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between hover:shadow-lg transition-shadow duration-300">
+              <div key={idx} className="common-card p-8 flex flex-col md:flex-row items-start md:items-center justify-between">
                 <div className="mb-6 md:mb-0">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{role.title}</h3>
                   <div className="flex items-center space-x-4 text-gray-500 font-medium text-sm">
