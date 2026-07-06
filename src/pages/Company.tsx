@@ -26,12 +26,18 @@ export const Company: React.FC = () => {
     {
       id: 'roop',
       name: 'Roop Singh',
-      role: 'Founder',
+      role: 'Founder & CEO',
       linkedin: 'https://www.linkedin.com/in/roop-s-47aaa4160/',
-      shortBio: '15+ years experience in business and IT consulting for BFSI and Healthcare industries.',
-      fullBio: `With over 25+ years of experience in Business and IT Consulting, he has partnered with organizations across the BFSI, Automotive, and Healthcare sectors to bridge the gap between business strategy and technology. His expertise lies in transforming complex business challenges into data-driven solutions that enable informed decision-making and sustainable growth.
+      shortBio: '25+ years in enterprise data engineering across Automotive, BFSI & Energy sectors. IIT (BHU) Varanasi alumnus.',
+      fullBio: `Before founding Passageway, Roop spent over two decades embedded inside large enterprises — designing data systems, running analytics programmes, and watching the same critical problem repeat across every organisation: enormous amounts of data, but no intelligence layer to make it useful.
 
-As the Founder of Passageway, his vision is to empower businesses by leveraging the potential of Data Science, Machine Learning, and Generative AI.He believes that every successful solution begins with a deep understanding of the client's business challenges. By combining empathy with advanced analytics and intelligent technologies, Passageway delivers innovative, practical, and impactful solutions that drive measurable business outcomes.`,
+Those 25 years weren't just experience. They were a blueprint for exactly what needed to be built.
+
+An alumnus of IIT (BHU) Varanasi, Roop brings 25+ years of expertise in enterprise data engineering across the Automotive, BFSI, and Energy sectors. From designing data pipelines and warehouse architectures for Tier-1 clients to leading end-to-end analytics transformation programmes, his work built the technical foundation that defines Passageway today.
+
+At the AI & Gen AI frontlines, he pioneered early Generative AI adoption within enterprise environments — developing the frameworks that now sit at the core of Passageway's AI portfolio.
+
+In 2023, Roop founded Passageway Tech. It was time to build what he had always known was missing.`,
       image: '/founder_image.jpeg'
     },
     {
