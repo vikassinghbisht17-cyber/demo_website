@@ -54,37 +54,28 @@ export const Header: React.FC = () => {
               <div className="absolute top-20 -left-64 w-screen max-w-5xl bg-white border border-gray-100 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-b-xl z-50 p-10 grid grid-cols-1 md:grid-cols-3 gap-12">
                 {/* Column 1 */}
                 <div>
-
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Manufacturing</h3>
+                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions#case-study-1" className="hover:text-primary transition-colors">Manufacturing Operational Analytics Platform</Link></li>
+                  </ul>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Government & Public Procurement</h3>
                   <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Manufacturing Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">4M Traceability Framework</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Operational KPIs</Link></li>
+                    <li><Link to="/solutions#case-study-4" className="hover:text-primary transition-colors">Distributed Tender Data Engineering & AI Platform</Link></li>
                   </ul>
                 </div>
                 {/* Column 2 */}
                 <div>
                   <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Banking & Financial Services</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">BFSI Platform Engineering</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Fraud Vigilance Monitors</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Resolution OS Orchestration</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Credit Default Prediction</Link></li>
+                    <li><Link to="/solutions#case-study-2" className="hover:text-primary transition-colors">AI-Powered Financial Document Extraction Platform</Link></li>
+                    <li><Link to="/solutions#case-study-6" className="hover:text-primary transition-colors">Intelligent Decision Anomaly Detection System</Link></li>
                   </ul>
                 </div>
                 {/* Column 3 */}
                 <div>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Energy & Utilities</h3>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Digital Platforms & Enterprise Software</h3>
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Asset Performance Monitoring</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Power Outage Intelligence</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Energy Consumption Forecasting</Link></li>
-                  </ul>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Digital Platforms & Media</h3>
-                  <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Product Recommendation Engines</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">User Behavior Analytics</Link></li>
-                    <li><Link to="/solutions" className="hover:text-primary transition-colors">Marketing Funnel Performance</Link></li>
+                    <li><Link to="/solutions#case-study-5" className="hover:text-primary transition-colors">Unified Enterprise Data & Analytics Platform</Link></li>
                   </ul>
                 </div>
               </div>
@@ -156,9 +147,11 @@ export const Header: React.FC = () => {
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Industry Solutions</h4>
                   <ul className="space-y-3 pl-2">
-
-                    <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Risk & Fraud</Link></li>
-                    <li><Link to="/solutions" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Energy Metering</Link></li>
+                    <li><Link to="/solutions#case-study-1" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Manufacturing Operational Analytics Platform</Link></li>
+                    <li><Link to="/solutions#case-study-2" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">AI-Powered Financial Document Extraction Platform</Link></li>
+                    <li><Link to="/solutions#case-study-6" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Intelligent Decision Anomaly Detection System</Link></li>
+                    <li><Link to="/solutions#case-study-4" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Distributed Tender Data Engineering & AI Platform</Link></li>
+                    <li><Link to="/solutions#case-study-5" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Unified Enterprise Data & Analytics Platform</Link></li>
                   </ul>
                 </div>
 
