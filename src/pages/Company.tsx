@@ -40,7 +40,15 @@ As the Founder of Passageway, his vision is to empower businesses by leveraging 
       role: 'Co-Founder and Director',
       linkedin: 'https://www.linkedin.com/in/abhishek-dadhichi-aa183b17/',
       shortBio: '20+ years of experience driving technical strategy. Specializing in advanced analytics and enterprise AI architecture.',
-      fullBio: 'Abhishek is a visionary leader with 20+ years of extensive experience driving the technical strategy and vision at Passageway. With a deep specialization in advanced analytics, data engineering, and enterprise AI architecture, he is passionate about transforming raw enterprise data into actionable intelligence. His leadership ensures that our GenAI frameworks and data platforms deliver scalable, real-world impacts for our clients.',
+      fullBio: `Abhishek partners with business leaders to turn complex business challenges into scalable, technology-driven growth opportunities.
+
+Over the past two decades, he has advised global enterprises on digital transformation, data strategy, and enterprise modernization. A defining chapter of his career was the ten years he spent in the United States, working alongside CXOs, business executives, and senior stakeholders to solve high-impact business problems. This experience shaped his ability to connect boardroom priorities with technology execution—ensuring that every solution delivered measurable business value rather than technical complexity.
+
+Before Passageway, Abhishek built his career with Wipro Technologies, Cognizant Technology Solutions, ATCS, and Nagarro, where he led large-scale transformation initiatives, architected enterprise solutions, established delivery organizations, and built high-performing teams across global engagements. His experience spans strategy, solution architecture, data platforms, AI, cloud technologies, and business transformation.
+
+At Passageway, Abhishek is building a culture of ownership. He is passionate about developing leaders who think like entrepreneurs, take end-to-end accountability, and relentlessly focus on customer success. Under his leadership, Passageway continues to invest in developing world-class talent in Data Engineering, Artificial Intelligence, and Data Science while fostering a mindset of innovation, excellence, and continuous learning.
+
+He believes that sustainable transformation is achieved when business vision, technology, and people move in unison. His leadership philosophy is rooted in strategic thinking, operational excellence, and an unwavering commitment to creating long-term value for clients.`,
       image: '/co_founder_one_image.png'
     },
     {
