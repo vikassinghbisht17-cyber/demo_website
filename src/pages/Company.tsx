@@ -72,6 +72,16 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
     }
   ];
 
+  const leads = Array.from({ length: 8 }, (_, i) => ({
+    id: `lead-${i + 1}`,
+    name: `Core Lead ${i + 1}`,
+    role: `Leadership Role`,
+    linkedin: '',
+    shortBio: `Core team member description for lead ${i + 1}.`,
+    fullBio: `Detailed professional background for Core Lead ${i + 1}. This content is currently a placeholder and will be updated later with actual team information.`,
+    image: ''
+  }));
+
   const valuesList: ValueItem[] = [
     {
       letter: 'E',
@@ -200,11 +210,11 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Meet Our Founders</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8 max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8 lg:max-w-[1066px] mx-auto">
             {founders.map((founder) => (
               <div key={founder.id} className="common-card overflow-hidden flex flex-col group cursor-pointer" onClick={() => setActiveBio(founder)}>
                 {/* Image Section */}
-                <div className="w-full h-72 sm:h-80 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
+                <div className="w-full h-72 sm:h-80 lg:h-64 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
                   {founder.image ? (
                     <img
                       src={founder.image}
@@ -248,6 +258,58 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-32">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Core Leadership Team</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:max-w-[950px] mx-auto">
+              {leads.map((lead) => (
+                <div key={lead.id} className="common-card overflow-hidden flex flex-col group cursor-pointer" onClick={() => setActiveBio(lead)}>
+                  {/* Image Section */}
+                  <div className="w-full h-48 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
+                    {lead.image ? (
+                      <img
+                        src={lead.image}
+                        alt={lead.name}
+                        className="w-full h-full object-cover object-top absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center absolute inset-0">
+                        <svg className="w-10 h-10 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+
+                  {/* Text Section */}
+                  <div className="w-full p-5 sm:p-6 flex flex-col flex-grow bg-white relative">
+                    <h3 className="text-lg font-extrabold text-gray-900 mb-1">{lead.name}</h3>
+                    <span className="text-xs font-bold text-gray-600 block mb-3">{lead.role}</span>
+                    {lead.linkedin && (
+                      <a
+                        href={lead.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#0077b5] hover:text-[#005582] transition-colors mb-4 w-fit"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label={`${lead.name}'s LinkedIn profile`}
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                      </a>
+                    )}
+                    <button className="inline-flex items-center text-xs font-bold text-primary hover:text-accent-blue transition-colors mt-auto w-fit">
+                      Read Bio <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 12h14m0 0l-6-6m6 6l-6 6" /></svg>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
