@@ -4,6 +4,7 @@ export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    phone: '',
     company: '',
     message: '',
   });
@@ -30,6 +31,7 @@ export const ContactForm: React.FC = () => {
       setFormData({
         fullName: '',
         email: '',
+        phone: '',
         company: '',
         message: '',
       });
@@ -95,19 +97,34 @@ export const ContactForm: React.FC = () => {
                 />
               </div>
             </div>
-            <div>
-              <label className="block text-sm font-bold text-gray-700 mb-2">
-                Company Name <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                placeholder="Your organization"
-                required
-                className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">
+                  Contact Number
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+91 98765 43210"
+                  className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">
+                  Company Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Your organization"
+                  required
+                  className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
+                />
+              </div>
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">
@@ -126,7 +143,7 @@ export const ContactForm: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary hover:bg-secondary text-white font-extrabold text-lg py-5 rounded-xl transition-colors shadow-lg shadow-primary/30 mt-4 disabled:opacity-50"
+              className="btn-modern w-full text-lg mt-4 disabled:opacity-50"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

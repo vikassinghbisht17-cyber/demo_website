@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-500">Industries</h4>
             <ul className="space-y-4 text-sm text-gray-300 font-semibold">
 
-              <li><Link to="/company" className="hover:text-white transition-colors">FMCG</Link></li>
+
               <li><Link to="/company" className="hover:text-white transition-colors">Finance</Link></li>
               <li><Link to="/company" className="hover:text-white transition-colors">Banking</Link></li>
               <li><Link to="/company" className="hover:text-white transition-colors">Energy Metering</Link></li>

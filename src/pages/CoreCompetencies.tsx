@@ -186,97 +186,107 @@ export const CoreCompetencies: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Framework 1 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-blue p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-blue/20 transition-all duration-500 transform flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 bg-accent-blue/10 rounded-xl flex items-center justify-center mb-6 border border-accent-blue/20 group-hover:bg-accent-blue/20 transition-colors duration-300">
+            <div className="group relative bg-[#0d233a]/60 backdrop-blur-xl border border-accent-blue/30 border-t-4 border-t-accent-blue p-8 rounded-2xl shadow-[0_20px_60px_rgba(128,155,206,0.3)] hover:shadow-[0_30px_100px_rgba(128,155,206,0.5)] hover:scale-105 hover:bg-[#0d233a]/80 hover:-translate-y-2 transition-all duration-500 transform flex flex-col justify-between overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue via-transparent to-accent-blue opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-accent-blue/20 rounded-xl flex items-center justify-center mb-6 border border-accent-blue/40 group-hover:bg-accent-blue/40 group-hover:shadow-[0_0_20px_rgba(128,155,206,0.6)] transition-all duration-300">
                   <svg className="w-6 h-6 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
                 <span className="text-accent-blue text-xs font-bold uppercase tracking-wider mb-2 block">Framework 01</span>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-blue transition-colors duration-300">Intelligent Knowledge System</h3>
-                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-blue group-hover:drop-shadow-lg transition-all duration-300">Intelligent Knowledge System</h3>
+                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6 group-hover:text-blue-100 transition-colors duration-300">
                   RAG-powered engine that transforms manuals, policies, and files into a living Q&A asset with cited, traceable responses.
                 </p>
               </div>
-              <div className="text-xs text-accent-blue font-semibold border-t border-white/5 pt-4">
+              <div className="text-xs text-accent-blue font-semibold border-t border-white/10 pt-4 group-hover:border-accent-blue/40 transition-colors duration-300 relative z-10">
                 Use Case: Audit SOP Assistant
               </div>
             </div>
 
             {/* Framework 2 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-peach p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-peach/20 transition-all duration-500 transform flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 bg-accent-peach/10 rounded-xl flex items-center justify-center mb-6 border border-accent-peach/20 group-hover:bg-accent-peach/20 transition-colors duration-300">
+            <div className="group relative bg-[#0d233a]/60 backdrop-blur-xl border border-accent-peach/30 border-t-4 border-t-accent-peach p-8 rounded-2xl shadow-[0_20px_60px_rgba(228,201,176,0.3)] hover:shadow-[0_30px_100px_rgba(228,201,176,0.5)] hover:scale-105 hover:bg-[#0d233a]/80 hover:-translate-y-2 transition-all duration-500 transform flex flex-col justify-between overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-peach/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent-peach via-transparent to-accent-peach opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-accent-peach/20 rounded-xl flex items-center justify-center mb-6 border border-accent-peach/40 group-hover:bg-accent-peach/40 group-hover:shadow-[0_0_20px_rgba(228,201,176,0.6)] transition-all duration-300">
                   <svg className="w-6 h-6 text-accent-peach" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
                 <span className="text-accent-peach text-xs font-bold uppercase tracking-wider mb-2 block">Framework 02</span>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-peach transition-colors duration-300">Decision Anomaly Detection</h3>
-                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-peach group-hover:drop-shadow-lg transition-all duration-300">Decision Anomaly Detection</h3>
+                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6 group-hover:text-blue-100 transition-colors duration-300">
                   ML + LLM monitoring that spots unusual transactions and generates detailed natural-language narrative reports of findings.
                 </p>
               </div>
-              <div className="text-xs text-accent-peach font-semibold border-t border-white/5 pt-4">
+              <div className="text-xs text-accent-peach font-semibold border-t border-white/10 pt-4 group-hover:border-accent-peach/40 transition-colors duration-300 relative z-10">
                 Use Case: Fraud & Vigilance
               </div>
             </div>
 
             {/* Framework 3 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-red p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-red/20 transition-all duration-500 transform flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 bg-accent-red/10 rounded-xl flex items-center justify-center mb-6 border border-accent-red/20 group-hover:bg-accent-red/20 transition-colors duration-300">
+            <div className="group relative bg-[#0d233a]/60 backdrop-blur-xl border border-accent-red/30 border-t-4 border-t-accent-red p-8 rounded-2xl shadow-[0_20px_60px_rgba(237,32,36,0.3)] hover:shadow-[0_30px_100px_rgba(237,32,36,0.5)] hover:scale-105 hover:bg-[#0d233a]/80 hover:-translate-y-2 transition-all duration-500 transform flex flex-col justify-between overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent-red via-transparent to-accent-red opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-accent-red/20 rounded-xl flex items-center justify-center mb-6 border border-accent-red/40 group-hover:bg-accent-red/40 group-hover:shadow-[0_0_20px_rgba(237,32,36,0.6)] transition-all duration-300">
                   <svg className="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
                 <span className="text-accent-red text-xs font-bold uppercase tracking-wider mb-2 block">Framework 03</span>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-red transition-colors duration-300">Smart Portfolio Analysis</h3>
-                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-red group-hover:drop-shadow-lg transition-all duration-300">Smart Portfolio Analysis</h3>
+                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6 group-hover:text-blue-100 transition-colors duration-300">
                   Risk cluster segmentation and NPA early warnings with automated portfolio health narratives for executive dashboards.
                 </p>
               </div>
-              <div className="text-xs text-accent-red font-semibold border-t border-white/5 pt-4">
+              <div className="text-xs text-accent-red font-semibold border-t border-white/10 pt-4 group-hover:border-accent-red/40 transition-colors duration-300 relative z-10">
                 Use Case: Default Prediction
               </div>
             </div>
 
             {/* Framework 4 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-accent-teal p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-accent-teal/20 transition-all duration-500 transform flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 bg-accent-teal/10 rounded-xl flex items-center justify-center mb-6 border border-accent-teal/20 group-hover:bg-accent-teal/20 transition-colors duration-300">
+            <div className="group relative bg-[#0d233a]/60 backdrop-blur-xl border border-accent-teal/30 border-t-4 border-t-accent-teal p-8 rounded-2xl shadow-[0_20px_60px_rgba(13,148,136,0.3)] hover:shadow-[0_30px_100px_rgba(13,148,136,0.5)] hover:scale-105 hover:bg-[#0d233a]/80 hover:-translate-y-2 transition-all duration-500 transform flex flex-col justify-between overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent-teal via-transparent to-accent-teal opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-accent-teal/20 rounded-xl flex items-center justify-center mb-6 border border-accent-teal/40 group-hover:bg-accent-teal/40 group-hover:shadow-[0_0_20px_rgba(13,148,136,0.6)] transition-all duration-300">
                   <svg className="w-6 h-6 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </div>
                 <span className="text-accent-teal text-xs font-bold uppercase tracking-wider mb-2 block">Framework 04</span>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-teal transition-colors duration-300">Intelligent Computer Vision</h3>
-                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-teal group-hover:drop-shadow-lg transition-all duration-300">Intelligent Computer Vision</h3>
+                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6 group-hover:text-blue-100 transition-colors duration-300">
                   Deep learning computer vision models that automate production line defect inspection and scan/verify KYC documentation.
                 </p>
               </div>
-              <div className="text-xs text-accent-teal font-semibold border-t border-white/5 pt-4">
+              <div className="text-xs text-accent-teal font-semibold border-t border-white/10 pt-4 group-hover:border-accent-teal/40 transition-colors duration-300 relative z-10">
                 Use Case: Quality Inspection & KYC
               </div>
             </div>
 
             {/* Framework 5 */}
-            <div className="group bg-[#0d233a]/50 backdrop-blur-md border border-white/5 border-t-4 border-t-primary p-8 rounded-none shadow-lg hover:scale-105 hover:bg-[#0d233a]/80 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 transform flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20 group-hover:bg-primary/20 transition-colors duration-300">
+            <div className="group relative bg-[#0d233a]/60 backdrop-blur-xl border border-primary/30 border-t-4 border-t-primary p-8 rounded-2xl shadow-[0_20px_60px_rgba(0,53,89,0.3)] hover:shadow-[0_30px_100px_rgba(0,53,89,0.5)] hover:scale-105 hover:bg-[#0d233a]/80 hover:-translate-y-2 transition-all duration-500 transform flex flex-col justify-between overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-transparent to-primary opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 border border-primary/40 group-hover:bg-primary/40 group-hover:shadow-[0_0_20px_rgba(0,53,89,0.6)] transition-all duration-300">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 </div>
                 <span className="text-primary text-xs font-bold uppercase tracking-wider mb-2 block">Framework 05</span>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">Agentic AI Framework</h3>
-                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary group-hover:drop-shadow-lg transition-all duration-300">Agentic AI Framework</h3>
+                <p className="text-sm text-blue-200 leading-relaxed font-light mb-6 group-hover:text-blue-100 transition-colors duration-300">
                   Autonomous agents orchestrating multi-step document audits, loan processing pipelines, and automated reporting bots.
                 </p>
               </div>
-              <div className="text-xs text-primary font-semibold border-t border-white/5 pt-4">
+              <div className="text-xs text-primary font-semibold border-t border-white/10 pt-4 group-hover:border-primary/40 transition-colors duration-300 relative z-10">
                 Use Case: Workflow Bots (Resolution OS)
               </div>
             </div>

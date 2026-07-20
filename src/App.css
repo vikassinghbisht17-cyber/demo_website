@@ -182,3 +182,35 @@
     border-right-color: var(--border);
   }
 }
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: linear-gradient(180deg, #f8fbff 0%, #f3f7fb 48%, #ffffff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  transition: transform 0.8s cubic-bezier(.4,0,.2,1), filter 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.03);
+}
+
+button,
+a {
+  transition: all 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+button:hover,
+a:hover {
+  transform: translateY(-1px);
+}
+

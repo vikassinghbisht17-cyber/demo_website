@@ -47,7 +47,7 @@ export const Home: React.FC = () => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-primary hover:bg-secondary text-white font-bold px-8 py-4 rounded-full transition-all hover:shadow-xl hover:shadow-primary/20 w-full sm:w-auto text-center border border-primary hover:border-secondary cursor-pointer"
+              className="btn-modern w-full sm:w-auto"
             >
               Get In Touch
             </a>
@@ -57,7 +57,7 @@ export const Home: React.FC = () => {
                 e.preventDefault();
                 document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="text-white font-bold hover:text-accent-peach flex items-center group transition-colors cursor-pointer"
+              className="btn-outline text-white font-bold flex items-center group transition-colors w-full sm:w-auto justify-center"
             >
               Explore Our Services
               <div className="ml-3 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all backdrop-blur-sm border border-white/20">
@@ -105,25 +105,25 @@ export const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Cards for each competency */}
-            <div className="common-card p-8 group">
+            <div className="common-card p-8 group card-hover">
               <h3 className="text-xl font-bold text-primary mb-4">Data Engineering & Platforms</h3>
               <p className="text-gray-600 font-medium mb-6">Designing resilient data lakes and scalable ingestion pipelines to unify siloed enterprise data.</p>
-              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore Engineering &rarr;</Link>
+              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore Engineering <span aria-hidden="true">→</span></Link>
             </div>
-            <div className="common-card p-8 group">
+            <div className="common-card p-8 group card-hover">
               <h3 className="text-xl font-bold text-primary mb-4">Advanced Analytics & BI</h3>
               <p className="text-gray-600 font-medium mb-6">Synthesizing complex data into operational intelligence through custom KPIs and automated workflows.</p>
-              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore Analytics &rarr;</Link>
+              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore Analytics <span aria-hidden="true">→</span></Link>
             </div>
-            <div className="common-card p-8 group">
+            <div className="common-card p-8 group card-hover">
               <h3 className="text-xl font-bold text-primary mb-4">Predictive Intelligence</h3>
               <p className="text-gray-600 font-medium mb-6">Deploying enterprise ML models to anticipate customer actions and flag operational risks proactively.</p>
-              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore ML &rarr;</Link>
+              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore ML <span aria-hidden="true">→</span></Link>
             </div>
-            <div className="common-card p-8 group">
+            <div className="common-card p-8 group card-hover">
               <h3 className="text-xl font-bold text-primary mb-4">Generative AI Frameworks</h3>
               <p className="text-gray-600 font-medium mb-6">Implementing reusable GenAI architectures for intelligent document processing and knowledge extraction.</p>
-              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors">Explore GenAI &rarr;</Link>
+              <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore GenAI <span aria-hidden="true">→</span></Link>
             </div>
           </div>
         </div>
@@ -330,11 +330,11 @@ export const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Card 1 */}
-            <div className="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer">
+            <div className="relative h-[420px] rounded-[28px] overflow-hidden group cursor-pointer image-card card-hover">
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team Culture" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 transition-colors duration-500 group-hover:bg-white/30">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -344,11 +344,11 @@ export const Home: React.FC = () => {
               </div>
             </div>
             {/* Card 2 */}
-            <div className="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer">
+            <div className="relative h-[420px] rounded-[28px] overflow-hidden group cursor-pointer image-card card-hover">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Career Growth" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 transition-colors duration-500 group-hover:bg-white/30">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
@@ -358,11 +358,11 @@ export const Home: React.FC = () => {
               </div>
             </div>
             {/* Card 3 */}
-            <div className="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer">
+            <div className="relative h-[420px] rounded-[28px] overflow-hidden group cursor-pointer image-card card-hover">
               <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Real Impact" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 transition-colors duration-500 group-hover:bg-white/30">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
                   </svg>

@@ -124,21 +124,62 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
   return (
     <div className="bg-white">
       {/* Company Hero Section */}
-      <section className="pt-32 pb-24 bg-white text-center px-4 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-primary/5 to-transparent rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-accent-blue/10 to-transparent rounded-full blur-3xl -z-10"></div>
+      <section className="pt-36 pb-28 bg-white text-center px-4 overflow-hidden relative">
+        {/* AI-style ambient background */}
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.10),_transparent_60%)]" />
+        <div
+          className="absolute inset-0 -z-10 opacity-70"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(0,53,89,0.09) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,53,89,0.09) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+            maskImage: 'radial-gradient(ellipse 75% 65% at 50% 15%, black 35%, transparent 85%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 75% 65% at 50% 15%, black 35%, transparent 85%)',
+          }}
+        />
+        {/* Scanning accent line */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent -z-10" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-24 bg-gradient-to-b from-accent-blue/25 to-transparent blur-2xl -z-10 animate-[gradient-shift_4s_ease_infinite]" />
+
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-primary/15 to-transparent rounded-full blur-3xl -z-10 animate-pulse [animation-duration:6s]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-accent-blue/20 to-transparent rounded-full blur-3xl -z-10 animate-pulse [animation-duration:8s]"></div>
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[320px] h-[320px] bg-accent-peach/15 rounded-full blur-[110px] -z-10"></div>
 
         <div className="max-w-4xl mx-auto z-10 relative">
-          <span className="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">About Us</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-white shadow-sm px-4 py-1.5 mb-6 text-primary font-bold text-xs uppercase tracking-widest">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            About Us
+          </span>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-8 leading-[1.1]">
             Empowering the future with <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-blue to-accent-peach">
+            <span className="relative inline-block text-transparent bg-clip-text bg-[length:200%_auto] bg-gradient-to-r from-primary via-accent-blue to-accent-peach animate-[gradient-shift_5s_ease_infinite]">
               predictive intelligence
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed mb-12">
             Founded in 2023 in Jaipur, Rajasthan, Passageway Tech Private Limited is a pioneering Data Engineering and AI consultancy. We empower enterprises to synthesize raw, fragmented datasets into coherent, actionable intelligence—engineered through robust data platforms, advanced analytics, and production-grade Generative AI frameworks built for real-world impact.
           </p>
+
+          {/* Trust / metric strip */}
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 pt-8 border-t border-gray-200">
+            <div className="text-left">
+              <p className="text-2xl font-extrabold text-gray-900">2023</p>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Founded</p>
+            </div>
+            <div className="w-px h-8 bg-gray-300 hidden sm:block" />
+            <div className="text-left">
+              <p className="text-2xl font-extrabold text-gray-900">Jaipur</p>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Headquarters</p>
+            </div>
+            <div className="w-px h-8 bg-gray-300 hidden sm:block" />
+            <div className="text-left">
+              <p className="text-2xl font-extrabold text-gray-900">AI & Data</p>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Core Focus</p>
+            </div>
+          </div>
         </div>
       </section>
 

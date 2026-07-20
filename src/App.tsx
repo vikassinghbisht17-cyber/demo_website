@@ -10,6 +10,10 @@ import { CoreCompetencies } from './pages/CoreCompetencies';
 import { IndustrySolution } from './pages/IndustrySolution';
 
 import { BreadcrumbStripe } from './components/BreadcrumbStripe';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
+import { CursorGlow } from './components/CursorGlow';
+import { useScrollReveal } from './hooks/useScrollReveal';
+import { useMagneticButtons } from './hooks/useMagneticButtons';
 
 // Scroll to top on route change helper
 const ScrollToTop: React.FC = () => {
@@ -31,10 +35,22 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
+// Mounts the additive scroll-reveal / magnetic-button effects.
+// Rendered inside Router so hooks can read route location; renders nothing.
+const EnhancementLayer: React.FC = () => {
+  useScrollReveal();
+  useMagneticButtons();
+  return null;
+};
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <EnhancementLayer />
+      <ScrollProgressBar />
+      <CursorGlow />
+      <div className="noise-overlay" />
       <div className="flex flex-col min-h-screen">
         <Header />
         <BreadcrumbStripe />
