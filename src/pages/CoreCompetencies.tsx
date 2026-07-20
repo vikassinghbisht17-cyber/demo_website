@@ -20,7 +20,7 @@ const competencies = [
     ),
     color: 'bg-primary',
     textColor: 'text-primary',
-    relatedCaseStudyId: 4
+    relatedCaseStudyId: 5
   },
   {
     id: 'analytics',

@@ -38,7 +38,8 @@ An alumnus of IIT (BHU) Varanasi, Roop brings 25+ years of expertise in enterpri
 At the AI & Gen AI frontlines, he pioneered early Generative AI adoption within enterprise environments — developing the frameworks that now sit at the core of Passageway's AI portfolio.
 
 In 2023, Roop founded Passageway Tech. It was time to build what he had always known was missing.`,
-      image: '/founder_image.jpeg'
+      image: '/founder_image.jpeg',
+      imageClassName: 'object-cover object-top'
     },
     {
       id: 'abhishek',
@@ -55,7 +56,8 @@ Before Passageway, Abhishek built his career with Wipro Technologies, Cognizant 
 At Passageway, Abhishek is building a culture of ownership. He is passionate about developing leaders who think like entrepreneurs, take end-to-end accountability, and relentlessly focus on customer success. Under his leadership, Passageway continues to invest in developing world-class talent in Data Engineering, Artificial Intelligence, and Data Science while fostering a mindset of innovation, excellence, and continuous learning.
 
 He believes that sustainable transformation is achieved when business vision, technology, and people move in unison. His leadership philosophy is rooted in strategic thinking, operational excellence, and an unwavering commitment to creating long-term value for clients.`,
-      image: '/co_founder_one_image.png'
+      image: '/co_founder_one_image.png',
+      imageClassName: 'object-cover object-[center_15%]'
     },
     {
       id: 'varun',
@@ -68,7 +70,8 @@ He believes that sustainable transformation is achieved when business vision, te
 With 12 years of industry experience, Varun brings deep expertise in building and scaling high-performing technology applications. He has a proven track record of delivering reliable, scalable solutions with a 100% execution-focused approach. His leadership combines technical depth, business clarity, and a strong commitment to innovation.
 
 At Passageway, Varun focuses on helping organizations adopt practical AI solutions that improve efficiency, unlock growth opportunities, and create long-term business value.`,
-      image: '/co_founder_three_image.png'
+      image: '/co_founder_3.jpeg',
+      imageClassName: 'object-contain object-bottom'
     }
   ];
 
@@ -214,16 +217,16 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
             {founders.map((founder) => (
               <div key={founder.id} className="common-card overflow-hidden flex flex-col group cursor-pointer" onClick={() => setActiveBio(founder)}>
                 {/* Image Section */}
-                <div className="w-full h-72 sm:h-80 lg:h-64 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
+                <div className="w-full h-72 sm:h-80 lg:h-64 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100 group-hover:bg-gray-100 transition-colors duration-500">
                   {founder.image ? (
-                    <img
-                      src={founder.image}
-                      alt={founder.name}
-                      className={`w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105 ${founder.id === 'abhishek'
-                          ? 'object-[center_15%]'
-                          : 'object-top'
-                        }`}
-                    />
+                    <>
+                      <img src={founder.image} className="w-full h-full object-cover absolute inset-0 blur-2xl opacity-40 scale-110" alt="" aria-hidden="true" />
+                      <img
+                        src={founder.image}
+                        alt={founder.name}
+                        className={`w-full h-full absolute inset-0 transition-transform duration-700 group-hover:scale-105 z-10 ${(founder as any).imageClassName || 'object-cover object-top'}`}
+                      />
+                    </>
                   ) : (
                     <div className="w-full h-full flex items-center justify-center absolute inset-0">
                       <svg className="w-16 h-16 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -339,6 +342,55 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
               </div>
             </div>
 
+            {/* Sports & Entertainment Focus */}
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Customer Propensity</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  Deploying ensemble ML scoring platforms to process transaction history and demographic data, enabling sports leagues to predict fan behavior and drive targeted engagement.
+                </p>
+              </div>
+            </div>
+
+            {/* ITSM Focus */}
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">ITSM & Enterprise Analytics</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  Co-engineering native data layers that fuse ITSM platform data with external sources (Workday, SIEM, Salesforce) into a governed data fabric for domain-specific insights and automated workflows.
+                </p>
+              </div>
+            </div>
+
+            {/* Automotive Focus */}
+            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gray-900/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
+                  <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Automotive After-Sales</h3>
+                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
+                  Integrating dealer network, warranty, and parts data to create proactive operational intelligence, driving warranty claims analytics and precise parts demand forecasting models.
+                </p>
+              </div>
+            </div>
+
             {/* BFSI Focus */}
             <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-peach/20 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
@@ -351,38 +403,6 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
                 <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Banking & Financial Services</h3>
                 <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
                   We engineer credit default prediction models, loan application processing bots, fraud vigilance monitors, and our flagship <strong className="text-gray-900">Resolution OS</strong> orchestration layer for NBFCs.
-                </p>
-              </div>
-            </div>
-
-            {/* Energy Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Energy & Utilities</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  We integrate SCADA and meter telemetry into cloud data lakes to enable asset health performance monitoring, power outage intelligence, and energy consumption forecasting.
-                </p>
-              </div>
-            </div>
-
-            {/* Digital Platforms Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between lg:col-span-1 md:col-span-2 lg:max-w-none md:max-w-md md:mx-auto lg:mx-0">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Digital Platforms & Media</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  We build real-time product engagement recommenders, user behavior cohort tracking tables, digital asset analytics, and marketing funnel performance engines.
                 </p>
               </div>
             </div>
@@ -494,9 +514,12 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
             </button>
             <div className="flex flex-col md:flex-row overflow-hidden min-h-0 flex-1">
               {/* Modal Image */}
-              <div className="w-full md:w-5/12 h-72 md:h-auto min-h-[300px] bg-gray-50 flex-shrink-0 relative">
+              <div className="w-full md:w-5/12 h-72 md:h-auto min-h-[300px] bg-gray-50 flex-shrink-0 relative overflow-hidden">
                 {activeBio.image ? (
-                  <img src={activeBio.image} alt={activeBio.name} className="w-full h-full object-cover object-top absolute inset-0" />
+                  <>
+                    <img src={activeBio.image} className="w-full h-full object-cover absolute inset-0 blur-2xl opacity-40 scale-110" alt="" aria-hidden="true" />
+                    <img src={activeBio.image} alt={activeBio.name} className={`w-full h-full absolute inset-0 z-10 ${activeBio.imageClassName || 'object-cover object-top'}`} />
+                  </>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center absolute inset-0 border-b md:border-r border-gray-100">
                     <svg className="w-20 h-20 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

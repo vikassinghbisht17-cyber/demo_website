@@ -58,10 +58,7 @@ export const Header: React.FC = () => {
                   <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
                     <li><Link to="/solutions#case-study-1" className="hover:text-primary transition-colors">Manufacturing Operational Analytics Platform</Link></li>
                   </ul>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Government & Public Procurement</h3>
-                  <ul className="space-y-3 text-base font-semibold text-gray-700">
-                    <li><Link to="/solutions#case-study-4" className="hover:text-primary transition-colors">Distributed Tender Data Engineering & AI Platform</Link></li>
-                  </ul>
+
                 </div>
                 {/* Column 2 */}
                 <div>
@@ -150,7 +147,6 @@ export const Header: React.FC = () => {
                     <li><Link to="/solutions#case-study-1" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Manufacturing Operational Analytics Platform</Link></li>
                     <li><Link to="/solutions#case-study-2" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">AI-Powered Financial Document Extraction Platform</Link></li>
                     <li><Link to="/solutions#case-study-6" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Intelligent Decision Anomaly Detection System</Link></li>
-                    <li><Link to="/solutions#case-study-4" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Distributed Tender Data Engineering & AI Platform</Link></li>
                     <li><Link to="/solutions#case-study-5" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Unified Enterprise Data & Analytics Platform</Link></li>
                   </ul>
                 </div>
