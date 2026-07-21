@@ -52,6 +52,7 @@ export const Header: React.FC = () => {
                 </svg>
               </span>
 
+
               <div
                 role="menu"
                 aria-label="Industry Solutions"
@@ -264,7 +265,6 @@ export const Header: React.FC = () => {
                     <li><Link to="/solutions#case-study-1" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Manufacturing Operational Analytics Platform</Link></li>
                     <li><Link to="/solutions#case-study-2" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">AI-Powered Financial Document Extraction Platform</Link></li>
                     <li><Link to="/solutions#case-study-6" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Intelligent Decision Anomaly Detection System</Link></li>
-                    <li><Link to="/solutions#case-study-4" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Distributed Tender Data Engineering & AI Platform</Link></li>
                     <li><Link to="/solutions#case-study-5" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Unified Enterprise Data & Analytics Platform</Link></li>
                   </ul>
                 </div>
