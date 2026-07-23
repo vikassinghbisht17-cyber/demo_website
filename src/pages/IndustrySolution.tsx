@@ -56,6 +56,28 @@ const caseStudies = [
     image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1200&auto=format&fit=crop',
     bgColor: 'bg-gray-50',
     reverse: false,
+  },
+  {
+    id: 6,
+    title: 'BFSI Lending & Incentive Suite',
+    industry: 'Banking, Financial Services & Insurance (BFSI)',
+    challenge: 'BFSI institutions often struggle with fragmented systems across loan origination, servicing, and sales intelligence, making it difficult to optimize the full lending lifecycle and accurately forecast agent incentives.',
+    solution: 'We deployed a modular digital-lending and sales-intelligence stack running on a shared data core. It features LOS and LMS apps alongside AI services for automated document extraction (KYC, financial, collateral) and agent-incentive forecasting.',
+    outcome: 'Delivered faster loan turnaround with fewer manual touches, straight-through document processing at scale, and forecast-driven, accurate agent incentive payouts to optimize sales performance.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+    bgColor: 'bg-[#f4f5f8]',
+    reverse: true,
+  },
+  {
+    id: 7,
+    title: 'Healthcare Market Intelligence',
+    industry: 'Healthcare & Life Sciences',
+    challenge: 'Pharma and medtech teams lack visibility into product penetration across specific market segments, struggling to benchmark against competitors and identify untapped growth opportunities.',
+    solution: 'We developed a tailored analytics and AI engine that fuses sales, prescription, claims, and market data. The platform provides comprehensive segment penetration tracking, competitor benchmarking, and product capability assessment.',
+    outcome: 'Empowered teams to turn market data into targeted growth decisions with segment-level white-space maps, head-to-head competitor share tracking, and evidence-based product capability scoring.',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
+    bgColor: 'bg-gray-50',
+    reverse: false,
   }
 ];
 

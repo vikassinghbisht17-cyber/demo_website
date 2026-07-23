@@ -192,6 +192,37 @@ export const Header: React.FC = () => {
                       </svg>
                     </Link>
                   </div>
+              <div className="absolute top-20 -left-64 w-screen max-w-5xl bg-white border border-gray-100 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-b-xl z-50 p-10 grid grid-cols-1 md:grid-cols-3 gap-12">
+                {/* Column 1 */}
+                <div>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Manufacturing & Auto</h3>
+                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions#case-study-1" className="hover:text-primary transition-colors">Manufacturing Operational Analytics</Link></li>
+                    <li><Link to="/solutions#case-study-4" className="hover:text-primary transition-colors">Automotive After-Sales Analytics</Link></li>
+                  </ul>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Sports & Entertainment</h3>
+                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions#case-study-2" className="hover:text-primary transition-colors">Customer Propensity Intelligence</Link></li>
+                  </ul>
+                </div>
+                {/* Column 2 */}
+                <div>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Banking & Financial Services</h3>
+                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions#case-study-6" className="hover:text-primary transition-colors">BFSI Lending & Incentive Suite</Link></li>
+                    <li><Link to="/solutions#case-study-5" className="hover:text-primary transition-colors">Decision Anomaly Detection System</Link></li>
+                  </ul>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Healthcare</h3>
+                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions#case-study-7" className="hover:text-primary transition-colors">Healthcare Market Intelligence</Link></li>
+                  </ul>
+                </div>
+                {/* Column 3 */}
+                <div>
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Digital Platforms & ITSM</h3>
+                  <ul className="space-y-3 text-base font-semibold mb-8 text-gray-700">
+                    <li><Link to="/solutions#case-study-3" className="hover:text-primary transition-colors">Enterprise ITSM Data & Analytics</Link></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -262,10 +293,13 @@ export const Header: React.FC = () => {
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Industry Solutions</h4>
                   <ul className="space-y-3 pl-2">
-                    <li><Link to="/solutions#case-study-1" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Manufacturing Operational Analytics Platform</Link></li>
-                    <li><Link to="/solutions#case-study-2" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">AI-Powered Financial Document Extraction Platform</Link></li>
-                    <li><Link to="/solutions#case-study-6" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Intelligent Decision Anomaly Detection System</Link></li>
-                    <li><Link to="/solutions#case-study-5" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Unified Enterprise Data & Analytics Platform</Link></li>
+                    <li><Link to="/solutions#case-study-1" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Manufacturing Operational Analytics</Link></li>
+                    <li><Link to="/solutions#case-study-2" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Customer Propensity Intelligence</Link></li>
+                    <li><Link to="/solutions#case-study-3" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Enterprise ITSM Data & Analytics</Link></li>
+                    <li><Link to="/solutions#case-study-4" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive After-Sales Analytics</Link></li>
+                    <li><Link to="/solutions#case-study-5" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Decision Anomaly Detection</Link></li>
+                    <li><Link to="/solutions#case-study-6" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Lending & Incentive Suite</Link></li>
+                    <li><Link to="/solutions#case-study-7" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Healthcare Market Intelligence</Link></li>
                   </ul>
                 </div>
 

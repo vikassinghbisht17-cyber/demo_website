@@ -62,7 +62,7 @@ He believes that sustainable transformation is achieved when business vision, te
     {
       id: 'varun',
       name: 'Varun Pandey',
-      role: 'Co-Founder',
+      role: 'Co-Founder and Head of Operations',
       linkedin: 'https://www.linkedin.com/in/varun-pandey-27a33784/',
       shortBio: 'Leading strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.',
       fullBio: `Varun leads strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.
@@ -75,15 +75,39 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
     }
   ];
 
-  const leads = Array.from({ length: 8 }, (_, i) => ({
-    id: `lead-${i + 1}`,
-    name: `Core Lead ${i + 1}`,
-    role: `Leadership Role`,
-    linkedin: '',
-    shortBio: `Core team member description for lead ${i + 1}.`,
-    fullBio: `Detailed professional background for Core Lead ${i + 1}. This content is currently a placeholder and will be updated later with actual team information.`,
-    image: ''
-  }));
+  const leads = [
+    {
+      id: 'sandeep',
+      name: 'Sandeep Kumar',
+      role: 'Lead Data Scientist',
+      linkedin: 'https://www.linkedin.com/in/sandeep-kumar-23b82b125/',
+      shortBio: 'Lead Data Scientist with over 8 years of experience in building end-to-end machine learning solutions.',
+      fullBio: `Lead Data Scientist with over 8 years of experience in building end-to-end machine learning solutions that transform complex data into actionable business insights. Experienced across healthcare, automotive, financial services, and Apple Maps, with a strong foundation in Python, PySpark, SQL, AWS, Azure, Hadoop, and Hive. Passionate about statistical modeling, deep learning, and scalable ML pipelines, with a proven ability to lead teams, collaborate with clients, and deliver impactful AI-driven solutions from concept to deployment.`,
+      image: '/sandeep_image.jpg'
+    },
+    {
+      id: 'ravi',
+      name: 'Ravi Chauhan',
+      role: 'Lead Data Scientist',
+      linkedin: 'https://www.linkedin.com/in/ravi-chauhan-a8173411a/',
+      shortBio: 'Lead Data Scientist with over 7 years of experience designing and delivering AI-powered solutions.',
+      fullBio: `Lead Data Scientist with over 7 years of experience designing and delivering AI-powered solutions that solve complex business challenges. Specializing in Generative AI, Machine Learning, Natural Language Processing (NLP), and Predictive Analytics, with expertise in LLM fine-tuning, Retrieval-Augmented Generation (RAG), GraphRAG, Agentic AI, recommendation systems, and production-scale ML solutions on AWS. Passionate about transforming data into intelligent products that enhance decision-making, automate business processes, and drive measurable business outcomes.`,
+      image: '/ravi_image.png'
+    },
+    {
+      id: 'aman',
+      name: 'Aman Jain',
+      role: 'Lead Data Scientist',
+      linkedin: 'https://www.linkedin.com/in/amanjain1711/',
+      shortBio: 'Lead Data Scientist with over 6 years of experience in AI, Machine Learning, and Enterprise Data Platforms.',
+      fullBio: `Aman Jain is a Lead Data Scientist with over 6 years of experience in AI, Machine Learning, and Enterprise Data Platforms. He has a proven track record of architecting and delivering scalable analytics solutions that empower organizations to make faster, data-driven decisions.
+
+At Passageway, Aman leads the design and implementation of enterprise AI and analytics initiatives, guiding cross-functional teams in building modern data platforms and intelligent applications. His expertise includes Machine Learning, Predictive Analytics, Python, SQL, Apache Spark, ClickHouse, Hadoop, Hive, Dask, and cloud-native data technologies.
+
+Aman is passionate about leveraging advanced analytics and AI to solve complex business challenges, optimize operations, and create measurable business impact through innovation and scalable technology.`,
+      image: '/aman_image.jpg'
+    }
+  ];
 
   const valuesList: ValueItem[] = [
     {
@@ -308,7 +332,7 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Core Leadership Team</h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:max-w-[950px] mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:max-w-[1066px] mx-auto">
               {leads.map((lead) => (
                 <div key={lead.id} className="common-card overflow-hidden flex flex-col group cursor-pointer" onClick={() => setActiveBio(lead)}>
                   {/* Image Section */}
