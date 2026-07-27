@@ -77,7 +77,6 @@ export const ContactForm: React.FC = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  placeholder="Your Name"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
@@ -91,7 +90,6 @@ export const ContactForm: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Your Email"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
@@ -107,7 +105,6 @@ export const ContactForm: React.FC = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 98765 43210"
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
               </div>
@@ -120,7 +117,6 @@ export const ContactForm: React.FC = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="Your organization"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
@@ -135,7 +131,6 @@ export const ContactForm: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                placeholder="Tell us about your project..."
                 required
                 className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
               ></textarea>
@@ -143,7 +138,8 @@ export const ContactForm: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-modern w-full text-lg mt-4 disabled:opacity-50"
+              style={{ transform: 'none' }}
+              className="w-full text-lg mt-4 py-4 rounded-full bg-gradient-to-r from-secondary to-primary text-white font-bold hover:brightness-110 active:brightness-95 transition-[filter] duration-200 disabled:opacity-50"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

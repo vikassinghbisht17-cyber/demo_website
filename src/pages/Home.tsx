@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ContactForm } from '../components/ContactForm';
 import ourCultureImg from '../assets/our-culture.jpg';
+import growthLearningImg from '../assets/growth-learning.jpg';
 
 export const Home: React.FC = () => {
 
@@ -58,10 +59,10 @@ export const Home: React.FC = () => {
                 e.preventDefault();
                 document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
               }}
-    className="btn-outline font-bold flex items-center group transition-all duration-300 w-full sm:w-auto justify-center"
+    className="font-bold flex items-center group transition-all duration-300 w-full sm:w-auto justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-full shadow-lg"
             >
               Explore Our Services
-<div className="ml-3 w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white shadow-md">
+<div className="ml-3 w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -346,7 +347,7 @@ export const Home: React.FC = () => {
             </div>
             {/* Card 2 */}
             <div className="relative h-[420px] rounded-[28px] overflow-hidden group cursor-pointer image-card card-hover">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Career Growth" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={growthLearningImg} alt="Growth & Learning" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 transition-colors duration-500 group-hover:bg-white/30">

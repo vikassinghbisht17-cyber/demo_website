@@ -9,7 +9,8 @@ const caseStudies = [
     challenge: 'A large manufacturing organization had critical operations data fragmented across ERP, SCM (Supply Chain Management), machine-level controllers, and workforce sheets. Plant managers lacked real-time visibility, leading to reactive decision-making, undetected rejection trends, and sub-optimal machine OEE.',
     solution: 'We designed an integrated operational analytics platform built on a scalable EDB (Enterprise Data Bus). Leveraging our proprietary 4M Traceability framework (Man, Machine, Material, Method), we unified production, rejection rates, machine OEE, and workforce metrics into real-time dashboards.',
     outcome: 'Plant managers obtained a single source of truth for proactive quality tracking and asset utilization. Enabled rapid troubleshooting of line bottlenecks. The solution handles millions of records daily with sub-second query speeds.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=1200&auto=format&fit=crop',
+    imagePosition: 'object-center',
     bgColor: 'bg-gray-50',
     reverse: false,
   },
@@ -42,7 +43,7 @@ const caseStudies = [
     challenge: 'A leading automotive OEM had limited visibility into dealer network performance, warranty claim trends, and parts demand. Reporting was fragmented across multiple systems and relied on manual Excel consolidation, making it difficult to identify underperforming dealers or forecast parts demand.',
     solution: 'We designed a dealer analytics platform integrating data from multiple DMS, warranty, and parts systems. Deliverables included dealer performance scorecards, warranty claims analytics, a parts demand forecasting model, and an after-sales revenue KPI dashboard.',
     outcome: 'Measurable improvements across the dealer network: proactive identification of warranty claim spikes, improved parts availability, and a 70% reduction in manual reporting effort. The platform is now the primary operational intelligence tool for OEM leadership.',
-    image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=1200&auto=format&fit=crop',
     bgColor: 'bg-[#f4f5f8]',
     reverse: true,
   },
@@ -64,7 +65,7 @@ const caseStudies = [
     challenge: 'BFSI institutions often struggle with fragmented systems across loan origination, servicing, and sales intelligence, making it difficult to optimize the full lending lifecycle and accurately forecast agent incentives.',
     solution: 'We deployed a modular digital-lending and sales-intelligence stack running on a shared data core. It features LOS and LMS apps alongside AI services for automated document extraction (KYC, financial, collateral) and agent-incentive forecasting.',
     outcome: 'Delivered faster loan turnaround with fewer manual touches, straight-through document processing at scale, and forecast-driven, accurate agent incentive payouts to optimize sales performance.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop',
     bgColor: 'bg-[#f4f5f8]',
     reverse: true,
   },
@@ -131,7 +132,7 @@ export const IndustrySolution: React.FC = () => {
               <img
                 src={study.image}
                 alt={study.title}
-                className="w-full h-full object-cover absolute inset-0 transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                className={`w-full h-full object-cover ${(study as any).imagePosition || 'object-center'} absolute inset-0 transform group-hover:scale-105 transition-transform duration-700 ease-in-out`}
               />
             </div>
           </div>

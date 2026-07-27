@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ContactForm } from '../components/ContactForm';
+import teamPhoto from '../assets/team-photo.jpg';
 
 interface ValueItem {
   letter: string;
@@ -83,7 +84,8 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
       linkedin: 'https://www.linkedin.com/in/sandeep-kumar-23b82b125/',
       shortBio: 'Lead Data Scientist with over 8 years of experience in building end-to-end machine learning solutions.',
       fullBio: `Lead Data Scientist with over 8 years of experience in building end-to-end machine learning solutions that transform complex data into actionable business insights. Experienced across healthcare, automotive, financial services, and Apple Maps, with a strong foundation in Python, PySpark, SQL, AWS, Azure, Hadoop, and Hive. Passionate about statistical modeling, deep learning, and scalable ML pipelines, with a proven ability to lead teams, collaborate with clients, and deliver impactful AI-driven solutions from concept to deployment.`,
-      image: '/sandeep_image.jpg'
+      image: '/sandeep_image.jpg',
+      imageClassName: 'object-cover object-[center_20%]'
     },
     {
       id: 'ravi',
@@ -92,7 +94,8 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
       linkedin: 'https://www.linkedin.com/in/ravi-chauhan-a8173411a/',
       shortBio: 'Lead Data Scientist with over 7 years of experience designing and delivering AI-powered solutions.',
       fullBio: `Lead Data Scientist with over 7 years of experience designing and delivering AI-powered solutions that solve complex business challenges. Specializing in Generative AI, Machine Learning, Natural Language Processing (NLP), and Predictive Analytics, with expertise in LLM fine-tuning, Retrieval-Augmented Generation (RAG), GraphRAG, Agentic AI, recommendation systems, and production-scale ML solutions on AWS. Passionate about transforming data into intelligent products that enhance decision-making, automate business processes, and drive measurable business outcomes.`,
-      image: '/ravi_image.png'
+      image: '/ravi_image.png',
+      imageClassName: 'object-cover object-[center_25%]'
     },
     {
       id: 'aman',
@@ -105,7 +108,8 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
 At Passageway, Aman leads the design and implementation of enterprise AI and analytics initiatives, guiding cross-functional teams in building modern data platforms and intelligent applications. His expertise includes Machine Learning, Predictive Analytics, Python, SQL, Apache Spark, ClickHouse, Hadoop, Hive, Dask, and cloud-native data technologies.
 
 Aman is passionate about leveraging advanced analytics and AI to solve complex business challenges, optimize operations, and create measurable business impact through innovation and scalable technology.`,
-      image: '/aman_image.jpg'
+      image: '/aman_image.jpg',
+      imageClassName: 'object-cover object-[center_25%]'
     }
   ];
 
@@ -113,37 +117,37 @@ Aman is passionate about leveraging advanced analytics and AI to solve complex b
     {
       letter: 'E',
       title: 'Empathy',
-      image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=600&fit=crop',
       colorClass: 'text-[#a6c1ee]'
     },
     {
       letter: 'N',
       title: 'Nimble',
-      image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=400&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=600&fit=crop',
       colorClass: 'text-[#a6c1ee]'
     },
     {
       letter: 'T',
       title: 'Trust',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=600&fit=crop',
-      colorClass: 'text-[#f1c39e]'
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=600&fit=crop',
+      colorClass: 'text-[#a6c1ee]'
     },
     {
       letter: 'I',
       title: 'Intelligence',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=600&fit=crop',
       colorClass: 'text-[#a6c1ee]'
     },
     {
       letter: 'R',
       title: 'Responsible',
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=600&fit=crop',
       colorClass: 'text-[#a6c1ee]'
     },
     {
       letter: 'E',
       title: 'Entrepreneur',
-      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=600&fit=crop',
       colorClass: 'text-[#a6c1ee]'
     }
   ];
@@ -336,13 +340,16 @@ Aman is passionate about leveraging advanced analytics and AI to solve complex b
               {leads.map((lead) => (
                 <div key={lead.id} className="common-card overflow-hidden flex flex-col group cursor-pointer" onClick={() => setActiveBio(lead)}>
                   {/* Image Section */}
-                  <div className="w-full h-48 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
+                  <div className="w-full h-64 relative overflow-hidden bg-gray-50 flex-shrink-0 border-b border-gray-100">
                     {lead.image ? (
-                      <img
-                        src={lead.image}
-                        alt={lead.name}
-                        className="w-full h-full object-cover object-top absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                      />
+                      <>
+                        <img src={lead.image} className="w-full h-full object-cover absolute inset-0 blur-2xl opacity-40 scale-110" alt="" aria-hidden="true" />
+                        <img
+                          src={lead.image}
+                          alt={lead.name}
+                          className={`w-full h-full absolute inset-0 transition-transform duration-700 group-hover:scale-105 z-10 ${(lead as any).imageClassName || 'object-cover object-top'}`}
+                        />
+                      </>
                     ) : (
                       <div className="w-full h-full flex items-center justify-center absolute inset-0">
                         <svg className="w-10 h-10 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -377,99 +384,6 @@ Aman is passionate about leveraging advanced analytics and AI to solve complex b
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Industry Focus */}
-      <section className="py-24 bg-gray-50 border-y border-gray-100">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent-blue font-bold text-xs uppercase tracking-widest mb-3 block">Specialized Solutions</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Industry Focus</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Manufacturing Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-red/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Manufacturing Analytics</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  Leveraging our proprietary <strong className="text-gray-900">4M Traceability framework</strong> (Man, Machine, Material, Method) to unify ERP & SCADA data for OEE tracking, scrap analysis, and machine failure prediction.
-                </p>
-              </div>
-            </div>
-
-            {/* Sports & Entertainment Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Customer Propensity</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  Deploying ensemble ML scoring platforms to process transaction history and demographic data, enabling sports leagues to predict fan behavior and drive targeted engagement.
-                </p>
-              </div>
-            </div>
-
-            {/* ITSM Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-accent-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">ITSM & Enterprise Analytics</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  Co-engineering native data layers that fuse ITSM platform data with external sources (Workday, SIEM, Salesforce) into a governed data fabric for domain-specific insights and automated workflows.
-                </p>
-              </div>
-            </div>
-
-            {/* Automotive Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gray-900/10 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Automotive After-Sales</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  Integrating dealer network, warranty, and parts data to create proactive operational intelligence, driving warranty claims analytics and precise parts demand forecasting models.
-                </p>
-              </div>
-            </div>
-
-            {/* BFSI Focus */}
-            <div className="common-card p-10 group relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-peach/20 rounded-full blur-2xl -mt-10 -mr-10 group-hover:scale-150 transition-transform duration-700"></div>
-              <div>
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 border border-gray-100">
-                  <svg className="w-8 h-8 text-accent-peach" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 relative z-10">Banking & Financial Services</h3>
-                <p className="text-gray-600 text-base leading-relaxed font-medium relative z-10">
-                  We engineer credit default prediction models, loan application processing bots, fraud vigilance monitors, and our flagship <strong className="text-gray-900">Resolution OS</strong> orchestration layer for NBFCs.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -537,6 +451,9 @@ Aman is passionate about leveraging advanced analytics and AI to solve complex b
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl max-w-5xl mx-auto text-center">
+            {/* Background team photo */}
+            <img src={teamPhoto} alt="Passageway Team" className="absolute inset-0 w-full h-full object-cover object-[center_30%]" />
+            <div className="absolute inset-0 bg-primary/90"></div>
             <div className="absolute -right-20 -top-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-accent-blue opacity-20 rounded-full blur-3xl pointer-events-none"></div>
 

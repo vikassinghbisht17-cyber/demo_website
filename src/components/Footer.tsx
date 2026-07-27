@@ -55,14 +55,13 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-gray-300 font-semibold">
               <li><Link to="/company" className="hover:text-white transition-colors">About Us</Link></li>
               {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
-              <li><Link to="/#contact" className="hover:text-white transition-colors">Contact</Link></li>
+
             </ul>
           </div>
           <div>
             <h4 className="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-500">Contact</h4>
             <ul className="space-y-4 text-sm text-gray-300 font-semibold">
               <li><a href="mailto:contact@pssgway.com" className="hover:text-white transition-colors">contact@pssgway.com</a></li>
-              <li><a href="tel:+917742543582" className="hover:text-white transition-colors">+91-7742543582</a></li>
               <li><span className="text-gray-400">Jaipur, Rajasthan, India</span></li>
             </ul>
           </div>

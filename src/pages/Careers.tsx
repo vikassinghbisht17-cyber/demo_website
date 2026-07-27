@@ -1,4 +1,6 @@
 import React from 'react';
+import sandeepImg from '../assets/sandeep-testimonial.jpg';
+import anjaliImg from '../assets/anjali-testimonial.jpg';
 
 interface Testimonial {
   quote: string;
@@ -21,21 +23,14 @@ export const Careers: React.FC = () => {
       quote: "The level of autonomy and trust here is incredible. I was given the opportunity to lead the development of our predictive maintenance platform for a major manufacturing client within my first year.",
       author: "Sandeep K.",
       role: "Lead Data Scientist",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop",
+      image: sandeepImg,
       accentColor: "bg-primary"
-    },
-    {
-      quote: "Passageway doesn't just talk about continuous learning—they actively invest in it. The transition from traditional data engineering to building GenAI pipelines was seamless thanks to the mentorship here.",
-      author: "Vikas R.",
-      role: "Senior Data Engineer",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop",
-      accentColor: "bg-accent-blue"
     },
     {
       quote: "The culture is incredibly collaborative. We solve complex problems for global banks, and knowing that our fraud detection models are making a real-world impact is immensely rewarding.",
       author: "Anjali K.",
       role: "Full Stack Developer",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop",
+      image: anjaliImg,
       accentColor: "bg-accent-peach"
     }
   ];
@@ -191,7 +186,7 @@ export const Careers: React.FC = () => {
                   "{test.quote}"
                 </p>
                 <div className="flex items-center">
-                  <img src={test.image} alt={test.author} className="w-14 h-14 rounded-full object-cover mr-4" />
+                  <img src={test.image} alt={test.author} className="w-16 h-16 rounded-full object-cover object-top mr-4 ring-2 ring-gray-100" />
                   <div>
                     <h4 className="font-bold text-gray-900">{test.author}</h4>
                     <p className="text-sm text-gray-500 font-medium">{test.role}</p>
@@ -234,7 +229,7 @@ export const Careers: React.FC = () => {
                 </div>
                 <a
                   href={`mailto:${role.email}`}
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold px-8 py-3 rounded-full transition-colors whitespace-nowrap"
+                  className="bg-primary border-2 border-primary text-white hover:bg-secondary hover:border-secondary font-bold px-8 py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
                 >
                   Apply Now
                 </a>
