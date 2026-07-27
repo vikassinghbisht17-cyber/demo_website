@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ContactForm } from '../components/ContactForm';
-import ourCultureImg from '../assets/our-culture.jpg';
+import ourCultureImg from '../assets/our-culture.JPG';
 import growthLearningImg from '../assets/growth-learning.jpg';
 import realWorldImpactImg from '../assets/real-world-impact.jpg';
 
