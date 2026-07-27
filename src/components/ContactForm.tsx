@@ -77,6 +77,7 @@ export const ContactForm: React.FC = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
+                  placeholder="Your Name"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
@@ -90,6 +91,7 @@ export const ContactForm: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  placeholder="Your Email"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
@@ -105,6 +107,7 @@ export const ContactForm: React.FC = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  placeholder="Your Contact Number"
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />
               </div>
@@ -117,6 +120,7 @@ export const ContactForm: React.FC = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
+                  placeholder="Your organization"
                   required
                   className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium"
                 />

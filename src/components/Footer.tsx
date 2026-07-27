@@ -44,10 +44,11 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-gray-300 font-semibold">
 
 
-              <li><Link to="/company" className="hover:text-white transition-colors">Finance</Link></li>
-              <li><Link to="/company" className="hover:text-white transition-colors">Banking</Link></li>
-              <li><Link to="/company" className="hover:text-white transition-colors">Energy Metering</Link></li>
-              <li><Link to="/company" className="hover:text-white transition-colors">Sports Leagues</Link></li>
+              <li><Link to="/company" className="hover:text-white transition-colors">Sports Leagues </Link></li>
+              <li><Link to="/company" className="hover:text-white transition-colors">Manufacturing</Link></li>
+              <li><Link to="/company" className="hover:text-white transition-colors">Healthcare</Link></li>
+              <li><Link to="/company" className="hover:text-white transition-colors">Banking & Finance</Link></li>
+                            <li><Link to="/company" className="hover:text-white transition-colors">ITSM</Link></li>
             </ul>
           </div>
           <div>

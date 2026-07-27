@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ContactForm } from '../components/ContactForm';
 import ourCultureImg from '../assets/our-culture.jpg';
 import growthLearningImg from '../assets/growth-learning.jpg';
+import realWorldImpactImg from '../assets/real-world-impact.jpg';
 
 export const Home: React.FC = () => {
 
@@ -361,7 +362,7 @@ export const Home: React.FC = () => {
             </div>
             {/* Card 3 */}
             <div className="relative h-[420px] rounded-[28px] overflow-hidden group cursor-pointer image-card card-hover">
-              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Real Impact" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={realWorldImpactImg} alt="Real Impact" className="absolute inset-0 w-full h-full object-cover object-[75%_35%] group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 transition-colors duration-500 group-hover:bg-white/30">

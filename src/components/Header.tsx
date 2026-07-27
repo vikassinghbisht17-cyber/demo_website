@@ -1,16 +1,88 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+
+interface SolutionLink {
+  label: string;
+  href: string;
+}
+
+interface SolutionCategory {
+  heading: string;
+  items: SolutionLink[];
+}
+
+const solutionCategories: SolutionCategory[] = [
+  {
+    heading: 'Manufacturing & Auto',
+    items: [
+      { label: 'Manufacturing Operational Analytics', href: '/solutions#case-study-1' },
+      { label: 'Automotive After-Sales Analytics', href: '/solutions#case-study-4' },
+    ],
+  },
+  {
+    heading: 'Banking & Financial Services',
+    items: [
+      { label: 'BFSI Lending & Incentive Suite', href: '/solutions#case-study-6' },
+      { label: 'Decision Anomaly Detection System', href: '/solutions#case-study-5' },
+    ],
+  },
+  {
+    heading: 'Digital Platforms & ITSM',
+    items: [
+      { label: 'Enterprise ITSM Data & Analytics', href: '/solutions#case-study-3' },
+    ],
+  },
+  {
+    heading: 'Sports & Entertainment',
+    items: [
+      { label: 'Customer Propensity Intelligence', href: '/solutions#case-study-2' },
+    ],
+  },
+  {
+    heading: 'Healthcare',
+    items: [
+      { label: 'Healthcare Market Intelligence', href: '/solutions#case-study-7' },
+    ],
+  },
+];
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
-
-  
   // Close mobile drawer on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
+
+  const updateScrollButtons = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 4);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  };
+
+  useEffect(() => {
+    updateScrollButtons();
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener('scroll', updateScrollButtons);
+    window.addEventListener('resize', updateScrollButtons);
+    return () => {
+      el.removeEventListener('scroll', updateScrollButtons);
+      window.removeEventListener('resize', updateScrollButtons);
+    };
+  }, []);
+
+  const scrollByAmount = (direction: 'left' | 'right') => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const amount = el.clientWidth * 0.6;
+    el.scrollBy({ left: direction === 'left' ? -amount : amount, behavior: 'smooth' });
+  };
 
   // Smooth scroll helper for contact CTA
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -54,7 +126,6 @@ export const Header: React.FC = () => {
                 </svg>
               </span>
 
-
               <div
                 role="menu"
                 aria-label="Industry Solutions"
@@ -70,113 +141,74 @@ export const Header: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* Columns */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100 px-10 py-9 gap-y-10">
-                    {/* Column 1 */}
-                    <div className="md:pr-8 space-y-8">
-                      <div>
-                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Manufacturing</h4>
-                        <ul className="space-y-1">
-                          <li>
-                            <Link
-                              to="/solutions#case-study-1"
-                              role="menuitem"
-                              className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
-                            >
-                              <span className="relative">
-                                Manufacturing Operational Analytics Platform
-                                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
-                              </span>
-                              <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Government & Public Procurement</h4>
-                        <ul className="space-y-1">
-                          <li>
-                            <Link
-                              to="/solutions#case-study-4"
-                              role="menuitem"
-                              className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
-                            >
-                              <span className="relative">
-                                Distributed Tender Data Engineering & AI Platform
-                                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
-                              </span>
-                              <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                  {/* Scrollable Categories with carousel arrows */}
+                  <div className="relative px-4 md:px-6 py-9">
+                    {/* Left arrow */}
+                    <button
+                      type="button"
+                      aria-label="Scroll categories left"
+                      onClick={() => scrollByAmount('left')}
+                      disabled={!canScrollLeft}
+                      className={`absolute left-1 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center transition-opacity duration-300 ${
+                        canScrollLeft ? 'opacity-100 hover:bg-gray-50' : 'opacity-0 pointer-events-none'
+                      }`}
+                    >
+                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
 
-                    {/* Column 2 */}
-                    <div className="md:px-8 pt-8 md:pt-0 space-y-8">
-                      <div>
-                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Banking & Financial Services</h4>
-                        <ul className="space-y-1">
-                          <li>
-                            <Link
-                              to="/solutions#case-study-2"
-                              role="menuitem"
-                              className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
-                            >
-                              <span className="relative">
-                                AI-Powered Financial Document Extraction Platform
-                                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
-                              </span>
-                              <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/solutions#case-study-6"
-                              role="menuitem"
-                              className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
-                            >
-                              <span className="relative">
-                                Intelligent Decision Anomaly Detection System
-                                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
-                              </span>
-                              <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                    {/* Right arrow */}
+                    <button
+                      type="button"
+                      aria-label="Scroll categories right"
+                      onClick={() => scrollByAmount('right')}
+                      disabled={!canScrollRight}
+                      className={`absolute right-1 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center transition-opacity duration-300 ${
+                        canScrollRight ? 'opacity-100 hover:bg-gray-50' : 'opacity-0 pointer-events-none'
+                      }`}
+                    >
+                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
 
-                    {/* Column 3 */}
-                    <div className="md:pl-8 pt-8 md:pt-0 space-y-8">
-                      <div>
-                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Digital Platforms & Enterprise Software</h4>
-                        <ul className="space-y-1">
-                          <li>
-                            <Link
-                              to="/solutions#case-study-5"
-                              role="menuitem"
-                              className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
-                            >
-                              <span className="relative">
-                                Unified Enterprise Data & Analytics Platform
-                                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
-                              </span>
-                              <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
+                    {/* Scroll container */}
+                    <div
+                      ref={scrollRef}
+                      className="flex gap-x-10 overflow-x-auto no-scrollbar scroll-smooth px-8 md:px-10"
+                      style={{ scrollSnapType: 'x proximity' }}
+                    >
+                      {solutionCategories.map((category) => (
+                        <div
+                          key={category.heading}
+                          className="flex-shrink-0 w-[260px]"
+                          style={{ scrollSnapAlign: 'start' }}
+                        >
+                          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                            {category.heading}
+                          </h4>
+                          <ul className="space-y-1">
+                            {category.items.map((item) => (
+                              <li key={item.label}>
+                                <Link
+                                  to={item.href}
+                                  role="menuitem"
+                                  className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
+                                >
+                                  <span className="relative">
+                                    {item.label}
+                                    <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
+                                  </span>
+                                  <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                  </svg>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
@@ -194,10 +226,9 @@ export const Header: React.FC = () => {
                       </svg>
                     </Link>
                   </div>
-                  </div>
-</div>
-</div>
-              
+                </div>
+              </div>
+            </div>
 
             {/* 3. Insights (Hidden for now) */}
             {/* <NavLink to="/insights" className={navLinkClass}>Insights</NavLink> */}
@@ -265,13 +296,15 @@ export const Header: React.FC = () => {
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Industry Solutions</h4>
                   <ul className="space-y-3 pl-2">
-                    <li><Link to="/solutions#case-study-1" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Manufacturing Operational Analytics</Link></li>
-                    <li><Link to="/solutions#case-study-2" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Customer Propensity Intelligence</Link></li>
-                    <li><Link to="/solutions#case-study-3" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Enterprise ITSM Data & Analytics</Link></li>
-                    <li><Link to="/solutions#case-study-4" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Automotive After-Sales Analytics</Link></li>
-                    <li><Link to="/solutions#case-study-5" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Decision Anomaly Detection</Link></li>
-                    <li><Link to="/solutions#case-study-6" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">BFSI Lending & Incentive Suite</Link></li>
-                    <li><Link to="/solutions#case-study-7" className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">Healthcare Market Intelligence</Link></li>
+                    {solutionCategories.flatMap((category) =>
+                      category.items.map((item) => (
+                        <li key={item.label}>
+                          <Link to={item.href} className="block text-base font-bold text-gray-800 hover:text-primary transition-colors">
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))
+                    )}
                   </ul>
                 </div>
 

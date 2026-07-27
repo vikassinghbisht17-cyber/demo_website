@@ -40,7 +40,7 @@ At the AI & Gen AI frontlines, he pioneered early Generative AI adoption within 
 
 In 2023, Roop founded Passageway Tech. It was time to build what he had always known was missing.`,
       image: '/founder_image.jpeg',
-      imageClassName: 'object-cover object-top'
+      imageClassName: 'object-cover object-[center_15%]'
     },
     {
       id: 'abhishek',
