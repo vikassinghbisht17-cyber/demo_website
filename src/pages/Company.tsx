@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ContactForm } from '../components/ContactForm';
 import teamPhoto from '../assets/team-photo.jpg';
 
@@ -64,7 +63,7 @@ He believes that sustainable transformation is achieved when business vision, te
     {
       id: 'varun',
       name: 'Varun Pandey',
-      role: 'Head of Operations',
+      role: 'Co-Founder and Head of Operations',
       linkedin: 'https://www.linkedin.com/in/varun-pandey-27a33784/',
       shortBio: 'Leading strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.',
       fullBio: `Varun leads strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.
@@ -81,7 +80,7 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
     {
       id: 'sandeep',
       name: 'Sandeep Kumar',
-      role: 'Lead Data Scientist',
+      role: 'Principal Data Scientist',
       linkedin: 'https://www.linkedin.com/in/sandeep-kumar-23b82b125/',
       shortBio: 'Lead Data Scientist with over 8 years of experience in building end-to-end machine learning solutions.',
       fullBio: `Lead Data Scientist with over 8 years of experience in building end-to-end machine learning solutions that transform complex data into actionable business insights. Experienced across healthcare, automotive, financial services, and Apple Maps, with a strong foundation in Python, PySpark, SQL, AWS, Azure, Hadoop, and Hive. Passionate about statistical modeling, deep learning, and scalable ML pipelines, with a proven ability to lead teams, collaborate with clients, and deliver impactful AI-driven solutions from concept to deployment.`,
@@ -91,7 +90,7 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
     {
       id: 'ravi',
       name: 'Ravi Chauhan',
-      role: 'Lead Data Scientist',
+      role: 'AI Solutions Architect',
       linkedin: 'https://www.linkedin.com/in/ravi-chauhan-a8173411a/',
       shortBio: 'Lead Data Scientist with over 7 years of experience designing and delivering AI-powered solutions.',
       fullBio: `Lead Data Scientist with over 7 years of experience designing and delivering AI-powered solutions that solve complex business challenges. Specializing in Generative AI, Machine Learning, Natural Language Processing (NLP), and Predictive Analytics, with expertise in LLM fine-tuning, Retrieval-Augmented Generation (RAG), GraphRAG, Agentic AI, recommendation systems, and production-scale ML solutions on AWS. Passionate about transforming data into intelligent products that enhance decision-making, automate business processes, and drive measurable business outcomes.`,
@@ -101,7 +100,7 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
     {
       id: 'aman',
       name: 'Aman Jain',
-      role: 'Lead Data Scientist',
+      role: 'Head of Data Intelligence',
       linkedin: 'https://www.linkedin.com/in/amanjain1711/',
       shortBio: 'Lead Data Scientist with over 6 years of experience in AI, Machine Learning, and Enterprise Data Platforms.',
       fullBio: `Aman Jain is a Lead Data Scientist with over 6 years of experience in AI, Machine Learning, and Enterprise Data Platforms. He has a proven track record of architecting and delivering scalable analytics solutions that empower organizations to make faster, data-driven decisions.
@@ -155,10 +154,6 @@ Aman is passionate about leveraging advanced analytics and AI to solve complex b
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>About Us | Passageway Tech</title>
-        <meta name="description" content="Founded in 2023, Passageway Tech is a pioneering Data Engineering and AI consultancy based in Jaipur." />
-      </Helmet>
       {/* Company Hero Section */}
       <section className="pt-36 pb-28 bg-white text-center px-4 overflow-hidden relative">
         {/* AI-style ambient background */}

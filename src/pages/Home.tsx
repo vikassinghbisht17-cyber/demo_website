@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { ContactForm } from '../components/ContactForm';
-import ourCultureImg from '../assets/our-culture.JPG';
+import ourCultureImg from '../assets/our-culture.jpg';
 import growthLearningImg from '../assets/growth-learning.jpg';
 import realWorldImpactImg from '../assets/real-world-impact.jpg';
 
@@ -10,10 +9,6 @@ export const Home: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>Passageway Tech | Enterprise AI & Data Engineering</title>
-        <meta name="description" content="Empowering enterprises to transform raw data into actionable intelligence through modern data platforms and real-world Generative AI." />
-      </Helmet>
       {/* Module 3: Animated Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center pt-24 pb-32 text-center px-4 overflow-hidden relative bg-secondary">
         {/* Full-screen Background Video */}
@@ -55,7 +50,7 @@ export const Home: React.FC = () => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="font-bold flex items-center transition-all duration-300 w-full sm:w-auto justify-center bg-[#5176A6] hover:bg-[#40628e] text-white px-8 py-4 rounded-full shadow-lg"
+              className="btn-modern w-full sm:w-auto"
             >
               Get In Touch
             </a>
@@ -111,25 +106,25 @@ export const Home: React.FC = () => {
               View All Capabilities <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Cards for each competency */}
-            <div className="common-card p-8 group card-hover">
-              <h3 className="text-xl font-bold text-primary mb-4">Data Engineering & Platforms</h3>
+            <div className="common-card p-6 sm:p-8 group card-hover">
+              <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Data Engineering & Platforms</h3>
               <p className="text-gray-600 font-medium mb-6">Designing resilient data lakes and scalable ingestion pipelines to unify siloed enterprise data.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore Engineering <span aria-hidden="true">→</span></Link>
             </div>
-            <div className="common-card p-8 group card-hover">
-              <h3 className="text-xl font-bold text-primary mb-4">Advanced Analytics & BI</h3>
+            <div className="common-card p-6 sm:p-8 group card-hover">
+              <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Advanced Analytics & BI</h3>
               <p className="text-gray-600 font-medium mb-6">Synthesizing complex data into operational intelligence through custom KPIs and automated workflows.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore Analytics <span aria-hidden="true">→</span></Link>
             </div>
-            <div className="common-card p-8 group card-hover">
-              <h3 className="text-xl font-bold text-primary mb-4">Predictive Intelligence</h3>
+            <div className="common-card p-6 sm:p-8 group card-hover">
+              <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Predictive Intelligence</h3>
               <p className="text-gray-600 font-medium mb-6">Deploying enterprise ML models to anticipate customer actions and flag operational risks proactively.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore ML <span aria-hidden="true">→</span></Link>
             </div>
-            <div className="common-card p-8 group card-hover">
-              <h3 className="text-xl font-bold text-primary mb-4">Generative AI Frameworks</h3>
+            <div className="common-card p-6 sm:p-8 group card-hover">
+              <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Generative AI Frameworks</h3>
               <p className="text-gray-600 font-medium mb-6">Implementing reusable GenAI architectures for intelligent document processing and knowledge extraction.</p>
               <Link to="/capabilities" className="text-sm font-bold text-accent-blue group-hover:text-primary transition-colors hover:border-b hover:border-primary pb-1">Explore GenAI <span aria-hidden="true">→</span></Link>
             </div>

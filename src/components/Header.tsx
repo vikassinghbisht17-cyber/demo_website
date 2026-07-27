@@ -104,10 +104,10 @@ export const Header: React.FC = () => {
     <>
       <header className="sticky top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-28 items-center">
+        <div className="flex justify-between h-20 md:h-24 lg:h-28 items-center">
           {/* Left: Logo */}
           <Link to="/" className="flex items-center cursor-pointer">
-            <img src="/logo-horizontal.svg" alt="Passageway" className="h-14" />
+            <img src="/logo-horizontal.svg" alt="Passageway" className="h-9 md:h-11 lg:h-14" />
           </Link>
 
           {/* Center: Desktop Nav */}
@@ -141,75 +141,34 @@ export const Header: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* Scrollable Categories with carousel arrows */}
-                  <div className="relative px-4 md:px-6 py-9">
-                    {/* Left arrow */}
-                    <button
-                      type="button"
-                      aria-label="Scroll categories left"
-                      onClick={() => scrollByAmount('left')}
-                      disabled={!canScrollLeft}
-                      className={`absolute left-1 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center transition-opacity duration-300 ${
-                        canScrollLeft ? 'opacity-100 hover:bg-gray-50' : 'opacity-0 pointer-events-none'
-                      }`}
-                    >
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </button>
-
-                    {/* Right arrow */}
-                    <button
-                      type="button"
-                      aria-label="Scroll categories right"
-                      onClick={() => scrollByAmount('right')}
-                      disabled={!canScrollRight}
-                      className={`absolute right-1 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center transition-opacity duration-300 ${
-                        canScrollRight ? 'opacity-100 hover:bg-gray-50' : 'opacity-0 pointer-events-none'
-                      }`}
-                    >
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-
-                    {/* Scroll container */}
-                    <div
-                      ref={scrollRef}
-                      className="flex gap-x-10 overflow-x-auto no-scrollbar scroll-smooth px-8 md:px-10"
-                      style={{ scrollSnapType: 'x proximity' }}
-                    >
-                      {solutionCategories.map((category) => (
-                        <div
-                          key={category.heading}
-                          className="flex-shrink-0 w-[260px]"
-                          style={{ scrollSnapAlign: 'start' }}
-                        >
-                          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
-                            {category.heading}
-                          </h4>
-                          <ul className="space-y-1">
-                            {category.items.map((item) => (
-                              <li key={item.label}>
-                                <Link
-                                  to={item.href}
-                                  role="menuitem"
-                                  className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
-                                >
-                                  <span className="relative">
-                                    {item.label}
-                                    <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
-                                  </span>
-                                  <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                                  </svg>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
+                  {/* Categories Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10 px-10 py-9">
+                    {solutionCategories.map((category) => (
+                      <div key={category.heading}>
+                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                          {category.heading}
+                        </h4>
+                        <ul className="space-y-1">
+                          {category.items.map((item) => (
+                            <li key={item.label}>
+                              <Link
+                                to={item.href}
+                                role="menuitem"
+                                className="group/item relative flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 -mx-3 text-[15px] font-semibold text-gray-700 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-300 hover:translate-x-1"
+                              >
+                                <span className="relative">
+                                  {item.label}
+                                  <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover/item:w-full" />
+                                </span>
+                                <svg className="w-4 h-4 flex-shrink-0 text-primary opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
 
                   {/* Footer CTA */}
@@ -242,7 +201,7 @@ export const Header: React.FC = () => {
 
           {/* Right: Get In Touch */}
           <div className="hidden lg:flex items-center">
-            <a href="/#contact" onClick={handleContactClick} className="font-bold flex items-center transition-colors duration-300 bg-[#5176A6] hover:bg-[#40628e] text-white px-7 py-3 rounded-full shadow-lg">
+            <a href="/#contact" onClick={handleContactClick} className="btn-modern">
               Get In Touch
             </a>
           </div>
@@ -271,7 +230,7 @@ export const Header: React.FC = () => {
       {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-x-0 top-28 bottom-0 z-40 bg-black/30 backdrop-blur-sm transition-opacity duration-300 lg:hidden"
+          className="fixed inset-x-0 top-20 md:top-24 lg:top-28 bottom-0 z-40 bg-black/30 backdrop-blur-sm transition-opacity duration-300 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           {/* Mobile Menu Content */}

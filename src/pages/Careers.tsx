@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import sandeepImg from '../assets/sandeep-testimonial.jpg';
 import anjaliImg from '../assets/anjali-testimonial.jpg';
 
@@ -22,28 +21,28 @@ export const Careers: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       quote: "The level of autonomy and trust here is incredible. I was given the opportunity to lead the development of our predictive maintenance platform for a major manufacturing client within my first year.",
-      author: "Sandeep Kumar",
+      author: "Sandeep K.",
       role: "Lead Data Scientist",
       image: sandeepImg,
       accentColor: "bg-primary"
     },
     {
       quote: "The culture is incredibly collaborative. We solve complex problems for global banks, and knowing that our fraud detection models are making a real-world impact is immensely rewarding.",
-      author: "Anjali Mohta",
+      author: "Anjali K.",
       role: "Full Stack Developer",
       image: anjaliImg,
       accentColor: "bg-accent-peach"
     },
     {
       quote: "Passageway gave me the room to grow fast. Within months I moved from writing ETL scripts to owning the architecture for one of our largest data platforms.",
-      author: "Ashish baghel.",
+      author: "Ravi C.",
       role: "Lead Data Scientist",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop",
       accentColor: "bg-accent-blue"
     },
     {
       quote: "What stands out here is how much ownership everyone has. Ideas from junior engineers are taken as seriously as those from leadership, and that pushes all of us to do better work.",
-      author: "soniya chouhan",
+      author: "Aman J.",
       role: "Lead Data Scientist",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop",
       accentColor: "bg-accent-teal"
@@ -73,10 +72,6 @@ export const Careers: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>Careers | Join Passageway Tech</title>
-        <meta name="description" content="Build your career at the intersection of data, AI, and real-world business impact. Explore open positions in Jaipur." />
-      </Helmet>
       {/* Careers Hero */}
       <section className="relative pt-32 pb-32 overflow-hidden bg-gray-900 text-white min-h-[60vh] flex flex-col justify-center">
         {/* Abstract Background */}

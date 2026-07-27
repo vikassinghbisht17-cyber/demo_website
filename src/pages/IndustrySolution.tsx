@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 const caseStudies = [
   {
@@ -101,10 +100,6 @@ export const IndustrySolution: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      <Helmet>
-        <title>Industry Solutions | Passageway Tech</title>
-        <meta name="description" content="Deep expertise across diverse sectors including Healthcare, Manufacturing, Banking & FS, and Energy & Utilities." />
-      </Helmet>
 
       {/* Case Studies Zig-Zag Layout */}
       <div className="w-full">
