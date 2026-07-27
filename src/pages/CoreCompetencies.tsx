@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const competencies = [
   {
@@ -91,6 +92,10 @@ export const CoreCompetencies: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Our Capabilities & Services | Passageway Tech</title>
+        <meta name="description" content="Explore our core competencies in Data Engineering, Advanced Analytics, Predictive Intelligence, and Generative AI Frameworks." />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-secondary text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Subtle background graphics */}

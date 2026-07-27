@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ContactForm } from '../components/ContactForm';
 import teamPhoto from '../assets/team-photo.jpg';
 
@@ -63,7 +64,7 @@ He believes that sustainable transformation is achieved when business vision, te
     {
       id: 'varun',
       name: 'Varun Pandey',
-      role: 'Co-Founder and Head of Operations',
+      role: 'Head of Operations',
       linkedin: 'https://www.linkedin.com/in/varun-pandey-27a33784/',
       shortBio: 'Leading strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.',
       fullBio: `Varun leads strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.
@@ -154,6 +155,10 @@ Aman is passionate about leveraging advanced analytics and AI to solve complex b
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>About Us | Passageway Tech</title>
+        <meta name="description" content="Founded in 2023, Passageway Tech is a pioneering Data Engineering and AI consultancy based in Jaipur." />
+      </Helmet>
       {/* Company Hero Section */}
       <section className="pt-36 pb-28 bg-white text-center px-4 overflow-hidden relative">
         {/* AI-style ambient background */}
