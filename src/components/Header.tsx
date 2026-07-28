@@ -201,7 +201,7 @@ export const Header: React.FC = () => {
 
           {/* Right: Get In Touch */}
           <div className="hidden lg:flex items-center">
-            <a href="/#contact" onClick={handleContactClick} className="btn-modern">
+            <a href="/#contact" onClick={handleContactClick} style={{ transform: 'none' }} className="px-6 py-3 rounded-full bg-gradient-to-r from-secondary to-primary text-white font-bold hover:brightness-110 active:brightness-95 transition-[filter] duration-200">
               Get In Touch
             </a>
           </div>

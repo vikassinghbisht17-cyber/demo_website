@@ -1,6 +1,11 @@
 import React from 'react';
 import sandeepImg from '../assets/sandeep-testimonial.jpg';
 import anjaliImg from '../assets/anjali-testimonial.jpg';
+import soniyaImg from '../assets/soniya-testimonial.jpg';
+import vikasImg from '../assets/vikas-testimonial.jpg';
+import gauravImg from '../assets/gaurav-testimonial.jpg';
+import charulImg from '../assets/charul-testimonial.jpg';
+import ayushImg from '../assets/ayush-testimonial.jpg';
 
 interface Testimonial {
   quote: string;
@@ -19,33 +24,48 @@ interface OpenRole {
 
 export const Careers: React.FC = () => {
   const testimonials: Testimonial[] = [
-    {
-      quote: "The level of autonomy and trust here is incredible. I was given the opportunity to lead the development of our predictive maintenance platform for a major manufacturing client within my first year.",
-      author: "Sandeep K.",
-      role: "Lead Data Scientist",
-      image: sandeepImg,
-      accentColor: "bg-primary"
-    },
+   
     {
       quote: "The culture is incredibly collaborative. We solve complex problems for global banks, and knowing that our fraud detection models are making a real-world impact is immensely rewarding.",
-      author: "Anjali K.",
-      role: "Full Stack Developer",
+      author: "Anjali Mohta",
+      role: "Assosiate Software Developer",
       image: anjaliImg,
       accentColor: "bg-accent-peach"
     },
     {
-      quote: "Passageway gave me the room to grow fast. Within months I moved from writing ETL scripts to owning the architecture for one of our largest data platforms.",
-      author: "Ravi C.",
-      role: "Lead Data Scientist",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop",
+      quote: "Working across our Java-based services has taught me to think about scale from day one. The code review culture here pushed my engineering standards higher than anywhere I've worked before.",
+      author: "Soniya Chauhan",
+      role: "Java Developer",
+      image: soniyaImg,
       accentColor: "bg-accent-blue"
     },
     {
-      quote: "What stands out here is how much ownership everyone has. Ideas from junior engineers are taken as seriously as those from leadership, and that pushes all of us to do better work.",
-      author: "Aman J.",
-      role: "Lead Data Scientist",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop",
+      quote: "Owning backend services end-to-end here means you see the direct impact of your architecture choices on real client systems — that responsibility has made me a far more careful engineer.",
+      author: "Vikas Singh",
+      role: "Software Engineer",
+      image: vikasImg,
       accentColor: "bg-accent-teal"
+    },
+    {
+      quote: "I joined as a fresher and within a year I was already leading a client-facing data pipeline. The trust and mentorship here accelerates your growth faster than anywhere else I've worked.",
+      author: "Gaurav Kumar Rana",
+      role: "Data Engineer",
+      image: gauravImg,
+      accentColor: "bg-accent-red"
+    },
+    {
+      quote: "Being part of HR here means shaping a culture where engineers and analysts alike feel heard. Watching new hires grow into confident leaders within months is the most rewarding part of my role.",
+      author: "Charul Jain",
+      role: "HR",
+      image: charulImg,
+      accentColor: "bg-secondary"
+    },
+    {
+      quote: "The leadership genuinely listens. When I proposed a new approach to our data pipeline architecture, I was given full ownership to build and ship it — that kind of trust is rare.",
+      author: "Ayush Mahendra",
+      role: "Data Engineer",
+      image: ayushImg,
+      accentColor: "bg-accent-peach"
     }
   ];
 

@@ -100,7 +100,7 @@ At Passageway, Varun focuses on helping organizations adopt practical AI solutio
     {
       id: 'aman',
       name: 'Aman Jain',
-      role: 'Head of Data Intelligence',
+      role: 'Data Solution Architect',
       linkedin: 'https://www.linkedin.com/in/amanjain1711/',
       shortBio: 'Lead Data Scientist with over 6 years of experience in AI, Machine Learning, and Enterprise Data Platforms.',
       fullBio: `Aman Jain is a Lead Data Scientist with over 6 years of experience in AI, Machine Learning, and Enterprise Data Platforms. He has a proven track record of architecting and delivering scalable analytics solutions that empower organizations to make faster, data-driven decisions.

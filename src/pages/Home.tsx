@@ -50,7 +50,8 @@ export const Home: React.FC = () => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="btn-modern w-full sm:w-auto"
+              style={{ transform: 'none' }}
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-primary text-white font-bold hover:brightness-110 active:brightness-95 transition-[filter] duration-200"
             >
               Get In Touch
             </a>
