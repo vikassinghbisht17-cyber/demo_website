@@ -1,5 +1,4 @@
 import React from 'react';
-import sandeepImg from '../assets/sandeep-testimonial.jpg';
 import anjaliImg from '../assets/anjali-testimonial.jpg';
 import soniyaImg from '../assets/soniya-testimonial.jpg';
 import vikasImg from '../assets/vikas-testimonial.jpg';
