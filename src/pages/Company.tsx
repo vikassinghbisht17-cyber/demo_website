@@ -72,7 +72,7 @@ With 12 years of industry experience, Varun brings deep expertise in building an
 
 At Passageway, Varun focuses on helping organizations adopt practical AI solutions that improve efficiency, unlock growth opportunities, and create long-term business value.`,
       image: '/co_founder_3.jpeg',
-      imageClassName: 'object-contain object-bottom'
+      imageClassName: 'object-cover object-[center_15%]'
     }
   ];
 
