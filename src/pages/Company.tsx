@@ -45,7 +45,7 @@ In 2023, Roop founded Passageway Tech. It was time to build what he had always k
     {
       id: 'abhishek',
       name: 'Abhishek Dadhichi',
-      role: 'Co-Founder and Director',
+      role: 'Co-Founder and Head of Operations',
       linkedin: 'https://www.linkedin.com/in/abhishek-dadhichi-aa183b17/',
       shortBio: '20+ years of experience driving technical strategy. Specializing in advanced analytics and enterprise AI architecture.',
       fullBio: `Abhishek partners with business leaders to turn complex business challenges into scalable, technology-driven growth opportunities.
@@ -63,7 +63,7 @@ He believes that sustainable transformation is achieved when business vision, te
     {
       id: 'varun',
       name: 'Varun Pandey',
-      role: 'Co-Founder and Head of Operations',
+      role: 'Co-Founder',
       linkedin: 'https://www.linkedin.com/in/varun-pandey-27a33784/',
       shortBio: 'Leading strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.',
       fullBio: `Varun leads strategic growth and operational excellence with a strong focus on enabling AI-driven solutions for businesses.
