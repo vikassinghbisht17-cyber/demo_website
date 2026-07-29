@@ -54,14 +54,14 @@ export const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  // Smooth scroll helper for contact CTA
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If there's no contact form on this page, navigate to home #contact
+      window.location.href = '/#contact';
     }
   };
 
