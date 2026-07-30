@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import anjaliImg from '../assets/anjali-testimonial.jpg';
 import soniyaImg from '../assets/soniya-testimonial.jpg';
 import vikasImg from '../assets/vikas-testimonial.jpg';
@@ -91,6 +92,10 @@ export const Careers: React.FC = () => {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Careers | Join Passageway Tech</title>
+        <meta name="description" content="Build your career at the intersection of data, AI, and real-world business impact. Explore open engineering and data science roles in Jaipur." />
+      </Helmet>
       {/* Careers Hero */}
       <section className="relative pt-32 pb-32 overflow-hidden bg-gray-900 text-white min-h-[60vh] flex flex-col justify-center">
         {/* Abstract Background */}

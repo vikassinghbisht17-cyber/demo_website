@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ContactForm } from '../components/ContactForm';
 import ourCultureImg from '../assets/our-culture.JPG';
 import growthLearningImg from '../assets/growth-learning.jpg';
@@ -9,6 +10,10 @@ export const Home: React.FC = () => {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Passageway Tech | Enterprise AI & Data Engineering</title>
+        <meta name="description" content="Empowering enterprises to transform raw data into intelligent action through modern data platforms and real-world Generative AI." />
+      </Helmet>
       {/* Module 3: Animated Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center pt-24 pb-32 text-center px-4 overflow-hidden relative bg-secondary">
         {/* Full-screen Background Video */}
